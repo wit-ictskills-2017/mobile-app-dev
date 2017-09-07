@@ -942,12 +942,14 @@ public class Donate extends AppCompatActivity {
       <div  class="ui tab segment lab" data-tab="Exercises">
         <h1>Exercises</h1>
 <h2>Exercise 1:</h2>
-<p>Here is an archive of lab so far:</p>
+<p>You will find archives of the Donation labs in this repo:</p>
 <ul>
 <li><a href="https://github.com/wit-ictskills-2017/android-donation-2017.git">android-donation-2017</a></li>
 </ul>
 <p>You may use this as a reference if you have any unresolved anomalies in your code.</p>
-<p>The archive is tagged at end of each lab step. To obtain a snapshot at the end of, for example, step 8, simply run the command <code>git checkout 01_08</code>. In this case, 01_08 is a tag where 01 represents the first lab in the donation series of labs and 08 represents step 8. Not every step has a solution; typically there are two per lab i.e. the final step and the exercises. Note that the same process can be followed for exercises e.g. <code>git checkout 01_exercises</code>.</p>
+<p>To download the code (as a zip) upto and including step 8 of this lab, click on the <strong>release</strong> menu item in this repo and you will be brought to the <strong>Releases</strong> section.  Here you will see the downloads associated with V1.0 of Donation.   </p>
+<p><img src="img/31.png" alt="Figure 1: V1.0 Releases"></p>
+<p>Click on the appropriate Donation.*.zip file you require to download the archive you want.  </p>
 <p>You should now put your Donation application under git version control. You are already familiar with this procedure:</p>
 <ul>
 <li>cd into the project on your computer in a terminal</li>
@@ -989,15 +991,16 @@ Thumbs.db
 .idea/workspace.xml
 .gradle
 build/</code></pre>
+<p>You could also create your own android-donation repo in GitHub and maintain releases as we have done in this lab and will do in future labs i.e. start building a public CV of your work.  <strong>Note that we highly recommend not using GitHub public releases for your assignment work (until grading has been completed).</strong></p>
 <h2>Exercise 2:</h2>
 <p>Consider an alternative to the NumberPicker - specifically one of the &quot;Text&quot; controls:</p>
-<p><img src="img/25.png" alt="Figure 1: Text controls"></p>
+<p><img src="img/25.png" alt="Figure 2: Text controls"></p>
 <p>These are mostly EditView objects:</p>
 <ul>
 <li><a href="http://developer.android.com/reference/android/widget/EditText.html">http://developer.android.com/reference/android/widget/EditText.html</a></li>
 </ul>
 <p>Redesign the activity to take a value from the picker or directly from a text view:</p>
-<p><img src="img/26.png" alt="Figure 2: Textview alternative number input"></p>
+<p><img src="img/26.png" alt="Figure 3: Textview alternative number input"></p>
 <p>If the number picker is set to zero, then attempt to get a number from the text view.</p>
 <p>Here is a hint (a version of donatButonPressed that does what we want):</p>
 <pre><code class="lang-java">   public void donateButtonPressed (View view)
@@ -1029,7 +1032,7 @@ build/</code></pre>
 <li><a href="http://developer.android.com/reference/android/widget/TextView.html">http://developer.android.com/reference/android/widget/TextView.html</a></li>
 </ul>
 <p>You already have a number of these on screen. Your layout could be revised to look like this:</p>
-<p><img src="img/27.png" alt="Figure 3: Total so far displayed"></p>
+<p><img src="img/27.png" alt="Figure 4: Total so far displayed"></p>
 
       </div>
      
