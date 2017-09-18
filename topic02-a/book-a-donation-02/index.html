@@ -1,0 +1,1001 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      2-a: Activities & Layouts
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Donation-02">
+      Donation-02
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" data-tab="Appendix">
+      Appendix
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Donation-02">
+        <h1>Objectives</h1>
+<p>Introduce a second screen to display the list of donations made by the user. In addition, enable our app its first &quot;Model&quot; objects, which will be used to store the individual donations made by the user. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Donation-01 Solutions</h1>
+<p>In this lab we shall continue work on the NUC devices.</p>
+<p>You are recommend to tag each step.</p>
+<p>Continue building on your previous app. Alternatively use this version, but if you do then it will be necessary to change the remote tracking repo (see Appendix).</p>
+<p><a href="https://github.com/wit-ictskills-2017/donation-android-2017.git">donation-android-2017</a></p>
+<p>Launch Android Studio and open this project.</p>
+<p>If the project is not present in the Recent Projects panel, open the project as shown in Figure 1:</p>
+<p><img src="img/10.png" alt="Figure 1: Open and existing Android Studio project"></p>
+<p>You may be presented with a message as shown in Figure 2 indicating an unregistered version control system (VCS).</p>
+<ul>
+<li>Click <strong>Add root</strong>.</li>
+</ul>
+<p><img src="img/11.png" alt="Figure 2: Configure git VCS"></p>
+<p>Once you have opened the project in Android Studio you are ready to proceed with the lab, the first part of which is to provide solutions to the exercises at the end of Donation-01.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Package Name</h1>
+<p>This version is a little misconfigured - we have a leftover - the package name &#39;com.example.donation&#39; from the project generation wizard.<br> 
+This can be changed as follows:</p>
+<ul>
+<li>With the project imported to Android Studio, select Project in the Project Structure pane.</li>
+<li><p>Expand the folders in <em>app/java</em> to reveal <em>com.example.donation</em> packages (java classes and the tests).
+<img src="img/20.png" alt="Figure 1: Project Structure pane"></p>
+</li>
+<li><p>Create a new package <em>app.donation</em> in <em>androidTest/java</em>.</p>
+<ul>
+<li>Drag the file <em>ExampleInstrumentedTest</em> to this new package.</li>
+</ul>
+</li>
+<li>Create a new package <em>app.donation</em> in <em>test/java</em>.<ul>
+<li>Drag the file <em>ExampleUnitTest</em> to this new package.</li>
+</ul>
+</li>
+<li><p>Create a new package <em>app.donation</em> in <em>main/java</em>.</p>
+<ul>
+<li>Drag file <em>Donate</em> to this new package.</li>
+</ul>
+</li>
+<li><p>The three original packages, <em>com.example.donation</em> should be deleted automatically without user intervention.
+<img src="img/21.png" alt="Figure 2: Create new packages and populate by drag and drop"></p>
+</li>
+<li><p>Ensure that the package name has been changed to <em>app.donation</em> in <em>AndroidManifest.xml</em>:
+<img src="img/24.png" alt="Figure 3: Updated AndroidManifest.xml"></p>
+</li>
+<li><p>Change the <em>applicationID</em> to <em>app.donation</em> in build.gradle (Module: app).</p>
+<ul>
+<li>Sync Now if prompted. 
+<img src="img/22.png" alt="Figure 4: Update build.gradle"></li>
+</ul>
+</li>
+<li><p>Check that the import statement in <em>Donate.java</em> is as follows instead of &quot;com.example.donation.R&quot;:</p>
+</li>
+</ul>
+<pre><code>import app.donation.R;</code></pre>
+<ul>
+<li><p>Clean the project:
+<img src="img/23.png" alt="Figure 5: Clean project"></p>
+</li>
+<li><p>Test by rebuilding (Build | Rebuild) and running (Run | Run &#39;app&#39;).</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Menu</h1>
+<p>In lab01, we choose an Empty Activity as the starting point for our activity_donate layout.  No menu was associated with it, which means that no <em>menu</em> resource directory was created in the <em>res</em> folder.  In this step, we will first create this <em>menu</em> resource directory and then add a menu resource to it (and our activity_donate layout).</p>
+<h2>Creating the menu resource directory</h2>
+<p>Right click on the <em>res</em> directory and select (New | Android Resource Directory).</p>
+<p>When the dialog window appears, choose <strong>menu</strong> as the resource type.  Accept the defaults by clicking the OK button.</p>
+<h2>Creating a menu layout</h2>
+<p>Right click on your new <em>menu</em> directory and select (New | Menu Resource File).</p>
+<p>When the dialog window appears, enter <strong>menu_donate</strong> as the file name and click the OK button. </p>
+<h2>Adding items to the menu</h2>
+<p>Open <code>res/values/Strings.xml</code> and introduce two new String resources like this:</p>
+<pre><code class="lang-xml">    &lt;string name=&quot;menuSettings&quot;&gt;Settings&lt;/string&gt;
+    &lt;string name=&quot;menuReport&quot;&gt;Report&lt;/string&gt;</code></pre>
+<p>Open &#39;menu_donate.xml&#39; in the <code>res/menu</code> folder. Modify this file by adding these two menu items:</p>
+<pre><code>      &lt;item android:id=&quot;@+id/menuSettings&quot;
+        android:title=&quot;@string/menuSettings&quot;
+        android:orderInCategory=&quot;100&quot;/&gt;
+
+    &lt;item android:id=&quot;@+id/menuReport&quot;
+        android:title=&quot;@string/menuReport&quot;
+        android:orderInCategory=&quot;100&quot;/&gt;</code></pre>
+<p>(Make sure it is within the <code>&lt;menu&gt;</code> element)</p>
+<p>Return to design view for menu_donate.xml and it should resemble this:</p>
+<p><img src="img/05a.png" alt="Figure 1 - Menu_Donate"></p>
+<p>In Donate.java, add a new method called <code>onOptionsItemSelected</code> and include the following code:</p>
+<pre><code class="lang-java">    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menuReport:
+                Toast.makeText(this, &quot;Report Selected&quot;, Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.menuSettings:
+                Toast.makeText(this, &quot;Settings Selected&quot;, Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }</code></pre>
+<p>An import statement is required for MenuItem:</p>
+<pre><code>import android.view.MenuItem;</code></pre>
+<p>If you ran this code now, you would not see your menu.  We need to &quot;inflate&quot; the menu in order to see it.  To do this, add the following code to Donate.java, along with the necessary import statements:</p>
+<pre><code class="lang-java">    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_donate, menu);
+        return super.onCreateOptionsMenu(menu);
+    }</code></pre>
+<p>Run the app and when you press the menu button (or the overflow menu) and select &#39;Report&#39;, you should see the toast message appear.</p>
+<p><img src="img/05.png" alt=""></p>
+<p>Likewise, when you select &#39;Settings&#39;, you should see a toast message indicating that you selected Settings.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Reports Activity</h1>
+<p>Before we start to design a new activity, Add a string resource in <code>res/values/strings.xml</code>:</p>
+<pre><code>&lt;string name=&quot;reportTitle&quot;&gt;Report&lt;/string&gt;</code></pre>
+<p>Design a new layout called <code>activity_report</code>. Do this by locating the <code>res/layout</code> folder and selecting <code>new-&gt;layout resource file</code>:</p>
+<p><img src="img/30.png" alt=""></p>
+<p>Call the layout file <code>activity_report</code>.</p>
+<p>We would like the resource to look like this:</p>
+<p><img src="img/01.png" alt="Figure 1: Report activity design view"></p>
+<p>For the moment, to achieve this - just replace the xml with the following:</p>
+<pre><code class="lang-xml">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/reportTitle&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignParentStart=&quot;true&quot;
+        android:layout_alignParentEnd=&quot;true&quot;
+        android:layout_alignParentTop=&quot;true&quot;
+        android:text=&quot;@string/reportTitle&quot;
+        android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot; /&gt;
+
+    &lt;ListView
+        android:id=&quot;@+id/reportList&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignStart=&quot;@+id/reportTitle&quot;
+        android:layout_below=&quot;@+id/reportTitle&quot; &gt;
+
+    &lt;/ListView&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+<p>You should see the design render as above.</p>
+<p>We can now introduce a new Class into app.donation to render this activity:</p>
+<pre><code class="lang-java">package app.donation;
+
+import app.donation.R;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class Report extends AppCompatActivity
+{
+  ListView listView;
+
+  static final String[] numbers = new String[] {
+      &quot;Amount, Pay method&quot;,
+      &quot;10,     Direct&quot;,
+      &quot;100,    PayPal&quot;,
+      &quot;1000,   Direct&quot;,
+      &quot;10,     PayPal&quot;,
+      &quot;5000,   PayPal&quot;};
+
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    listView = (ListView) findViewById(R.id.reportList);
+    ArrayAdapter&lt;String&gt; adapter = new ArrayAdapter&lt;String&gt;(this,  android.R.layout.simple_list_item_1, numbers);
+    listView.setAdapter(adapter);
+  }
+}</code></pre>
+<p>This will display a hard-coded lists of donations.</p>
+<p>Back in Donation class, change the Donate activity to load this view when &#39;Report&#39; selected from menu:</p>
+<pre><code class="lang-java">  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case R.id.menuReport : startActivity (new Intent(this, Report.class));
+                             break;
+    }
+    return true;
+  }</code></pre>
+<p>This requires an import statement:</p>
+<pre><code>import android.content.Intent;</code></pre>
+<p>All of this will not work until you add the activity specification to the AndroidManifest.xml file:</p>
+<pre><code class="lang-xml">        &lt;activity
+            android:name=&quot;app.donation.Report&quot;
+            android:label=&quot;@string/donateTitle&quot; &gt;
+        &lt;/activity&gt;</code></pre>
+<p>The above must be carefuly positioned - this is the full <code>AndroidManifest.xml</code> file here:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;app.donation&quot;&gt;
+
+    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;&gt;
+
+        &lt;activity android:name=&quot;app.donation.Donate&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+
+        &lt;activity android:name=&quot;app.donation.Report&quot;
+            android:label=&quot;@string/donateTitle&quot;&gt;
+        &lt;/activity&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p>Note the location of the new element.</p>
+<p>Try it all now - it should load. Here is an example using the inbuilt emulator (AVD).</p>
+<p><img src="img/06.png" alt="Figure 2: Report rendered on Android AVD"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Application Object</h1>
+<p>In order to keep our application design coherent, we now bring in an &#39;Application&#39; object.</p>
+<p>Create a new class called `DonationApp&#39;:</p>
+<p><img src="img/33.png" alt=""></p>
+<p>Incorporate this class here:</p>
+<pre><code class="lang-java">package app.donation;
+
+import android.app.Application;
+import android.util.Log;
+
+public class DonationApp extends Application
+{
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    Log.v(&quot;Donate&quot;, &quot;Donation App Started&quot;);
+  }
+}</code></pre>
+<p>Application objects need to be referenced in the AndroidManifest.xml</p>
+<pre><code>android:name=&quot;app.donation.DonationApp&quot;</code></pre>
+<p>It is inserted into the <code>application</code> element - here is the full manifest:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;app.donation&quot;&gt;
+
+    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;
+        android:name=&quot;app.donation.DonationApp&quot;&gt;
+
+        &lt;activity android:name=&quot;app.donation.Donate&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+
+        &lt;activity android:name=&quot;app.donation.Report&quot;
+            android:label=&quot;@string/donateTitle&quot;&gt;
+        &lt;/activity&gt;
+
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p>Make sure the &#39;Donation App Started&#39; appears in the logs when the application is started:</p>
+<p><img src="img/08.png" alt=""></p>
+<p>The filter used here is:</p>
+<p><img src="img/34.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Donation Model</h1>
+<p>Create a new class called <code>Donation</code>:</p>
+<pre><code class="lang-java">package app.donation;
+
+public class Donation
+{
+  public int    amount;
+  public String method;
+
+  public Donation (int amount, String method)
+  {
+    this.amount = amount;
+    this.method = method;
+  }
+}</code></pre>
+<p>This is a revised version of DonationApp class:</p>
+<pre><code class="lang-java">package app.donation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Application;
+import android.util.Log;
+import android.widget.Toast;
+
+public class DonationApp extends Application
+{
+  public final int       target       = 10000;
+  public int             totalDonated = 0;
+  public List &lt;Donation&gt; donations    = new ArrayList&lt;Donation&gt;();
+
+  public boolean newDonation(Donation donation)
+  {
+    boolean targetAchieved = totalDonated &gt; target;
+    if (!targetAchieved)
+    {
+      donations.add(donation);
+      totalDonated += donation.amount;
+    }
+    else
+    {
+      Toast toast = Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT);
+      toast.show();
+    }
+    return targetAchieved;
+  }
+
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    Log.v(&quot;Donate&quot;, &quot;Donation App Started&quot;);
+  }
+}</code></pre>
+<p>It manages a list of donations. It also centralises the &#39;makeDonation&#39; as as a method. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Refactored Donate</h1>
+<p>The Donate activity can now be completely re factored to make use of the DonationApp object.</p>
+<p>First, introduce this new member into the class:</p>
+<pre><code>  private DonationApp app;</code></pre>
+<p>and in the <code>onCreate</code> meethod, initialize app:</p>
+<pre><code>    app = (DonationApp) getApplication();</code></pre>
+<p>Finally, we can replace the <code>donatButtonPressed</code> method with this simplified version:</p>
+<pre><code>
+  public void donateButtonPressed (View view)
+  {
+    String method = paymentMethod.getCheckedRadioButtonId() == R.id.PayPal ? &quot;PayPal&quot; : &quot;Direct&quot;;
+    int donatedAmount =  amountPicker.getValue();
+    if (donatedAmount == 0)
+    {
+      String text = amountText.getText().toString();
+      if (!text.equals(&quot;&quot;))
+        donatedAmount = Integer.parseInt(text);
+    }
+    if (donatedAmount &gt; 0)
+    {
+      app.newDonation(new Donation(donatedAmount, method));
+      progressBar.setProgress(app.totalDonated);
+      String totalDonatedStr = &quot;$&quot; + app.totalDonated;
+      amountTotal.setText(totalDonatedStr);
+    }
+  }</code></pre>
+<p>Here is the complete <code>Donate</code> class if there is a problem:</p>
+<pre><code class="lang-java">package app.donation;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.NumberPicker;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+import app.donation.R;
+
+public class Donate extends AppCompatActivity {
+
+    private int          target = 10000;
+    private RadioGroup   paymentMethod;
+    private ProgressBar  progressBar;
+    private NumberPicker amountPicker;
+    private EditText     amountText;
+    private TextView     amountTotal;
+    private DonationApp  app;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_donate);
+
+        app           = (DonationApp)  getApplication();
+        paymentMethod = (RadioGroup)   findViewById(R.id.paymentMethod);
+        progressBar   = (ProgressBar)  findViewById(R.id.progressBar);
+        amountPicker  = (NumberPicker) findViewById(R.id.amountPicker);
+        amountTotal   = (TextView)     findViewById(R.id.amountTotal);
+        amountText    = (EditText)     findViewById(R.id.amountText);
+
+        amountPicker.setMinValue(0);
+        amountPicker.setMaxValue(1000);
+        progressBar.setMax(target);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case R.id.menuReport:
+                startActivity(new Intent(this, Report.class));
+                break;
+            case R.id.menuSettings:
+                Toast.makeText(this, &quot;Settings Selected&quot;, Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_donate, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public void donateButtonPressed (View view) {
+        String method = paymentMethod.getCheckedRadioButtonId() == R.id.payPal ? &quot;PayPal&quot; : &quot;Direct&quot;;
+
+        int donatedAmount = amountPicker.getValue();
+        if (donatedAmount == 0) {
+            String text = amountText.getText().toString();
+            if (!text.equals(&quot;&quot;))
+                donatedAmount = Integer.parseInt(text);
+        }
+
+        if (donatedAmount &gt; 0) {
+            app.newDonation(new Donation(donatedAmount, method));
+            progressBar.setProgress(app.totalDonated);
+            String totalDonatedStr = &quot;$&quot; + app.totalDonated;
+            amountTotal.setText(totalDonatedStr);
+        }
+    }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Refactored Report</h1>
+<p>We now rework Report to render the actual donations - held in the DonationApp list.</p>
+<p>First some layout additions. Include these new string in strings.xml</p>
+<pre><code>    &lt;string name=&quot;defaultAmount&quot;&gt;00&lt;/string&gt;
+    &lt;string name=&quot;defaultMethod&quot;&gt;N/A&lt;/string&gt;</code></pre>
+<p>In the layout folder, create a new layout called <code>row_layout.xml</code> - replace the generated contents with the following:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot; &gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/row_amount&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignParentStart=&quot;true&quot;
+        android:layout_alignParentTop=&quot;true&quot;
+        android:layout_marginStart=&quot;48dp&quot;
+        android:layout_marginTop=&quot;20dp&quot;
+        android:text=&quot;@string/defaultAmount&quot; /&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/row_method&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_alignBaseline=&quot;@+id/row_amount&quot;
+        android:layout_alignBottom=&quot;@+id/row_amount&quot;
+        android:layout_marginStart=&quot;106dp&quot;
+        android:layout_toEndOf=&quot;@+id/row_amount&quot;
+        android:text=&quot;@string/defaultMethod&quot; /&gt;
+
+&lt;/RelativeLayout&gt;</code></pre>
+<p>The designer should look like this:</p>
+<p><img src="img/36.png" alt=""></p>
+<p>Finally, rework Report class to remove the hard coded values - and use a different &#39;adapter&#39;</p>
+<p>This is the complete class here:</p>
+<pre><code class="lang-java">package app.donation;
+
+import app.donation.R;
+
+import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.List;
+
+public class Report extends AppCompatActivity
+{
+  private ListView    listView;
+  private DonationApp app;
+
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    app = (DonationApp) getApplication();
+
+    listView = (ListView) findViewById(R.id.reportList);
+    DonationAdapter adapter = new DonationAdapter (this, app.donations);
+    listView.setAdapter(adapter);
+  }
+}
+
+class DonationAdapter extends ArrayAdapter&lt;Donation&gt;
+{
+  private Context context;
+  public List&lt;Donation&gt; donations;
+
+  public DonationAdapter(Context context, List&lt;Donation&gt; donations)
+  {
+    super(context, R.layout.row_layout, donations);
+    this.context   = context;
+    this.donations = donations;
+  }
+
+  @Override
+  public View getView(int position, View convertView, ViewGroup parent)
+  {
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+    View view       = inflater.inflate(R.layout.row_layout, parent, false);
+    Donation donation   = donations.get(position);
+    TextView amountView = (TextView) view.findViewById(R.id.row_amount);
+    TextView methodView = (TextView) view.findViewById(R.id.row_method);
+
+    amountView.setText(&quot;&quot; + donation.amount);
+    methodView.setText(donation.method);
+
+    return view;
+  }
+
+  @Override
+  public int getCount()
+  {
+    return donations.size();
+  }
+}</code></pre>
+<p>We will discuss this version in depth in class.</p>
+<p>If all goes well - then you should be able to make donations, and and the see a list of these in the report activity.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Repository</h1>
+<p>Here we shall describe how you can break the association with GitHub that you established to download the baseline <em>donation-android-2016</em> and push your refactored application to a new repository that you will create on your Bitbucket account.</p>
+<p>Access your Bitbucket account and create a repository named <em>donation-android-2016</em></p>
+<ul>
+<li>If a similarly named repo already exists on your Bitbucket account then change its name to something like <em>donation-android-v1</em>:<ul>
+<li>This may easily be done by:<ul>
+<li>clicking on the repo to be renamed, </li>
+<li>clicking on the gear wheel located on the bottom left hand side, </li>
+<li>changing the name under Repository details | Name</li>
+<li>Pressing the <em>Save repository details</em> button.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/28.png" alt="Figure 1"></p>
+<p>On the NUC cd into <em>donation-android-2016</em> and run the following commands in sequence.</p>
+<pre><code>git remote rm origin</code></pre>
+<p>This last command removes the association with GitHub.</p>
+<p>Now bring your local repo up to date, associate it with the newly created repo on Bitbucket and push all:</p>
+<pre><code>
+git add .
+
+git commit -m &quot;Donation-02 lab complete&quot;</code></pre>
+<p>Before running this next command it will be necessary to replace the placeholders <font color='red'>jdoe@wit.ie</font> and <font color='red'>jdoe</font> with the email you registered on Bitbucket and your login id:</p>
+<pre><code>git remote add origin https://jdoe@wit.org/jdoe/donation-android-2016.git &lt;------- See Figure 2</code></pre>
+<p>Finally, push your repo to Bitbucket:</p>
+<pre><code>
+git push -u origin --all  
+
+git push -u origin --tags</code></pre>
+<p>You will be asked for your Bitbucket password.</p>
+<p>Use the clone statement to complete the expression <em>git remote add origin</em> above. See Figure 2.</p>
+<p><img src="img/29.png" alt="Figure 2"></p>
+<p>On your PC cd to where you locate your repos and run the SSH clone command. You have already have installed ssh on your pc during the summer school.</p>
+<ul>
+<li>This will pull the latest commit of donation-android-2016.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<p>Project so far:</p>
+<ul>
+<li>Available to clone from GitHub: <a href="https://github.com/wit-ictskills-2017/donation-android-2017.git">donation-android-2017</a></li>
+</ul>
+<h2>Exercise 1</h2>
+<p>Run the app and insert amounts of varying lengths (1, 222, 23, 2323). Note that the second column - payment method - may be displayed at different positions. If this happens, fix it.</p>
+<p>Hint: each row is laid out by a row_donate.xml layout. The easiest way to fix this would be to experiment with the layout, and have the text fields aligned with the edges and not with each other.</p>
+<h2>Exercise 2</h2>
+<p>When a donation is accepted, set the amount on screen to 0 (in both picker and text field).</p>
+<h2>Exercise 3</h2>
+<p>When you navigate from the Donate activity to reports, there is no menu available. Bring in a menu, with two options &#39;Settings&#39; and &#39;Donate&#39; - Donate should bring you back to the donate screen.  Settings should display a Toast message indicating that Settings was selected.</p>
+<h2>Exercise 4</h2>
+<p>Introduce a new welcome screen - which should display a greeting + give the user 2 options (as simple buttons)</p>
+<ul>
+<li>Signup</li>
+<li>Login</li>
+</ul>
+<p>When Login or Signup is pressed, the app should take you directly to the Donate activity (for the moment).</p>
+<h2>Exercise 5</h2>
+<p>Introduce a Signup Activity (use the Empty Activity template), which should present the user with:</p>
+<ul>
+<li>First Name</li>
+<li>Last Name</li>
+<li>Email</li>
+<li><p>Password</p>
+</li>
+<li><p>a &#39;Register&#39; button.</p>
+</li>
+</ul>
+<p>Pressing Register should take you directly to &quot;Donate&quot; activity. Also, refactor the Welcome screen such that the &#39;signup&#39; button takes you to this screen.</p>
+<h2>Exercise 6:</h2>
+<p>Introduce a Login activty, which should just look for</p>
+<ul>
+<li>email</li>
+<li><p>password</p>
+</li>
+<li><p>a &#39;Login&#39; button</p>
+</li>
+</ul>
+<p>Pressing Login should take you directly to &quot;Donate&quot; activity.</p>
+<h2>Exercise 7</h2>
+<p>Bring in a new menu option - &#39;logout&#39;. It should take you to the welcome screen, and should be available from the donate and report activities.</p>
+<h2>Exercise 8</h2>
+<p>Introduce a &#39;User&#39; into the models package to represent the user in the usual way. Maintain a list of Users in the DonationApp object. Whenever anyone registers, then create a new User object in this list.</p>
+<h2>Exercise 9</h2>
+<p>Implement the Login activity, to now only let users in to Donate if they are registered (i.e. a matching email + password in the list of users maintained by DonationApp)</p>
+<h2>Exercise 10</h2>
+<p>If you have  any &quot;RelativeLayout&quot; layouts, convert them to &quot;ConstraintLayout&quot;.  There is a conversion function in Android Studio to do this for you. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Appendix">
+        <h1>Useful commands</h1>
+<h2>Linux</h2>
+<p>You create a folder with the mkdir command:</p>
+<pre><code>mkdir &lt;new folder&gt;</code></pre>
+<p>For example:</p>
+<pre><code>mkdir backup-projects</code></pre>
+<p>You may remove a folder and all its contents with this (dangerous) command:</p>
+<pre><code>rm -rf &lt;folder name&gt;</code></pre>
+<p>You may rename a file or folder with the <code>mv</code> command. For example to change the name of an existing file-a to file-b:</p>
+<pre><code>mv file-a file-b</code></pre>
+<h2>Git</h2>
+<p>If you wish take control of an application downloaded from a third party repo then it will be necessary to change the origin as follows:</p>
+<ul>
+<li>cd into the project in a terminal</li>
+<li>run this command:</li>
+</ul>
+<pre><code>git remote rm origin</code></pre>
+<p>Add an alternative, for example, as follows where https is the method of transfer:</p>
+<pre><code>git remote add origin https://&lt;your domain&gt;@bitbucket.org/&lt;your domain&gt;/&lt;app name&gt;</code></pre>
+<p><code>gitp</code> is our customized command to pretty-print the logs of the most recent 10 commits.</p>
+<pre><code>alias gitp=&quot;git log --pretty=format:&#39;%C(yellow)%h %&lt;(24)%C(red)%ad  %Creset%s&#39; --date=local --max-count=10&quot;</code></pre>
+<p>This command outputs all the tags and their associated messages:</p>
+<pre><code>git tag -n</code></pre>
+<p><img src="img/12.png" alt="Figure 1: Print commit logs and tags and their messages"></p>
+<p>Here are the commands to configure your git installation:</p>
+<pre><code>git user.name  = &quot;your name here&quot;  &lt;------ use double quotes
+git user.email = &quot;your email here&quot; &lt;------ use double quotes
+// Check
+git config [--global] user.name   
+git config [--global] user.email</code></pre>
+<p>You are not alone if you have difficulty understanding <code>man</code> pages. Here&#39;s a simple guide (that comes without a guarantee):</p>
+<p><a href="http://www.tfug.org/helpdesk/general/man.html">Beginners Guide to man Pages</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
