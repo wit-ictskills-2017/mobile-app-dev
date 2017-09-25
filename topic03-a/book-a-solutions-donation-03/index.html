@@ -1,0 +1,501 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      3-a: Navigation & App Structure
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Donation-03-Solutions">
+      Donation-03-Solutions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Donation-03-Solutions">
+        <h1>Donation-03 Exercise Solutions</h1>
+<p>A total of 5 exercises were set at the end of the earlier lab - Donation-03.</p>
+<p>Here we present sample solutions to exercises 2 and 5. The other exercises require experimentation and studying the official Android documentation, links to which have been provided.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Exercise 2 Solution</h1>
+<p>[2] Add an activity named Report to the application <code>android-linear-layout</code> available here:</p>
+<pre><code>https://github.com/wit-ictskills-2016/android-linear-layout.git</code></pre>
+<ul>
+<li><p>Provide menu access, following the same pattern as existing app. This is a worthwhile exercise as it will give you experience in composing an activity, menu layout, adding string resources and configuring the manifest file.</p>
+</li>
+<li><p>As layout content add the solution in step 01 of Donation 03. This will result in the display of a single list entry in the activity.</p>
+</li>
+</ul>
+<h2>Solution</h2>
+<p>Create an empty activity and call it Report.  </p>
+<p>We begin with a layout. In this we provide two arbitrary TextView widgets in a file <code>res/layout/activity_report.xml</code></p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/row_amount&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/defaultAmount&quot;
+        tools:layout_constraintTop_creator=&quot;1&quot;
+        android:layout_marginStart=&quot;48dp&quot;
+        android:layout_marginTop=&quot;20dp&quot;
+        tools:layout_constraintLeft_creator=&quot;1&quot;
+        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/row_method&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/defaultMethod&quot;
+        tools:layout_constraintTop_creator=&quot;1&quot;
+        tools:layout_constraintRight_creator=&quot;1&quot;
+        android:layout_marginEnd=&quot;79dp&quot;
+        app:layout_constraintRight_toRightOf=&quot;parent&quot;
+        android:layout_marginTop=&quot;20dp&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
+<p>Then add a menu item to <code>res/menu/menu_global.xml</code>.</p>
+<pre><code>  &lt;item
+      android:id=&quot;@+id/report&quot;
+      android:orderInCategory=&quot;100&quot;
+      android:title=&quot;@string/report&quot;/&gt;</code></pre>
+<p>In <code>res/values/strings.xml</code> provide the string resources referenced in the above 2 xml code blocks.</p>
+<pre><code>  &lt;string name=&quot;report&quot;&gt;Report&lt;/string&gt;
+  &lt;string name=&quot;defaultAmount&quot;&gt;00&lt;/string&gt;
+  &lt;string name=&quot;defaultMethod&quot;&gt;N/A&lt;/string&gt;</code></pre>
+<p>Amend the generated Report class in to the folder <code>java/app/donation</code> to this:</p>
+<pre><code>package app.layouts;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+
+public class Report extends AppCompatActivity
+{
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    // Inflate the menu; this adds items to the action bar if it is present.
+    getMenuInflater().inflate(R.menu.menu_global, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.donate:
+        startActivity(new Intent(this, Donate.class));
+        break;
+      case R.id.accept:
+        startActivity(new Intent(this, Accept.class));
+        break;
+      case R.id.message:
+        startActivity(new Intent(this, Message.class));
+        break;
+      case R.id.donation:
+        startActivity(new Intent(this, Donation.class));
+        break;
+    }
+    return true;
+  }
+
+}</code></pre>
+<p>Update the new element representing the Report activity in the manifest file:</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.Report&quot;
+        android:label=&quot;@string/report&quot;&gt;
+    &lt;/activity&gt;</code></pre>
+<p>Finally, add a Report menu handler in the previously existing activities, namely Accept, Donate, Donation, Message, Reject as follows:</p>
+<pre><code>      case R.id.report:
+        startActivity(new Intent(this, Report.class));
+        break;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Exercise 5 Solution (Anonymous class)</h1>
+<p>[5] Setting listeners was introduced in the slide deck <code>A First Android Application</code>. Three different styles were mentioned. We have already seen how setting a listener explicitly in a resource file is implemented in the donation app. This is illustrated in the code extract here taken from the file <code>res/layout/activity_donate.xml</code> (donateButtonPressed).</p>
+<pre><code>    &lt;Button
+        android:id=&quot;@+id/donateButton&quot;
+        android:layout_width=&quot;88dp&quot;
+        android:layout_height=&quot;48dp&quot;
+        android:layout_marginBottom=&quot;24dp&quot;
+        android:text=&quot;@string/donateButton&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        android:onClick=&quot;donateButtonPressed&quot;
+        android:layout_marginLeft=&quot;16dp&quot;
+        app:layout_constraintLeft_toLeftOf=&quot;parent&quot; /&gt;</code></pre>
+<p>Create two branches in your donation app, one named listener_1, the other listener_2. </p>
+<ul>
+<li>Checkout out listener_1 branch.</li>
+<li>Implement the listener for donationButtonPressed using an anonymous class.</li>
+<li>Test, add and commit to your repo and push the new branch to your remote.</li>
+<li>Now check out listener_2 branch.</li>
+<li>Implement the listener using the listener interface.</li>
+<li>Test, add and commit to your repo and push the new branch to your remote.</li>
+</ul>
+<h2>Solution (Anonymous class)</h2>
+<p>Delete this line from the Button in the activity_donation.xml file:</p>
+<pre><code>      android:onClick=&quot;donateButtonPressed&quot;</code></pre>
+<p>Make the following changes to <code>app/donation/activity/Donate.java</code>:</p>
+<ul>
+<li>In onCreate register a listener on Button donateButton. Begin with this skeleton code:</li>
+</ul>
+<pre><code>    donateButton.setOnClickListener(new View.OnClickListener() {
+
+    });</code></pre>
+<p>This will generate an error that is resolved by implementing the sole View.OnClickListener method, <code>onClick</code>.</p>
+<p><img src="img/02.png" alt="Figure 1: Error generated requiring interface method implementation to resolve"></p>
+<p><img src="img/03.png" alt="Figure 2: View.OnClickListener sole method onClick requires implementation"></p>
+<pre><code>    donateButton.setOnClickListener(new View.OnClickListener() {
+
+
+      @Override
+      public void onClick(View v) {
+
+      }
+    });</code></pre>
+<p>Note the parameter type of onClick is View. A Button type is a View as may be seen in Figure 3, an extract from the official Android documentation.</p>
+<p>The method setOnClickListener belongs to the View class and since a Button <code>is</code> a view, invoking the method on a Button object is legal.</p>
+<p>See documentation: <a href="https://developer.android.com/reference/android/widget/Button.html">Button</a> and <a href="https://developer.android.com/reference/android/view/View.OnClickListener.html">View.OnClickListener</a>.</p>
+<p>See the <a href="https://developer.android.com/reference/android/view/View.html">View</a> class for documentation on <code>setOnClickListener</code>, in particular noting the required parameter type.</p>
+<p><img src="img/01.png" alt="Figure 3: A Button is a View"></p>
+<p>The usual method of completing this would be to introduce the handler code in the onClick method. This would result in the following where we are using the body of the existing method <code>donateButtonPressed</code>.</p>
+<pre><code>        donateButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                String method = paymentMethod.getCheckedRadioButtonId() == R.id.payPal ? &quot;PayPal&quot; : &quot;Direct&quot;;
+
+                int donatedAmount = amountPicker.getValue();
+                if (donatedAmount == 0) {
+                    String text = amountText.getText().toString();
+                    if (!text.equals(&quot;&quot;))
+                        donatedAmount = Integer.parseInt(text);
+                }
+
+                if (donatedAmount &gt; 0) {
+                    app.newDonation(new Donation(donatedAmount, method));
+                    progressBar.setProgress(app.totalDonated);
+                    String totalDonatedStr = &quot;$&quot; + app.totalDonated;
+                    amountTotal.setText(totalDonatedStr);
+                    amountPicker.setValue(0);
+                    amountText.setText(&quot;&quot;);
+                }
+            }
+        });
+    }</code></pre>
+<p>Test this by registering a user, signing in and making a donation. Use the debugger, placing a break point within <code>onClick(View v)</code> and observing that the execution path routes correctly. Check the Report screen to verify the donation is displayed.</p>
+<p>We can remove much of this ugliness by actually invoking the existing <code>donateButtonPressed</code> method. The listener registration then becomes:</p>
+<pre><code>    donateButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+
+
+      }
+    });</code></pre>
+<p>This is a considerable improvement. But if, as is typically the situation, there are several View event handlers within the activity then the <code>onClick</code> method is repeated for each handler. We show how to avoid this code repetition in the next step by using the interface approach (also known as the delegated method or pattern) to setting listeners.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Exercise 5 Solution (Interface)</h1>
+<p>Change the class Donate header so that it implements the View.OnClickListener interface.</p>
+<pre><code>
+public class Donate extends AppCompatActivity implements View.OnClickListener {
+  ...
+  ...
+}</code></pre>
+<p>The error is resolved by implementing View.OnClickListener method as shown in Figures 1 and 2 here.</p>
+<p><img src="img/04.png" alt="Figure 1: Error generated requiring interface method implementation to resolve"></p>
+<p><img src="img/05.png" alt="Figure 2: View.OnClickListener sole method onClick requires implementation"></p>
+<p>In onCreate register the event handler:</p>
+<pre><code>    donateButton.setOnClickListener(this);</code></pre>
+<p>Recall that the parameter type of setOnClickListener is View.OnClickListener. Because Donate now implements View.OnClickListener, <code>this</code> is a valid parameter.</p>
+<p>Complete the implementation of onClickView:</p>
+<pre><code>
+  @Override
+  public void onClick(View v) {
+    switch (v.getId()) {
+      case R.id.donateButton:
+        donateButtonPressed(v);
+    }
+  }</code></pre>
+<p>This onClick implementation can now handle all View events. All that is required is to add the appropriate <code>case</code> block.</p>
+<p>Test this by registering a user, signing in and making a donation. Use the debugger, placing a break point within <code>onClick(View v)</code> and observing that the execution path routes correctly. Check the Report screen to verify the donation is displayed.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

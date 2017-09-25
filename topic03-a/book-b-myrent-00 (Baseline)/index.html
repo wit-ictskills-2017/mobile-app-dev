@@ -1,0 +1,1040 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      3-a: Navigation & App Structure
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-00 (Baseline)">
+      MyRent-00 (Baseline)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-00 (Baseline)">
+        <h1>Objectives</h1>
+<p>We start a new application in this lab, which will be succeeded by numerous version over the next few topics. In the first lab the focus is on explaining the essential &#39;plumbing&#39; of the app, and introducing the first Interface based listener you may have encountered.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Create Project</h1>
+<p>Click on <em>Start a new Android Studio project</em> on the Quick Start panel in the Welcome screen.</p>
+<ul>
+<li>Complete the wizard steps as shown in the following screenshots:</li>
+</ul>
+<p><img src="img/00.png" alt="Figure 1: Android Studio - Start new Application Project"> </p>
+<ul>
+<li>Carefully note the Project location you choose. </li>
+</ul>
+<p><img src="img/01.png" alt="Figure 2: MyRent app located in folder of your choice">
+<img src="img/02.png" alt="Figure 3: Select form factor and platform">
+<img src="img/03.png" alt="Figure 4: Select Empty Activity">
+<img src="img/04.png" alt="Figure 5: Customize the activity"></p>
+<p>Your build.gradle (Module:app) should look similar to this one:</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion &quot;25.0.3&quot;
+    defaultConfig {
+        applicationId &quot;org.wit.myrent&quot;
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName &quot;1.0&quot;
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:2.2.2&#39;, {
+        exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39;
+    })
+    compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+}</code></pre>
+<p>If you have to make changes to build.gradle, it is necessary to sync the project:
+<img src="img/05b.png" alt=""></p>
+<p>The default layout should now be as shown in Figure 6.</p>
+<p><img src="img/05.png" alt="Figure 6: Android Studio IDE">
+<img src="img/06.png" alt="Figure 7: MyRent Android application directory structure"></p>
+<ul>
+<li>Now in bash terminal cd to your project folder:<ul>
+<li>Run <em>git init</em> to create an empty repo.</li>
+<li>In Sublime Text or other suitable text editor edit the generated <code>.gitignore</code> file and add the following content:</li>
+</ul>
+</li>
+</ul>
+<pre><code>#built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+/bin/
+/gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Android Studio
+# https://www.jetbrains.com/idea/help/project.html
+*.iml
+.idea
+.gradle
+/build/</code></pre>
+<p>Before committing, check that git is properly configured with your name and email:</p>
+<pre><code>git config --global -l</code></pre>
+<p>Your git output, so far, should be similar to this:</p>
+<pre><code>Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Siobhan\Documents\2017-2018\mobile-app-dev\workspace-labs\MyRent&gt;git init
+Initialized empty Git repository in C:/Users/Siobhan/Documents/2017-2018/mobile-app-dev/workspace-labs/MyRent/.git/
+
+C:\Users\Siobhan\Documents\2017-2018\mobile-app-dev\workspace-labs\MyRent&gt;git config --global -l
+push.default=simple
+user.email=sdrohan@wit.ie
+user.name=Siobhan Drohan
+
+C:\Users\Siobhan\Documents\2017-2018\mobile-app-dev\workspace-labs\MyRent&gt;</code></pre>
+<p>Now commit your changes:</p>
+<pre><code>git add .
+git commit -m &quot;MyRent-00 (step 01): Baseline app built using Android Studio 2.3.1&quot;</code></pre>
+<p>Create a tracking repository on your <a href="https://bitbucket.org/">Bitbucket</a> account. Follow the Bitbucket instructions to associate your local repo with the remote repo and on making the initial push from local to remote.</p>
+<ul>
+<li>Progressively add and commit to the repo as you complete this and subsequent labs.</li>
+<li>We suggest you tag each lab&#39;s code v0, v1, v2 ..., each tag corresponding to a lab.</li>
+<li>Additionally, you may find it helpful to commit each step of each lab with a suitable message as exemplified in Figure 8 and relating to the Donation app encountered earlier in the course.</li>
+</ul>
+<p><img src="img/55.png" alt="Figure 8: Example of git commit and messaging"></p>
+<p>Install and launch the app on a device or emulator. Figure 9 is a screenshot of the app installed on the Android emulator.</p>
+<p><img src="img/07.png" alt="Figure 9: First run MyRent app"></p>
+<p>For reference, the sdk configuration shown in Figure 10 is that on which this lab is based. The latest SDK Platform is API 23 (installed) and API 25 (partially installed). Your platform configuration may vary from this. You may inspect your configuration by launching the SDK Manager as demonstrated in Figure 11.</p>
+<p><img src="img/09.png" alt="Figure 10: Android SDK Manager showing installed tools, adk and extras"></p>
+<p><img src="img/56.png" alt="Figure 11: Launch Android SDK Manager"></p>
+<p>The code below shows the lab module&#39;s build.gradle. Observe that the minSdkVersion is 19. The goal is that MyRent may be installed and run on phones from and including this version. Study the table <a href="http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels">here</a> to get an appreciation of the relationship between platform version (example Android 4.1) and API level (example JELLY_BEAN).</p>
+<p>MyRent app build.gradle:</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion &quot;25.0.3&quot;
+    defaultConfig {
+        applicationId &quot;org.wit.myrent&quot;
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName &quot;1.0&quot;
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:2.2.2&#39;, {
+        exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39;
+    })
+    compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Layout XML</h1>
+<p>So far, we have been viewing our Project in Android layout.  However, we now want to look at the generated R.java file.  To see this, swap to Project Files layout:</p>
+<p><img src="img/14a.png" alt="Figure 1a: Project files layout"></p>
+<p>Some of the key files of the application are identified in the screenshot of the Project Files Tools Window as illustrated in Figure 1.</p>
+<p><img src="img/14b.png" alt="Figure 1b: Key Application Files"></p>
+<p><strong>Layout XML Code</strong></p>
+<p>The file <em>activity_myrent.xml</em> specifies the screen layout.
+The textual content of the file is as follows. </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;org.wit.myrent.MyRentActivity&quot;&gt;
+
+    &lt;TextView
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;Hello World!&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+        app:layout_constraintRight_toRightOf=&quot;parent&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
+<p>This translates to the graphical layout shown in Figure 2.</p>
+<p><img src="img/15.png" alt="Figure 2: Graphical representation of activity_myrent.xml"></p>
+<p>Tabs enable one to quickly switch between graphical and textual content as demonstrated in Figure 3.
+<img src="img/16.png" alt="Figure 3: Tabs facilitate switching between graphical and textual views of layout"></p>
+<p>From the XML above you can see that the layout comprises a TextView wrapped in a Constraint Layout.</p>
+<ul>
+<li><p>A <a href="https://developer.android.com/training/constraint-layout/index.html">Constraint Layout</a> allows you to create large and complex layouts with a flat view hierarchy (no nested view groups). It&#39;s similar to <a href="https://developer.android.com/reference/android/widget/RelativeLayout.html">RelativeLayout</a> in that all views are laid out according to relationships between sibling views and the parent layout, but it&#39;s more flexible than RelativeLayout and easier to use with Android Studio&#39;s Layout Editor.  In this app, to date, there is only one child view - a TextView.</p>
+</li>
+<li><p>A <a href="http://developer.android.com/reference/android/widget/TextView.html">TextView</a> displays text and is configured by default to be read-only. </p>
+</li>
+</ul>
+<p>Both the ConstraintLayout and TextView definitions contain attributes that determine characteristices such as, for example, their size and position. </p>
+<p>Thus, in the case of TextView, the attribute <em>android:layout_width</em>, whose value is <em>wrap_content</em>, determines that the view will be created just wide enough to contain the text specified by the attribute <em>android:text</em> (whose value is <em>@string/hello_world</em>).</p>
+<p>This becomes clear if you select <em>Hello world</em> in the graphical representation of <em>activity_myrent.xml</em> as demonstrated in Figure 4.
+<img src="img/17.png" alt="Figure 4: TextView width attribute value set to &quot;wrap_content&quot;"></p>
+<p>Were the TextView attribute <em>android:layout_width</em> set to <em>fill_parent</em> the situation would be as represented in Figure 5.
+<img src="img/18.png" alt="Figure 5: TextView width attribute value set to &quot;fill_parent&quot;"></p>
+<p>A short tutorial is available is available <a href="http://www.mkyong.com/android/android-wrap_content-and-fill_parent-example/">here</a> that demonstrates the effect of different values for <em>layout_width</em> and <em>layout_height</em> attributes.</p>
+<p>An interesting feature of Android Studio may be observed here. Figure 6 below contains a screen shot of of <em>activity_myrent.xml</em>. At first glance the string <em>Hello world</em> seems to be hardwired. However if you hover over the string (as was done in preparing the screenshot) you will notice the underlying reference to <em>@string/hello_world</em> in the <em>res/values/strings.xml</em> file. This approach differs from that in Eclipse where <em>@string/hello_world</em> is displayed in the xml file. </p>
+<ul>
+<li><p>You may disable this feature by accessing File | Settings | Editor | Code Folding and unticking Android String References.</p>
+</li>
+<li><p>It&#39;s also interesting to note that if you copy the textual content of <em>activity_myrent.xml</em> from Android Studio and paste it to a text editor, <em>@string/hello_world</em> is displayed, not <em>Hello world</em>.</p>
+</li>
+<li><p>Hover over other attributes in the layout file, such as padding, to observe somewhat similar effects.</p>
+</li>
+</ul>
+<p><img src="img/08.png" alt="Figure 6: Screenshot of MyRent layout"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Strings</h1>
+<p>The file <em>strings.xml</em>, located in <em>res/values</em>, contains all the text that <em>MyRent</em> application uses.
+<img src="img/22.png" alt="Figure 1: Avoid hardcoding strings by locating in file strings.xml"></p>
+<p>This arrangement, rather than hard-coding strings when and where required in the code, greatly facilites any changes to the strings, such as for example in localization - adapting your application to a new language.</p>
+<p>Presently <em>strings.xml</em> contains only 2 entries (see Figure 2):</p>
+<ul>
+<li>The application name: MyRent</li>
+<li>The content displayed on running the app: <em>Hello world!</em></li>
+</ul>
+<p><img src="img/22a.png" alt="Figure 2: strings.xml"></p>
+<p>The name of the application may be obtained theoughout the application by accessing a string element thus:</p>
+<p><strong>&quot;@string/app_name&quot;</strong></p>
+<p>This is illustrated in Figure 3 below where the application&#39;s name is retrieved in <em>AndroidManifest.xml</em>.</p>
+<p>Figure 4 shows how the <em>Hello world!</em> string, displayed when the application is launched, is obtained.</p>
+<p><img src="img/24.png" alt="Figure 3: AndroidManifest.xml">
+<img src="img/25.png" alt="Figure 4: res/layout/activity_myrent.xml"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>R File</h1>
+<p>All auto-generated files are located in the <em>build</em> folder structure and should not be modified by the developer.</p>
+<ul>
+<li>BuildConfig.java contains a constant that allows one to run some code only in debug mode.</li>
+</ul>
+<p><img src="img/28a.png" alt="Figure 1: BuildConfig should not be edited by developer"></p>
+<ul>
+<li>The R file (R.java) is the glue between Java and resources, for example XML files, images and so on.<ul>
+<li>The file is automatically regenerated whenever a change is made to any of the content in the <em>res</em> directory.<ul>
+<li>For example, when an image is added, or when an XML file added or modified.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/28.png" alt="Figure 2: R File should not be edited by developer"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Java</h1>
+<p><img src="img/29.png" alt="Figure 1: Java files location"></p>
+<p><strong>MyRentActivity</strong></p>
+<ul>
+<li>This is a subclass of the Android class <em>AppCompatActivity</em></li>
+<li>An <a href="https://developer.android.com/reference/android/support/v7/app/AppCompatActivity.html">AppCompatActivity</a> creates (or inflates) a window within which are located UI components such as buttons, text and so on.  It also provides Material color themes and app bar support. Use of this class requires that you use Theme.AppCompat themes for consistent visual presentation. </li>
+</ul>
+<p><strong>onCreate</strong></p>
+<ul>
+<li>This method initializes the activity. </li>
+<li>Note the argument to <em>setContentView</em>: <em>R.layout.activity_myrent</em>.<ul>
+<li>This is an integer constant that is autogenerated, the ID of the resource to be inflated, namely the MyRent layout.</li>
+<li>A resource is some item of the application that is not code, such as for example an images, XML file, audio file and so on.</li>
+</ul>
+</li>
+</ul>
+<p><strong>onCreateOptions</strong></p>
+<ul>
+<li>This method inflates the menu and adds any items present to the Action bar.<ul>
+<li>In the case of MyRent this is shown in Figure 3 below.</li>
+</ul>
+</li>
+</ul>
+<p><strong>onOptionsItemSelected</strong></p>
+<ul>
+<li>When an item on the action bar is clicked the program&#39;s execution path routes through this method.</li>
+<li>Figure 3 below shows the situation where <ul>
+<li><em>MyRent</em> is run in debug mode,</li>
+<li>The <em>Settings</em> menu item has been clicked</li>
+<li>The program halts at a breakpoint in onOptionsItemSelected</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/30.png" alt="Figure 2: MyRentActivity.java"></p>
+<h2>Menu Items</h2>
+<p>In previous projects, we created menus.  If we had a menu on this activity, we would have code similar to this (note: we would extend AppCompatActivity and not Activity):</p>
+<p><img src="img/30b.png" alt="Figure 3: MyRentActivity.java"></p>
+<p><img src="img/31.png" alt="Figure 4: MyRent menu item on Action bar"></p>
+<p><img src="img/32.png" alt="Figure 5: Program halts at breakpoint on line 28 when menu selected"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Run App</h1>
+<p>This step only applies to those intending to use the <a href="https://www.genymotion.com/">Genymotion emulator</a>.</p>
+<p><strong>Install Genymotion</strong>
+Follow <a href="https://stackoverflow.com/documentation/android/9245/genymotion-for-android#t=201705290944516953402">these instructions</a> to set up an account with GenyMotion and install it for Android Studio.</p>
+<p><strong>Start the Genymotion emulator</strong></p>
+<ul>
+<li>Press the Genymotion icon on the tool bar</li>
+<li>The Genymotion Virtual Device Manager opens</li>
+<li>Select an available device<ul>
+<li>For example <em>Google Nexus 7</em> (min API 19).</li>
+</ul>
+</li>
+<li>Press the Start button on the right of the Device Manager window
+<img src="img/50.png" alt="Figure 1: Start Genymotion emulator"></li>
+<li>After a brief pause the emulator will launch (Figure 2)
+<img src="img/51.png" alt="Figure 2: Emulator launched"></li>
+</ul>
+<p>If the emulator fails to launch on pressing the toolbar icon, launch it from the Start menu (Windows) or the Applications folder (Mac).</p>
+<p><strong>Run the app</strong></p>
+<p>Select <em>myrent-android</em> project in the Android Studio Package Explorer</p>
+<ul>
+<li>From the menu, execute the command    <ul>
+<li>Run As | Android Application (Figure 3)</li>
+</ul>
+</li>
+<li>The Android Device Chooser window opens.<ul>
+<li>Press the radio button <em>Choose a running Android device</em> and select device (for example <em>genymotion-google-nexus</em> as shown in Figure 4).</li>
+<li>Optionally, tick the box: <em>Use same device for future launches</em></li>
+<li>Press OK</li>
+</ul>
+</li>
+<li>The application should open in the emulator as depicted in Figure 5<ul>
+<li>Reminder: unless the emulator is unlocked (by dragging the lock icon to the right margin) the application window may not appear.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/52.png" alt="Figure 3: Run application using menu command or toolbar">
+<img src="img/53.png" alt="Figure 4: Android Device Chooser - Select emulator on which to run app">
+<img src="img/54.png" alt="Figure 5: MyRent app running on Genymotion emulator"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Model</h1>
+<p>We first begin with a new model class: Residence.</p>
+<ul>
+<li>Create the file in the package <em>org.wit.myrent</em>.</li>
+<li>It contains three fields:<ul>
+<li>Long id, a pseudo-random long integer.</li>
+<li>String geolocation, a field representing latitude and longitude, the geolocation of a particular residence.</li>
+</ul>
+</li>
+<li>Setter and getter methods for geolocation are also provided.</li>
+</ul>
+<h2>Residence.java</h2>
+<pre><code>package org.wit.myrent;
+
+import java.util.Random;
+
+public class Residence
+{
+  private Long id;
+
+  //a latitude longitude pair
+  //example &quot;52.4566,-6.5444&quot;
+  private String geolocation;
+
+  public Residence()
+  {
+    id = unsignedLong();
+  }
+
+  /**
+   * Generate a long greater than zero
+   * @return Unsigned Long value greater than zero
+   */
+  private Long unsignedLong() {
+    long rndVal = 0;
+    do {
+      rndVal = new Random().nextLong();
+    } while (rndVal &lt;= 0);
+    return rndVal;
+  }
+
+  public void setGeolocation(String geolocation)
+  {
+    this.geolocation = geolocation;
+  }
+
+  public String getGeolocation()
+  {
+    return geolocation;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Layout</h1>
+<p>A general note on layout development: Android Development Kit (ADK) provides two ways to to create a user interface (UI):</p>
+<ul>
+<li><p>Declarative</p>
+<ul>
+<li>Use XML to define how the UI will look</li>
+<li>Developing the UI declaratively has the advantage of providing immediate visual feedback.</li>
+</ul>
+</li>
+<li><p>Programmatic</p>
+<ul>
+<li>Write all necessary code in Java.</li>
+</ul>
+</li>
+</ul>
+<p>In this series of labs we shall develop the UI in XML but use Java, where necessary, to interact with UI components. For example when data is entered in a UI control (for example a text input component), then the ensuing operations will be handled programmatically using Java.</p>
+<p>Back to the present iteration: We have completed the refactoring of the Java code by adding the Residence class.</p>
+<p>Here we shall address the necessary changes to the layout.</p>
+<p>First, we need to make a change to the file <em>res/values/strings.xml</em>.</p>
+<p>The legacy code from the baseline MyRent app is as shown here in Figure 1:</p>
+<p><img src="img/38.png" alt="Figure 1: Legacy strings.xml">  </p>
+<p>Replace this with the following:</p>
+<p>Filename: strings.xml</p>
+<pre><code>&lt;resources&gt;
+    &lt;string name=&quot;app_name&quot;&gt;MyRent&lt;/string&gt;
+    &lt;string name=&quot;title_activity_myrent&quot;&gt;MyRentActivity&lt;/string&gt;
+    &lt;string name=&quot;geolocation_hint&quot;&gt;52.253456,-7.187162&lt;/string&gt;
+&lt;/resources&gt;</code></pre>
+<p>Observe that we have deleted the  <em>Hello world!</em> string and replaced it with a string describing the Geolocation hint.</p>
+<p>Recall the output generated on launching the baseline app:</p>
+<p><img src="img/39.png" alt="Figure 2"></p>
+<p>Our goal is now to replace this output with the following:</p>
+<p><img src="img/40.png" alt="Figure 3"></p>
+<p>Open <em>activity_myrent.xml</em> in the folder <em>res/layout</em> </p>
+<p>Its content should be as shown in Figure 4:
+<img src="img/41.png" alt="Figure 4: Legacy activity_layout.xml"></p>
+<p>Replace the content of the file with the following:</p>
+<h2>activity_myrent.xml</h2>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.constraint.ConstraintLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;org.wit.myrent.MyRentActivity&quot;&gt;
+
+    &lt;EditText
+        android:id=&quot;@+id/geolocation&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_marginLeft=&quot;8dp&quot;
+        android:layout_marginRight=&quot;8dp&quot;
+        android:layout_marginTop=&quot;16dp&quot;
+        android:hint=&quot;@string/geolocation_hint&quot;
+        app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+        app:layout_constraintRight_toRightOf=&quot;parent&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot;
+        app:layout_constraintHorizontal_bias=&quot;0.5&quot; /&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;</code></pre>
+<p><img src="img/05a.png" alt="Figure 5: Graphical layout of Activity">.</p>
+<p>Study the Graphical Layout, Outline and Properties in the IDE, all as shown in Figure 5. </p>
+<ul>
+<li><p>Notice the reference to the hint <em>52.253456,-7.187162</em>:</p>
+<ul>
+<li>@string/geolocation_hint<ul>
+<li>This is a reference to a string called <em>geolocation_hint</em> that is located in <em>res/values/string.xml</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Notice also the XML statement: *android:id = &quot;@+id/geolocation&quot;</p>
+<ul>
+<li>The @+ indicates that an identifier named <em>geolocation</em> is being created and automatically assigned a value unique in this app.<ul>
+<li>This identifier is used in the Java code to obtain a reference to the EditText control. More on this later.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Tip</strong>: We have chosen identifiers such as <em>geolocation</em> and <em>geolocation_hint</em> to be as self-documenting as possible. </p>
+<ul>
+<li>We could have accepted default names but to do so would make development all the more difficult. </li>
+<li>The practice that will be adopted in this set of labs, therefore, will be to choose names that can be easily associated with the entities they represent, that is, names that are as self-documenting as possible.</li>
+</ul>
+</li>
+</ul>
+<p>The application should be error free and capable of being launched and generating output as shown here in Figure 6.</p>
+<p><img src="img/33.png" alt="Figure 6: MyRent"></p>
+<p><strong>Tip</strong>: in order to understand more clearly how layout works, refer to Figure 7 below which shows how selected parts of the UI may be colored during development.</p>
+<ul>
+<li>This requires adding colours to a file called <em>colors.xml</em> in <em>res/values</em>.  Define the additional colors you require as illustrated below:</li>
+</ul>
+<p>Filename: colors.xml</p>
+<pre><code>&lt;resources&gt;
+    &lt;color name=&quot;colorPrimary&quot;&gt;#3F51B5&lt;/color&gt;
+    &lt;color name=&quot;colorPrimaryDark&quot;&gt;#303F9F&lt;/color&gt;
+    &lt;color name=&quot;colorAccent&quot;&gt;#FF4081&lt;/color&gt;
+    &lt;color name=&quot;red&quot;&gt;#ffff0000&lt;/color&gt;
+    &lt;color name=&quot;green&quot;&gt;#FF99CC00&lt;/color&gt;
+    &lt;color name=&quot;darkgreen&quot;&gt;#124816&lt;/color&gt;
+    &lt;color name=&quot;blue&quot;&gt;#FF33B5E5&lt;/color&gt;
+    &lt;color name=&quot;orange&quot;&gt;#FFFFBB33&lt;/color&gt;
+    &lt;color name=&quot;purple&quot;&gt;#FFAA66CC&lt;/color&gt;
+    &lt;color name=&quot;darkorange&quot;&gt;#FFFF8800&lt;/color&gt;
+    &lt;color name=&quot;black&quot;&gt;#161803&lt;/color&gt;
+    &lt;color name=&quot;white&quot;&gt;#ffffff&lt;/color&gt;
+&lt;/resources&gt;</code></pre>
+<p><img src="img/34.png" alt="Figure 7: Using color in layout"></p>
+<p><img src="img/34a.png" alt="Figure 8: Using color in layout"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Listeners</h1>
+<p>We shall now inject code into the MyRentActivity class that shall:</p>
+<ul>
+<li>Listen for changes to the Geolocation input control</li>
+<li>When changes are detected, that is when a user enters data, the listener will receive the data and transmit it to the model class, Residence.</li>
+<li>We shall introduce a Residence type field and instantiate this in the MyRentActivity onCreate method.</li>
+<li>We shall also introduce an EditText type field and assign to this a reference to the EditText in the layout screen.<ul>
+<li>We will use the <em>geolocation</em> auto-generated identifier to obtain a reference to this EditText control.</li>
+<li>This reference is obtained from the expression <em>(EditText)View.findViewById(R.id.geolocation)</em>.<ul>
+<li>See Figure 1 below for an explanation of <em>R.id.geolocation</em></li>
+</ul>
+</li>
+<li>We chose the name <em>geolocation</em> when writing the file <em>activity_myrent.xml</em><ul>
+<li><em>android:id=&quot;@+id/geolocation&quot;</em></li>
+<li>Notice that, in the file <em>activity_myrent.xml</em>, there is a + sign in the value for android:id; this indicated an id will be autogenerated, located in the R file from where it is accessible in the Java, in this case from MyRentActivity.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/35.png" alt="Figure 1: The R class"></p>
+<p>Here are the steps in refactoring MyRentActivity to introduce a listener:</p>
+<p>First introduce a reference to the model object + the TextEdit field:</p>
+<pre><code>public class MyRentActivity extends AppCompatActivity
+{
+  private EditText  geolocation;
+  private Residence residence;
+
+  ...
+  ...
+}</code></pre>
+<ul>
+<li>An import is necessary:</li>
+</ul>
+<pre><code>import android.widget.EditText;</code></pre>
+<ul>
+<li><p>Now create both objects in the onCreate method:</p>
+<pre><code>@Override
+protected void onCreate(Bundle savedInstanceState)
+{
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_myrent);
+
+  geolocation = (EditText) findViewById(R.id.geolocation);
+  residence = new Residence();
+}</code></pre>
+</li>
+</ul>
+<p>Next we implement the Listener interface:</p>
+<pre><code>public class MyRentActivity extends Activity implements TextWatcher
+{
+  ...
+  ...
+}</code></pre>
+<p>The following steps simplify the addition of interface methods:</p>
+<ul>
+<li>When you add the <em>implements TextWatcher</em> to the class header an error is indicated.<ul>
+<li>Caused by absence of interface&#39;s methods: these must be implemented in MyRentActivity.</li>
+</ul>
+</li>
+<li>Place cursor anywhere in class header.</li>
+<li><p>Press Alt + Enter. This opens a window with a list of options. Select <em>Implement methods</em> and hit return. See Figure 2.
+<img src="img/35a.png" alt="Figure 2: Error indicated due to as yet unimplemented interface methods"></p>
+</li>
+<li><p>You are then presented with a further window listing the methods to be overrideen as shown in Figure 3. Press OK.</p>
+</li>
+<li>The methods are then implemented in outline (See Figure 4); it remains for you to complete as appropriate.
+<img src="img/35b.png" alt="Figure 3: List of options available - select Implement methods">
+<img src="img/35c.png" alt="Figure 4: Outline implementations of interface methods auto-generated"></li>
+</ul>
+<p>At this stage it is necessary to fully implement only <em>afterTextChanged</em>.</p>
+<p>Here is the required implementation:</p>
+<pre><code>  @Override
+  public void afterTextChanged(Editable editable)
+  {
+    residence.setGeolocation(editable.toString());
+  }
+
+  @Override
+  public void beforeTextChanged(CharSequence c, int start, int count, int after)
+  {
+  }
+
+  @Override
+  public void onTextChanged(CharSequence c, int start, int count, int after)
+  {
+  }</code></pre>
+<p>These imports are required:</p>
+<pre><code>import android.text.Editable;
+import android.text.TextWatcher;</code></pre>
+<p>It is also necessary to register a Textwatcher: add this code at the end of onCreate:</p>
+<pre><code>    // Register a TextWatcher in the EditText geolocation object
+    geolocation.addTextChangedListener(this);</code></pre>
+<ul>
+<li><p>Test the code by placing breakpoints at:<br></p>
+<ul>
+<li><em>residence.setGeolocation</em> in <em>MyRentActivity.afterTextChanged</em>.</li>
+<li><em>setGeolocation</em> in <em>Residence</em> class.</li>
+</ul>
+</li>
+<li><p>Launch MyRent using the debugger.
+<img src="img/42c.png" alt="Figure 5: Run app using debugger from menu or using toolbar"></p>
+</li>
+<li><p>Begin to input a new geolocation in the input window in MyRent emulator.</p>
+</li>
+<li>The program should halt at the first breakpoint and it should be possible to see the inputted digits in the <em>Variables</em> window as shown in Figure 6.</li>
+</ul>
+<p><img src="img/42a.png" alt="Figure 6: Breakpoint set at residence.setGeolocation"></p>
+<ul>
+<li>Figure 7 contains a screenshot of the debugger toolbar with notes explaining the function of those most frequently used. 
+<img src="img/42b.png" alt="Figure 7: Debugger controls"></li>
+<li>Press <em>Run to cursor</em> to continue execution to the second breakpoint. Examine the values in Variable windows again: see Figure 8.
+<img src="img/42.png" alt="Figure 8: Program halts in Residence"></li>
+</ul>
+<p>Let&#39;s examine the listener code in MyRentActivity in some detail.</p>
+<ul>
+<li><p>Note that we have created an instance variable <em>EditText geolocation</em>.</p>
+</li>
+<li><p>The statement <em>geolocation = (EditText) v.findViewById(R.id.geolocation);</em> obtains a reference to the Geolocation input contol and assigns it to this instance variable.</p>
+<ul>
+<li>R.id.geolocation is the id referencing this control.</li>
+</ul>
+</li>
+<li><p>EditText is a subclass of <a href="http://developer.android.com/reference/android/widget/TextView.html">TextView</a>. TextView has a method <em>addTextChangedListener</em>. We invoke this method.</p>
+<ul>
+<li>The signature of <em>addTextChangedListener</em> is:
+<strong>public void addTextChangedListener (TextWatcher watcher)</strong>.</li>
+<li><a href="http://developer.android.com/reference/android/text/TextWatcher.html">TextWatcher</a> is an interface: it has 3 methods (that must be implemented on instantiation of a class implementing Textwatcher):<ul>
+<li>onTextChanged</li>
+<li>beforeTextChanged</li>
+<li>afterTextChanged</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It&#39;s becoming clearer what we have done, namely:<ul>
+<li>Obtained a reference to the UI Geolocation input control (<em>geolocation</em>)</li>
+<li>Invoked the method <em>addTextChanged</em> on <em>geolocation</em></li>
+<li>As a parameter to addTextChangedListener, created an anonymous class that implemented the TextWatcher listener interface<ul>
+<li>Fully implemented the method we&#39;re interested in: <em>onTextChanged</em></li>
+<li>Implemented the remaining two methods as wrappers only.<ul>
+<li>Recall that in using an interface all its methods must be implemented, otherwise a compile-time error is generated.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/37.png" alt="Figure 9: Analysis of listener code"></p>
+<p>For reference, here is the latest MyRentActivity class:</p>
+<pre><code>package org.wit.myrent;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.EditText;
+
+public class MyRentActivity extends AppCompatActivity implements TextWatcher
+{
+  private EditText geolocation;
+  private Residence residence;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_myrent);
+
+    geolocation = (EditText) findViewById(R.id.geolocation);
+    residence = new Residence();
+
+    // Register a TextWatcher in the EditText geolocation object
+    geolocation.addTextChangedListener(this);
+  }
+
+
+  @Override
+  public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+  {
+
+  }
+
+  @Override
+  public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+  {
+
+  }
+
+  @Override
+  public void afterTextChanged(Editable editable)
+  {
+    residence.setGeolocation(editable.toString());
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Summary</h1>
+<p>Here is what we have done in this topic:</p>
+<ul>
+<li><p>Created a model class, Residence.</p>
+<ul>
+<li>We will progressively extend this class as we develop MyRent.</li>
+<li>At the end of this topic, Residence includes:<ul>
+<li>An id that will have a unique value for each instance of Residence.</li>
+<li>A String containing a geolocation in the form of <em>latitude,longitude</em>.<ul>
+<li>For example: &quot;52.45678,-7.54321&quot;</li>
+<li>Five places of decimals provides accuracy not less than about +/- 1 metre.</li>
+</ul>
+</li>
+<li>Getter and setter methods for geolocation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Created a layout in xml</p>
+<ul>
+<li>Introduced an EditText input control to accept and display geolocation coordinates</li>
+</ul>
+</li>
+<li><p>Added a listener to the Activity class to capture any changes in input (the geolocation) and transmit these changes to the Residence object for storage.</p>
+</li>
+</ul>
+<p>The application at the end of this lab is available for reference here:</p>
+<pre><code>https://github.com/wit-ictskills-2017/myrent-00.git</code></pre>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
