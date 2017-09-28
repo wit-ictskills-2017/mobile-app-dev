@@ -1,0 +1,868 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      3-b: Platform & Events
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Event-Handling">
+      Event-Handling
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <a class="item" data-tab="Archives">
+      Archives
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Event-Handling">
+        <h1>Objectives</h1>
+<p>This is a short lab whose aim is to provide a detailed explanation of event handling via a simple standalone non-android application</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>ResidenceActivity</h1>
+<p>Here is an extract from a similar ResidenceActivity.java.  Here, the TextWatcher listener is introduced by means of an anonymous class:</p>
+<pre><code>  private EditText geolocation;  
+  ...
+  ...
+  ...
+  private void geolocation(View v)
+  {
+    // Respond to user input
+    geolocation = (EditText) v.findViewById(R.id.geolocation);
+    geolocation.addTextChangedListener(new TextWatcher()
+    {
+      public void onTextChanged(CharSequence c, int start, int before, int count)
+      {
+        residence.setGeolocation(c.toString());
+      }
+
+      public void beforeTextChanged(CharSequence c, int start, int count, int after)
+      {
+        // this space intentionally left blank
+      }
+
+      public void afterTextChanged(Editable c)
+      {
+        // this space intentionally left blank
+      }
+    });
+  }</code></pre>
+<p>Figure 1 provides an outline analysis of the method.</p>
+<p><img src="img/01.png" alt="Figure 1: Analysis of callback and listener code"></p>
+<p>In the following steps we shall develop short programs that will, hopefully, explain more fully how the pattern in this method, <em>geolocation</em>, works.</p>
+<p>We shall select names for classes, interface and methods that, where appropriate, are the same as in <em>geolocation</em>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Callback (Standalone method)</h1>
+<p>This approach is for the purpose of instruction only and is unlikely to be used very much in practice.</p>
+<ul>
+<li>Create a project in Eclipse named <em>callbacks</em>.</li>
+<li>Within the project create a package <em>org.wit.callback</em>.</li>
+<li>We shall populate this package with the following files:<ul>
+<li>Callback.java</li>
+<li>EventLoop.java</li>
+<li>TextView.java</li>
+<li>TextWatcher.java
+<img src="img/03.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<p>Here is the TextWatcher code:</p>
+<p>Filename: TextWatcher.java</p>
+<pre><code>package org.wit.callback;
+
+public interface TextWatcher
+{
+  void onTextChanged(String changedtext);
+}</code></pre>
+<p>As you can see, TextWatcher is a simple interface with one method.</p>
+<ul>
+<li>Both the interface name and its method have been chosen to correspond to names in the ResidenceActivity code (see Figure 1 in previous step).</li>
+</ul>
+<p>Next, create a class that implements TextWatcher:</p>
+<p>Filename: Callback.java</p>
+<pre><code>package org.wit.callback;
+
+public class Callback implements TextWatcher
+{
+    @Override
+    public void onTextChanged(String changedtext)
+    {
+      System.out.println(changedtext);
+    } 
+}</code></pre>
+<p>This class does nothing other than implement the TextWatcher method <em>onTextChanged</em></p>
+<ul>
+<li>Compare again with the code in ResidenceActivity.</li>
+</ul>
+<p>The next class we develop is TextView:</p>
+<p>Filename: TextView.java</p>
+<pre><code>
+package org.wit.callback;
+
+public class TextView
+{
+  private TextWatcher textwatcher;
+  private boolean somethingHappened;
+
+  public void addTextChangedListener(TextWatcher textwatcher)
+  {
+    // Save the event object for later use.
+    this.textwatcher = textwatcher;
+    // Nothing to report yet.
+    somethingHappened = false;
+  }
+
+  // Invoking with flag == true sets scene for a callback
+  public void setPredicate(boolean flag)
+  {
+    somethingHappened = flag;
+  }
+
+  // This method will be invoked repeatedly in an event loop
+  public void doWork()
+  {
+    // Check the predicate, which is set elsewhere.
+    if (somethingHappened)
+    {
+      // Signal the event by invoking the interface&#39;s method.
+      textwatcher.onTextChanged(&quot;Finally - you called back&quot;);
+      somethingHappened = false;
+    }
+  }
+}</code></pre>
+<p>Here is a brief analysis of TextView:</p>
+<ul>
+<li>It contains a reference named <em>textwatcher</em> to an object whose class implements <em>TextWatcher</em> interface.</li>
+<li>A boolean <em>somethingHappened</em>, when possessing the value <em>true</em>, indicates that an event has occurred.</li>
+<li>The method <em>addChangedListener</em>:<ul>
+<li>Takes as a parameter a reference to an object whose class implements the TextWatcher interface</li>
+<li>Sets <em>somethingHapped</em> to <em>false</em> indicating that an event has yet to occur.</li>
+</ul>
+</li>
+<li>The public method <em>setPredicate</em> exists to change the state of <em>somethingHappened</em>, thus indicating an event has occurred.</li>
+<li>The method <em>doWork</em>:<ul>
+<li>Does nothing if <em>somethingHappened</em> is <em>false</em></li>
+<li>Invokes <em>onTextChanged</em> on <em>textWatcher</em> if <em>somethingHappened</em> is <em>true</em>.<ul>
+<li>This is the <em>callback</em>: <em>textWatcher</em> is a reference to an object that was passed in as an argument in <em>addTextChangedListener</em>. We shall see where this invocation occurred in the next and final class in the project.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Filename: EventLoop.java</p>
+<pre><code>package org.wit.callback;
+
+// Class to simulate a short-lived event loop
+public class EventLoop
+{
+  public static void main(String[] args)
+  {
+    TextWatcher textwatcher = new Callback();
+    TextView textview = new TextView();
+    textview.addTextChangedListener(textwatcher);
+
+    int val = 0;
+    // The simulated event loop
+    do
+    {
+      if (val % 100 == 0)
+      {
+        textview.setPredicate(true); // the trigger to fire an event
+      }
+      // invoke repeatedly but trigger event only when predicate true
+      textview.doWork();
+      val += 1;
+    } while (val &lt; 500);// we expect 5 events to be triggered
+  }
+}</code></pre>
+<p>This class simulates an event loop. </p>
+<ul>
+<li>It models a situation where the system is waiting for text input to an edit widget (control).</li>
+<li>When text is entered an event is triggered and the interface method <em>onTextChanged</em> invoked.</li>
+</ul>
+<p>In more detail:</p>
+<ul>
+<li>We instantiate a Callback object and assign it to a variable <em>textwatcher</em> of interface type TextWatcher</li>
+<li>Next we instantiate TextView and invoke <em>addTextChangedListener</em> on the object created passing <em>textwatcher</em> as a parameter</li>
+<li>We then set up the event loop and at specific times set the predicate to <em>true</em> which causes an event to be triggered.</li>
+</ul>
+<p>Run the application and observe the output:</p>
+<p><img src="img/02.png" alt="Figure 1: Callback in action"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Callback (Anonymous class method)</h1>
+<p>We shall now dispense with the <em>Callback</em> class</p>
+<ul>
+<li>Create a new package in the <em>callbacks</em> project named <em>org.wit.callbackanon</em>.</li>
+<li>Copy the file <em>EventLoop.java</em> from org.wit.callback to the new package.
+<img src="img/04.png" alt=""></li>
+<li>If you get a number of errors after the move, they could be resolved by adding the following import statements to EventLoop.java:</li>
+</ul>
+<pre><code>import org.wit.callback.TextView;
+import org.wit.callback.TextWatcher;</code></pre>
+<p>Study the original EventLoop code:
+<img src="img/05.png" alt=""></p>
+<p>Note the contents of Callback:
+<img src="img/06.png" alt=""></p>
+<p>Delete the Callback.java class.</p>
+<p>Open org.wit.callbackanon.EventLoop.java and:</p>
+<ul>
+<li>Delete the line that instantiates a new Callback object: <em>TextWatcher textwatcher = new Callback();</em><ul>
+<li>We no longer require Callback</li>
+</ul>
+</li>
+<li>Replace the line: <em>textview.addTextChangedListener(textwatcher);</em> with this code:</li>
+</ul>
+<pre><code>    textview.addTextChangedListener(new TextWatcher()
+    {
+      @Override
+      public void onTextChanged(String changedtext)
+      {
+        System.out.println(changedtext);
+      }
+
+    });</code></pre>
+<p>It should be clear what&#39;s happening: we have dispensed with the class Callback and instead used its contents within what is referred to as an anonymous class as a parameter to <em>addTextChangedListener</em>.</p>
+<ul>
+<li>Official documentation on the anonymous class syntax is available in the <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html">Java Tutorial</a>.</li>
+</ul>
+<p>Here is the final refactored EventLoop code:</p>
+<p>Filename: EventLoop.java</p>
+<pre><code>package org.wit.callbackanon;
+
+import org.wit.callback.TextView;
+import org.wit.callback.TextWatcher;
+
+//Class to simulate a short-lived event loop
+public class EventLoop
+{
+
+  public static void main(String[] args)
+  {
+
+    TextView textview = new TextView();
+
+    // We use an anonymous class instead of the Callback object
+    textview.addTextChangedListener(new TextWatcher()
+    {
+      @Override
+      public void onTextChanged(String changedtext)
+      {
+        System.out.println(changedtext);
+      }
+
+    });
+
+    // The simulated event loop
+    int val = 0;
+    do
+    {
+      if (val % 100 == 0)
+      {
+        textview.setPredicate(true); // the trigger to fire an event
+      }
+      textview.doWork();// invoked repeatedly and triggers event when predicate
+                        // true
+      val += 1;
+    } while (val &lt; 500);// we expect 5 events to be triggered
+  }
+}</code></pre>
+<p>Figure 1 below presents a flow diagram of the program.</p>
+<p><img src="img/07.png" alt="Figure 1: Flow diagram of callback program"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Callback (Delegated method)</h1>
+<ul>
+<li>Create a package in <em>callbacks</em> project named <em>org.wit.callbackimpl</em>.</li>
+<li><p>Copy the file <em>EventLoop.java</em> from org.wit.callbackanon to the new package.
+<img src="img/08.png" alt=""></p>
+</li>
+<li><p>Reorganize EventLoop </p>
+<ul>
+<li>by moving its functionality to a method:<ul>
+<li>public void runloop()</li>
+</ul>
+</li>
+<li>Instantiating EventLoop within the <em>main</em> method</li>
+<li>Invoking <em>runloop</em> on the newly created Eventloop object.</li>
+</ul>
+</li>
+</ul>
+<p>Here is the refactored class:</p>
+<p>org.wit.callbackimpl.EventLoop.java</p>
+<pre><code>package org.wit.callbackimpl;
+
+import org.wit.callback.TextView;
+import org.wit.callback.TextWatcher;
+
+//Class to simulate a short-lived event loop
+public class EventLoop
+{
+
+  public static void main(String[] args)
+  {
+    EventLoop event = new EventLoop();
+    event.runLoop();
+  }
+
+  public void runLoop() 
+  {
+      TextView textview = new TextView();
+
+      // We use an anonymous class instead of the Callback object
+      textview.addTextChangedListener(new TextWatcher()
+      {
+        @Override
+        public void onTextChanged(String changedtext)
+        {
+          System.out.println(changedtext);
+        }
+
+      });
+
+      // The simulated event loop
+      int val = 0;
+      do
+      {
+        if (val % 100 == 0)
+        {
+          textview.setPredicate(true); // the trigger to fire an event
+        }
+        textview.doWork();// invoked repeatedly and triggers event when predicate
+                          // true
+        val += 1;
+      } while (val &lt; 500);// we expect 5 events to be triggered
+
+  }
+}</code></pre>
+<ul>
+<li><p>Test that the result of this change has no noticeable effect on the output:
+<img src="img/11.png" alt=""></p>
+</li>
+<li><p>As shown in Figure 1, replace the anonymous class with the <em>this</em> reference.</p>
+<ul>
+<li>Remember that here <em>this</em> is a reference to the instance of EventLoop that has been created.</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/09.png" alt="Figure 1"></p>
+<ul>
+<li><p>This change will trigger an error:
+<img src="img/10.png" alt=""></p>
+</li>
+<li><p>The reason for the error is that the signature of <em>addTextChangedListener</em> clearly shows that a TextWatcher type is expected as a parameter whereas we have supplied it with an EventLoop reference.
+<img src="img/12.png" alt=""></p>
+</li>
+<li><p>We can eliminate the error by:</p>
+<ul>
+<li>Having EventLoop implement TextWatcher<ul>
+<li>Doing so means that <em>this</em>, a reference to EventLoop, becomes an acceptable parameter</li>
+</ul>
+</li>
+<li>We are then obliged to implement the method declared in TextWatcher, namely <em>onTextChanged</em>.</li>
+</ul>
+</li>
+</ul>
+<p>Change the signature of EventLoop to the following:</p>
+<pre><code>public class EventLoop implements TextWatcher</code></pre>
+<p>Use QuickFix to override <em>onTextChanged</em> in the class:</p>
+<pre><code>  @Override
+  public void onTextChanged(String changedtext)
+  {
+    // TODO Auto-generated method stub
+
+  }</code></pre>
+<p>Finally, fully implement <em>onTextChanged</em>:</p>
+<pre><code>      @Override
+      public void onTextChanged(String changedtext)
+      {
+        System.out.println(changedtext);
+      }</code></pre>
+<p>The application should now be error-free. </p>
+<ul>
+<li>Run it and observe the result as before:
+<img src="img/11.png" alt=""></li>
+</ul>
+<p>Here is the final version of <em>EventLoop</em>:</p>
+<pre><code>package org.wit.callbackimpl;
+
+import org.wit.callback.TextView;
+import org.wit.callback.TextWatcher;
+
+//Class to simulate a short-lived event loop
+public class EventLoop implements TextWatcher
+{
+
+  public static void main(String[] args)
+  {
+    EventLoop event = new EventLoop();
+    event.runLoop();
+  }
+
+  public void runLoop() 
+  {
+    TextView textview = new TextView();
+
+    // EventLoop implements TextWatcher
+    // Consequently, &quot;this&quot; is a legal parameter here
+    textview.addTextChangedListener(this);
+
+    // The simulated event loop
+    int val = 0;
+    do
+    {
+      if (val % 100 == 0)
+      {
+        textview.setPredicate(true); // the trigger to fire an event
+      }
+      textview.doWork();// invoked repeatedly and triggers event when predicate
+      // true
+      val += 1;
+    } while (val &lt; 500);// we expect 5 events to be triggered
+
+  }
+
+  @Override
+  public void onTextChanged(String changedtext) {
+    System.out.println(changedtext);  
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercise 1</h1>
+<p>In this exercise, we will modify the Delegate callback method (step 04 solution).  </p>
+<p>Here is the package and file arrangement you are recommended to use for the new/changed entities:</p>
+<ul>
+<li><p>Create a new package <strong>org.wit.callbackexercise</strong>.</p>
+<ul>
+<li>Populate this package with <ul>
+<li>Two new classes:<ul>
+<li>EventLoop</li>
+<li>Keypress</li>
+</ul>
+</li>
+<li>One new interface<ul>
+<li>KeyBoardListener</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Introduce a new interface, KeyBoardListener, inherited from the existing interface TextWatcher.</p>
+<ul>
+<li>The interface to have one method: <strong>void onKeyBoardInput()</strong></li>
+</ul>
+</li>
+<li>Introduce a new class called KeyPress, a subclass of TextView<ul>
+<li>In Keypress, override the TextView method <em>doWork</em> as indicated below.</li>
+</ul>
+</li>
+<li>Modify EventLoop as follows:<ul>
+<li>The class should implement the new interface only</li>
+<li>Rather than TextView textview being an instance of TextView, have it be an instance of the derived class Keypress.</li>
+<li>In the simulated event loop capture a character from a keyboard press.<ul>
+<li>If the character is &quot;c&quot;:<ul>
+<li>Set the predicate <em>true</em>.</li>
+<li>Implement the necessary interface method(s).</li>
+</ul>
+</li>
+<li>If the character is &quot;q&quot;, quit the program.</li>
+</ul>
+</li>
+<li>Here is sample output:
+<img src="img/13.png" alt=""><ul>
+<li>EventLoop is provided in skeleton form below.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is skeleton code for EventLoop class with hints </p>
+<pre><code>package org.wit.callbackexercise;
+
+import java.util.Scanner;
+
+import org.wit.callback.TextView;
+
+//Class to simulate a short-lived event loop
+public class EventLoop 
+{
+  String keyboardInput;
+  static Scanner in = new Scanner(System.in);
+
+  public void runloop()
+  {
+    TextView textview = new KeyPress();
+    // EventLoop implements KeyBoardListener
+    // Consequently &quot;this&quot; a legal parameter here
+    textview.addTextChangedListener(...);
+    // The simulated event loop
+    do
+    {
+      keyboardInput = keyboard();
+      if (keyboardInput.equals(&quot;c&quot;))
+      {
+        textview.setPredicate(true); // the trigger to fire an event
+      }
+      textview.doWork();//if predicate true then trigger event in doWork
+    } while (keyboardInput.equals(&quot;q&quot;) == false);
+    System.out.println(&quot;Thanks for your time - bye&quot;);
+  }
+
+  /*
+   * Capture and return a single keyboard character
+   */
+  public String keyboard()
+  {
+    String s = &quot;&quot;;
+    if(in.hasNext())
+    {
+      s = in.next();
+    }
+    return s;
+  }
+
+  public static void main(String[] args)
+  {
+    EventLoop obj = new EventLoop();
+    obj.runloop();
+    in.close();
+  }
+}</code></pre>
+<p>Here is a skeleton of the derived Keypress class:</p>
+<pre><code>package org.wit.callbackexercise;
+
+import org.wit.callback.TextView;
+
+public class KeyPress extends TextView
+{
+  public void addKeyBoardListener(KeyBoardListener listener)
+  {
+    // Save the event object for later use.
+    //TODO ...
+  }
+
+  // This method will be invoked repeatedly in an event loop
+  @Override
+  public void doWork()
+  {
+    // Check the predicate, which is set elsewhere.
+    if (getSomethingHappened())
+    {
+      // Signal the event by invoking the interface&#39;s method.
+      //TODO: Invoke: onKeyBoardInput();
+      //TODO: Invoke: onTextChanged(&quot;Finally - you called back&quot;);
+      setPredicate(false);
+    }
+  }
+}</code></pre>
+<p>Here are suggested class diagrams for the solution.</p>
+<p><img src="img/14.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Archives">
+        <h1>Archives</h1>
+<p>This is downloadable archives of the event handling code complete the end if this lab:</p>
+<ul>
+<li><p><a href="archives/event-handling-step02.zip">Event_handling, step02 solution</a></p>
+</li>
+<li><p><a href="archives/event-handling-step03.zip">Event_handling, step03 solution</a></p>
+</li>
+<li><p><a href="archives/event-handling-step04.zip">Event_handling, step04 solution</a></p>
+</li>
+<li><p><a href="archives/event-handling-exercise-solution.zip">Event_handling, exercise solution</a></p>
+</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
