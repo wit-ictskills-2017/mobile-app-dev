@@ -1,0 +1,597 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      4-b: Navigation (Up button) & Lambda Expressions
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-05 (Up Button)">
+      MyRent-05 (Up Button)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-05 (Up Button)">
+        <h1>File IO &amp; Menu Up Navigation</h1>
+<p>We continue to evolve navigation support in the app, providing an &#39;up&#39; button in the action bar to allow navigation from the ResidenceActivity to the ResidenceListActivity.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Up Button</h1>
+<p>All screens should offer a navigation route to their parent screens by pressing on the <em>Up</em> button located in the action bar as shown, for example, here in Figure 1.</p>
+<p><img src="img/02.png" alt="Figure 1: MyRent Up button"></p>
+<p>Pressing the Up button should route one to the logical parent screen. The parent screen is declared in the manifest file.</p>
+<p>In the case of MyRent, a call to <em>setDisplayHomeAsUpEnabled()</em> in the ResidenceActivity facilitates switching to the ResidenceListActivity screen when the Up button is pressed.</p>
+<p>The following steps describe the process in detail.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>IntentHelper</h1>
+<p>In order to support enhanced navigation, we define an additional Helper method in the IntentHelper class:</p>
+<pre><code>  public static void navigateUp(Activity parent)
+  {
+    Intent upIntent = NavUtils.getParentActivityIntent(parent);
+    NavUtils.navigateUpTo(parent, upIntent);
+  }</code></pre>
+<p>Add an import statement for NavUtils:</p>
+<pre><code>import android.support.v4.app.NavUtils;</code></pre>
+<p>Here, for reference purposes, is the complete class:</p>
+<pre><code>package org.wit.android.helpers;
+import java.io.Serializable;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.support.v4.app.NavUtils;
+
+public class IntentHelper
+{
+    public static void startActivity (Activity parent, Class classname)
+    {
+        Intent intent = new Intent(parent, classname);
+        parent.startActivity(intent);
+    }
+
+    public static void startActivityWithData (Activity parent, Class classname, String extraID, Serializable extraData)
+    {
+        Intent intent = new Intent(parent, classname);
+        intent.putExtra(extraID, extraData);
+        parent.startActivity(intent);
+    }
+
+    public static void startActivityWithDataForResult (Activity parent, Class classname, String extraID, Serializable extraData, int idForResult)
+    {
+        Intent intent = new Intent(parent, classname);
+        intent.putExtra(extraID, extraData);
+        parent.startActivityForResult(intent, idForResult);
+    }
+
+    public static void navigateUp(Activity parent)
+    {
+        Intent upIntent = NavUtils.getParentActivityIntent(parent);
+        NavUtils.navigateUpTo(parent, upIntent);
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>ResidenceActivity</h1>
+<p>New we can make use of the helper we just introduced. We wish to support the &#39;up&#39; style navigation:</p>
+<p><img src="img/01.png" alt="Figure 1: New Residence menu item &amp; Up button"></p>
+<p>First introduce the helper method into ResidenceActivity:</p>
+<pre><code>import static org.wit.android.helpers.IntentHelper.navigateUp;</code></pre>
+<p>Add the statement:</p>
+<pre><code>getSupportActionBar().setDisplayHomeAsUpEnabled(true);</code></pre>
+<p>to onCreate following <em>setContentView(...)</em> as indicated in the following code extract:</p>
+<pre><code>  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_residence);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    ...
+  }</code></pre>
+<p>Now we override the <em>onOptionsItemSelected</em> method:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:  navigateUp(this);
+                               return true;
+    }
+    return super.onOptionsItemSelected(item);
+  }</code></pre>
+<p>This import statement is required:</p>
+<pre><code>import android.view.MenuItem;</code></pre>
+<p>Try this now - does it work as in Figure 1 above. Not Yet! - we need one more step...</p>
+<p>Full class to this point for reference purposes:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.DatePicker;
+import android.widget.EditText;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import android.app.DatePickerDialog;
+import android.view.View;
+
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+import static org.wit.android.helpers.IntentHelper.navigateUp;
+
+
+public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
+                                                                    OnCheckedChangeListener,
+                                                                    View.OnClickListener,
+                                                                    DatePickerDialog.OnDateSetListener{
+
+    private EditText geolocation;
+    private Residence residence;
+    private CheckBox rented;
+    private Button dateButton;
+    private Portfolio portfolio;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_residence);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        geolocation = (EditText) findViewById(R.id.geolocation);
+        residence   = new Residence();
+        geolocation.addTextChangedListener(this);
+
+        dateButton  = (Button)   findViewById(R.id.registration_date);
+        dateButton.setOnClickListener(this);
+
+        rented = (CheckBox) findViewById(R.id.isrented);
+        rented.setOnCheckedChangeListener(this);
+
+        MyRentApp app = (MyRentApp) getApplication();
+        portfolio = app.portfolio;
+
+        Long resId = (Long) getIntent().getExtras().getSerializable(&quot;RESIDENCE_ID&quot;);
+        residence = portfolio.getResidence(resId);
+        if (residence != null)
+        {
+            updateControls(residence);
+        }
+
+    }
+
+    public void updateControls(Residence residence)
+    {
+        geolocation.setText(residence.geolocation);
+        rented.setOnCheckedChangeListener(this);
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+        residence.setGeolocation(editable.toString());
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Log.i(this.getClass().getSimpleName(), &quot;rented Checked&quot;);
+        residence.rented = isChecked;
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+    {
+        Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+        residence.date = date.getTime();
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.registration_date      :
+                Calendar c = Calendar.getInstance();
+                DatePickerDialog dpd = new DatePickerDialog (this, this, c.get(Calendar.YEAR),
+                                                                         c.get(Calendar.MONTH),
+                                                                         c.get(Calendar.DAY_OF_MONTH));
+                dpd.show();
+                break;
+        }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        portfolio.saveResidences();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case android.R.id.home:  navigateUp(this);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>AndroidManifest</h1>
+<p>The final piece of the puzzle is the layout in the manifest the parent/child relationship between the ResidenceListActivity and ResidenceActivity classes:</p>
+<pre><code>    &lt;activity
+      android:name=&quot;.activities.ResidenceActivity&quot;
+      android:label=&quot;@string/app_name&quot; &gt;  
+      &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot; 
+                 android:value=&quot;.activities.ResidenceListActivity&quot;/&gt;  
+    &lt;/activity&gt;</code></pre>
+<p>In the above we are establishing this relationship. The navigation mechanism should work as expected now.</p>
+<p>Here is the complete manifest file for reference purposes:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;org.wit.myrent&quot;&gt;
+
+    &lt;application
+        android:name=&quot;.app.MyRentApp&quot;
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;&gt;
+        &lt;activity
+            android:name=&quot;.activities.ResidenceActivity&quot;
+            android:label=&quot;@string/app_name&quot; &gt;
+            &lt;meta-data android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+                       android:value=&quot;.activities.ResidenceListActivity&quot;/&gt;
+        &lt;/activity&gt;
+        &lt;activity android:name=&quot;.activities.ResidenceListActivity&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre>
+<p>Test the back button as indicated in Figure 1.</p>
+<p><img src="img/03.png" alt="Figure 1: Test back button"></p>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2017/myrent-05.git">myrent-05</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

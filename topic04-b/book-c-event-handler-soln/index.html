@@ -1,0 +1,572 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      4-b: Navigation (Up button) & Lambda Expressions
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Event-Handling-Solution">
+      Event-Handling-Solution
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="Archives">
+      Archives
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Event-Handling-Solution">
+        <h1>Event handling solution</h1>
+<p>This is a solution to the event handling lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Exercise 1</h1>
+<p>Modify the the Delegate callback method as follows:</p>
+<ul>
+<li>Introduce a new interface, KeyBoardListener, inherited from the existing interface TextWatcher.<ul>
+<li>The interface to have one method: <strong>void onKeyBoardInput()</strong></li>
+</ul>
+</li>
+<li>Introduce a new class called KeyPress, a subclass of TextView<ul>
+<li>In Keypress, override the TextView method <em>doWork</em> as indicated below.</li>
+</ul>
+</li>
+<li>Modify EventLoop as follows:<ul>
+<li>The class should implement the new interface only</li>
+<li>Rather than TextView textview being an instance of TextView, have it be an instance of the derived class Keypress.</li>
+<li>In the simulated event loop capture a character from a keyboard press.<ul>
+<li>If the character is &quot;c&quot;:<ul>
+<li>Set the predicate <em>true</em>.</li>
+<li>Implement the necessary interface method(s).</li>
+</ul>
+</li>
+<li>If the character is &quot;q&quot;, quit the program.</li>
+</ul>
+</li>
+<li>Here is sample output:
+<img src="img/13.png" alt=""><ul>
+<li>EventLoop is provided in skeleton form below.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is the package and file arrangement you are recommended to use:</p>
+<ul>
+<li>Create a new package <strong>org.wit.callbackexercise</strong>.<ul>
+<li>Populate this package with <ul>
+<li>Two new classes:<ul>
+<li>EventLoop</li>
+<li>Keypress</li>
+</ul>
+</li>
+<li>One new interface<ul>
+<li>KeyBoardListener</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is skeleton code for EventLoop class with hints </p>
+<pre><code>package org.wit.callbackexercise;
+
+import java.util.Scanner;
+
+import org.wit.callback.TextView;
+
+//Class to simulate a short-lived event loop
+public class EventLoop 
+{
+  String keyboardInput;
+  static Scanner in = new Scanner(System.in);
+
+  public void runloop()
+  {
+    TextView textview = new Keypress();
+    // EventLoop implements KeyBoardListener
+    // Consequently &quot;this&quot; a legal parameter here
+    textview.addTextChangedListener(...);
+    // The simulated event loop
+    do
+    {
+      keyboardInput = keyboard();
+      if (keyboardInput.equals(&quot;c&quot;))
+      {
+        textview.setPredicate(true); // the trigger to fire an event
+      }
+      textview.doWork();//if predicate true then trigger event in doWork
+    } while (keyboardInput.equals(&quot;q&quot;) == false);
+    System.out.println(&quot;Thanks for your time - bye&quot;);
+  }
+
+  /*
+   * Capture and return a single keyboard character
+   */
+  public String keyboard()
+  {
+    String s = &quot;&quot;;
+    if(in.hasNext())
+    {
+      s = in.next();
+    }
+    return s;
+  }
+
+  public static void main(String[] args)
+  {
+    EventLoop obj = new EventLoop();
+    obj.runloop();
+    in.close();
+  }
+}</code></pre>
+<p>Here is a skeleton of the derived Keypress class:</p>
+<pre><code>package org.wit.callbackexercise;
+
+import org.wit.callback.TextView;
+
+public class Keypress extends TextView
+{
+  public void addKeyBoardListener(KeyBoardListener listener)
+  {
+    // Save the event object for later use.
+    //TODO ...
+  }
+
+  // This method will be invoked repeatedly in an event loop
+  @Override
+  public void doWork()
+  {
+    // Check the predicate, which is set elsewhere.
+    if (somethingHappened)
+    {
+      // Signal the event by invoking the interface&#39;s method.
+      //TODO: Invoke: onKeyBoardInput();
+      //TODO: Invoke: onTextChanged(&quot;Finally - you called back&quot;);
+      somethingHappened = false;
+    }
+  }
+}</code></pre>
+<p>Here are suggested class diagrams for the solution.</p>
+<p><img src="img/14.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Exercise 1 Solution</h1>
+<p>Create a new package <strong>org.wit.callbackexercise</strong> in the project <strong>event_handling</strong>.</p>
+<ul>
+<li>Add a KeyBoardListener interface.</li>
+</ul>
+<h2>KeyBoardListener</h2>
+<p>Here is the specified listener:</p>
+<pre><code>package org.wit.callbackexercise;
+
+import org.wit.callback.TextWatcher;
+
+public interface KeyBoardListener extends TextWatcher
+{
+  void onKeyBoardInput();
+}</code></pre>
+<h2>EventLoop</h2>
+<p>Modify <em>org.wit.callbackexercise.EventLoop.java</em>:</p>
+<ul>
+<li>Have EventLoop implement KeyBoardListener:</li>
+</ul>
+<pre><code>public class EventLoop implements  KeyBoardListener</code></pre>
+<ul>
+<li>Add the necessary import statement:<ul>
+<li>import org.wit.callback.TextWatcher;</li>
+</ul>
+</li>
+<li>Implement the required override methods:</li>
+</ul>
+<pre><code>  @Override
+  public void onKeyBoardInput()
+  {
+    System.out.println(&quot;Keyboard input: &quot; + keyboardInput);   
+  }
+
+  @Override
+  public void onTextChanged(String changedtext)
+  {
+    System.out.println(&quot;Finally - you called back&quot;);
+  }</code></pre>
+<ul>
+<li>In EventLoop register a reference to the object whose class implements listener, namely <strong>this</strong>:</li>
+</ul>
+<pre><code>textview.addTextChangedListener(this);</code></pre>
+<h2>KeyPress</h2>
+<p>Complete the skeleton code provided: <em>org.wit.callbackexercise.Keypress.java</em>:</p>
+<ul>
+<li>Save the object for later use:</li>
+</ul>
+<pre><code>  public void addKeyBoardListener(KeyBoardListener listener)
+  {
+    super.textwatcher = listener;
+  }</code></pre>
+<p>In <em>doWork()</em>:</p>
+<ul>
+<li>Invoke onKeyBoardInput()</li>
+</ul>
+<pre><code>((KeyBoardListener)textwatcher).onKeyBoardInput();</code></pre>
+<ul>
+<li>Invoke onTextChanged</li>
+</ul>
+<pre><code>textwatcher.onTextChanged(&quot;Finally - you called back&quot;);</code></pre>
+<p>Here is the complete method:</p>
+<pre><code>  @Override
+  public void doWork()
+  {
+    // Check the predicate, which is set elsewhere.
+    if (somethingHappened)
+    {
+      // Signal the event by invoking the interface&#39;s method.
+      ((KeyBoardListener)textwatcher).onKeyBoardInput();
+      textwatcher.onTextChanged(&quot;Finally - you called back&quot;);
+      somethingHappened = false;
+    }
+  }</code></pre>
+<p>We need to make a change to some of the existing code, namely <em>org.wit.callback.TextView</em>:</p>
+<ul>
+<li>Note that in KeyPress we require access to the super class TextView<ul>
+<li>TextWatcher textwatcher</li>
+<li>boolean somethingHappened</li>
+</ul>
+</li>
+</ul>
+<p>We can do this in any of the following ways:</p>
+<ul>
+<li>Declare both fields <em>public</em></li>
+<li>Introduce <em>getter</em> methods </li>
+<li>Declare both fields <em>protected</em>.</li>
+</ul>
+<p>Change the fields to protected:</p>
+<pre><code>  protected TextWatcher textwatcher;
+  protected boolean somethingHappened;</code></pre>
+<p>The code should now be error-free.</p>
+<p>Test as follows:</p>
+<ul>
+<li>In the Package Explorer select <em>org.wit.callbackexercise.EventLoop.java</em><ul>
+<li>Run as Java Application</li>
+<li>Bring the console window into focus by placing the mouse cursor anywhere within it and pressing the left mouse button.</li>
+<li>Type the lower case character <strong>c</strong> and press return.</li>
+<li>You should see this:
+<img src="img/01.png" alt=""></li>
+<li>Repeat a number of times. </li>
+<li>The same output should be repeated.</li>
+<li>To quit enter the lower case character <strong>q</strong>.
+<img src="img/02.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<p>A complete project containing the solution may be downloaded using a link in the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Archives">
+        <h1>Archives</h1>
+<p>This is downloadable archive of the solution event handling code:</p>
+<ul>
+<li><a href="archives/event_handling_callbacks.zip">Event_handling</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

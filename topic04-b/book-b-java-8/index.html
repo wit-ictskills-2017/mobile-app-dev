@@ -1,0 +1,890 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      4-b: Navigation (Up button) & Lambda Expressions
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lambda Expressions">
+      Lambda Expressions
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lambda Expressions">
+        <h1>Java 8 Lambdas</h1>
+<p>Java 8, initially released in March 2014, is a major upgrade providing many new features one of which we examine here, namely <code>lambda expressions</code>. We consider situations where such expressions may be used to provide a less verbose alternatitive to anonymous classes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Introduction Java 8</h1>
+<p>The new features introduced to the Java Language are described in the official documentation <a href="http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html">What&#39;s New in JDK 8</a>.</p>
+<p>We shall examine the use of lambda expressions as a means of replacing certain anonymous classes. This includes a look at the changes to the <a href="https://docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html">Java interface type</a> where constant declarations and default and static methods are now permitted, in addition to existing abstract method declarations. We shall also explain what is meant by functional interfaces and explore what exactly is meant by an anonymous class. A simple Java application is progressively developed as part of the lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Interface (Java 7)</h1>
+<p>Using Eclipse IDE or equivalent create a Java project named <code>java8</code>. Create a package <code>interfaces</code> in this project. We shall introduce an interface <code>TextWatcher</code>, a class named <code>ResidenceActivity</code> that implements TextWatcher and a class <code>MyRentApp</code> containing a <code>main</code> method to run the application. The starter code is provided below. </p>
+<pre><code>package interfaces;
+
+public interface TextWatcher {
+
+  // abstract method declaration
+  void afterTextChanged();
+}</code></pre>
+<p>Interface abstract methods have implied qualifiers <code>public</code> and <code>abstract</code> so that <code>void afterTextChanged()</code> could have been written in the more verbose style <code>public abstract void afterTextChanged()</code>.</p>
+<pre><code>package interfaces;
+
+public class ResidenceActivity implements TextWatcher {
+
+}</code></pre>
+<p>Note that an <code>abstract</code> method does not have an implementation.</p>
+<pre><code>package interfaces;
+
+public class MyRentApp {
+
+  public static void main(String[] args) {
+    ResidenceActivity activity = new ResidenceActivity();
+    activity.afterTextChanged();
+  }
+}</code></pre>
+<p>The above code will not compile because we have not implemented the abstract method declared in the TextWatcher interface that the ResidenceActivity class implements. </p>
+<p><img src="img/02.png" alt="Figure 1: Compilation failure - interface method not implemented"></p>
+<p>To resolve this error modify ResidenceActivity (manually or using Quick Fix).</p>
+<p><img src="img/03.png" alt="Figure 2: Using Quick Fix to resolve error"></p>
+<p><img src="img/04.png" alt="Figure 3: Default implementation added using Quick Fix"></p>
+<p>Complete ResidenceActivity by fully implementing the body of <code>afterTextChanged</code>, in this case by adding a simple print statement.</p>
+<pre><code>package interfaces;
+
+public class ResidenceActivity implements TextWatcher {
+
+  @Override
+  public void afterTextChanged() {
+    System.out.println(&quot;We&#39;re watching you&quot;);
+  }
+}</code></pre>
+<p>Run the app. The output displayed in the console should resemble that shown in Figure 4.
+<img src="img/01.png" alt="Figure 4: Output on running app"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Interface (Java 8)</h1>
+<p>The <a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">official documentation</a> defines an interface as follows:</p>
+<ul>
+<li>In the Java programming language, an interface is a reference type, similar to a class, that can contain only constants, method signatures, default methods, static methods, and nested types.</li>
+</ul>
+<p>This differs from Java 7 in which the only valid entity in an interface type is one or more abstract method declarations.</p>
+<p>We shall provide some simple examples of the implementation of the following:</p>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/interfaceDef.html">const declarations</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html#static">static methods</a></li>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">default methods</a></li>
+</ul>
+<h2>Constant</h2>
+<p>Introduce a constant value to TextWatcher:</p>
+<pre><code>package interfaces;
+
+import java.util.Date;
+
+public interface TextWatcher {
+
+  // const declaration
+  int id = 1;
+
+  // abstract method declaration
+  void afterTextChanged();
+}</code></pre>
+<p>Add this snippet to MyRentApp.main:</p>
+<pre><code>
+    // A ResidenceActivity type &#39;is&#39; a TextWatcher
+    System.out.println(&quot;TextWatcher id: &quot; + activity.id);</code></pre>
+<p>Build and run the app. The output should resemble that in Figure 1.</p>
+<p><img src="img/05.png" alt="Figure 1: Output on running app"></p>
+<p>An explanation as to why <code>public abstract</code> and <code>static final</code> may be omitted before variables and static methods in interface definitions is provided in this <a href="http://stackoverflow.com/questions/161633/should-methods-in-a-java-interface-be-declared-with-or-without-a-public-access-m">Stackoverflow article: Despite the fact that this question...</a>.</p>
+<h2>Static method</h2>
+<p>We demonstrate the use of an interface static method as follows:</p>
+<p>Add the method definition to the interface.</p>
+<pre><code>  // static method
+  static long beforeTextChanged() {
+    return new Date().getTime();
+  }</code></pre>
+<p>Here is the refactored interface:</p>
+<pre><code>package interfaces;
+
+import java.util.Date;
+
+public interface TextWatcher {
+
+  // const declaration
+  int id = 1;
+
+  // abstract method declaration
+  void afterTextChanged();
+
+  // static method
+  static long beforeTextChanged() {
+    return new Date().getTime();
+  }
+
+}</code></pre>
+<p>Add a date field in the ResidenceActivity class that implements the interface and initialize this within the activity constructor:</p>
+<pre><code>package interfaces;
+
+public class ResidenceActivity implements TextWatcher {
+
+  long dateTextChanged;
+
+  @Override
+  public void afterTextChanged() {
+    System.out.println(&quot;We&#39;re watching you&quot;);
+
+  }
+
+  public ResidenceActivity() {
+    dateTextChanged = TextWatcher.beforeTextChanged();
+  }
+}</code></pre>
+<p>Test by adding this code snippet to MyRentApp.main:</p>
+<pre><code>    // Date text changed
+    String date = new  Date(activity.dateTextChanged).toString();
+    System.out.println(&quot;Date text changed: &quot; + date);</code></pre>
+<p>Run the app. The output displayed in the console should resemble that shown in Figure 2. Observe how the static method is invoked: <code>TextWatcher.beforeTextChanged()</code>.</p>
+<p><img src="img/06.png" alt="Figure 2: Output on running app"></p>
+<h2>Default method</h2>
+<p>Default interface methods have been provided to facilitate backward compatibility with older Java releases. We have the option of using the default method or overriding it in ResidenceActivity. We shall do both. First we implement and use the default method. Modify TextWatcher to include such a method:</p>
+<pre><code>  // default method
+  default void onTextChanged() {
+    System.out.println(&quot;I hate change&quot;);
+  }</code></pre>
+<p>Test this by adding the following code snippet to MyRentApp.main:</p>
+<pre><code>    // Test default interface method
+    activity.onTextChanged();</code></pre>
+<p>You may be puzzled at why this works. The method onTextChanged is invoked on an object of ResidenceActivity. Yet nowhere in ResidenceAcivity is <code>onTextChanged</code> implemented. The answer is that because ResidenceActivity implements TextWatcher the default TextWatcher methods become available for direct invocation on ResidenceActivity objects.</p>
+<p>Build and run the app. Expected output is shown here in Figure 3.</p>
+<p><img src="img/07.png" alt="Figure 3: Output on running app"></p>
+<p>Now, override the default method in ResidenceActivity:</p>
+<pre><code>  @Override
+  public void onTextChanged() {
+    System.out.println(&quot;Adapt or die&quot;);
+  }</code></pre>
+<p>Without making any further changes run the app. Expected output is shown here in Figure 4.</p>
+<p><img src="img/08.png" alt="Figure 4: Output on running app"></p>
+<p>Reference: <a href="https://blog.idrsolutions.com/2015/01/java-8-default-methods-explained-5-minutes/">Java 8 Default Methods Explained in 5 Minutes</a>.</p>
+<p>Reference: Default methods and Static methods in interfaces are also discussed on pages 14 - 17 inclusive in Java SE 8 for the Really Impatient by Cay Horstmann (Pearson 2014).</p>
+<p>Here is the final TextWatcher, MyRentApp and ResidenceActivity code:</p>
+<pre><code>
+package interfaces;
+
+import java.util.Date;
+
+public interface TextWatcher {
+
+  // const declaration
+  int id = 1;
+
+  // static method
+  static long beforeTextChanged() {
+    return new Date().getTime();
+  }
+
+  // abstract method
+  void afterTextChanged();
+
+  // default method
+  default void onTextChanged() {
+    System.out.println(&quot;I hate change&quot;);
+  }
+}</code></pre>
+<pre><code>package interfaces;
+
+public class ResidenceActivity implements TextWatcher {
+
+  long dateTextChanged;
+
+  @Override
+  public void afterTextChanged() {
+    System.out.println(&quot;We&#39;re watching you&quot;);
+
+  }
+
+  @Override
+  public void onTextChanged() {
+    System.out.println(&quot;Adapt or die&quot;);
+  }
+
+  public ResidenceActivity() {
+    dateTextChanged = TextWatcher.beforeTextChanged();
+  }
+
+}</code></pre>
+<pre><code>package interfaces;
+
+import java.util.Date;
+
+public class MyRentApp {
+
+  public static void main(String[] args) {
+
+    ResidenceActivity activity = new ResidenceActivity();
+    activity.afterTextChanged();
+
+    // A ResidenceActivity type &#39;is&#39; a TextWatcher
+    System.out.println(&quot;TextWatcher id: &quot; + activity.id);
+
+    // Date text changed
+    String date = new  Date(activity.dateTextChanged).toString();
+    System.out.println(&quot;Date text changed: &quot; + date);
+
+    // Test default interface method
+    activity.onTextChanged();
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Anonymous class</h1>
+<p>We shall lead in to demonstrating use of a lambda by first describing an anonymous class and then in the next step introducing <code>functional interfaces</code>. We will then be in a position to replace the anonymous class, the subject of our demo, with a lambda.</p>
+<p>Some changes are required to the application as follows:</p>
+<ul>
+<li>delete or comment out MyRentApp.main method. We will not be running the application in this and following steps.</li>
+</ul>
+<pre><code>package interfaces;
+
+public class MyRentApp {
+
+  public static void main(String[] args) {
+    ...    
+  }
+}</code></pre>
+<ul>
+<li>Introduce a simple TextView class containing a TextWatcher field and a method to set a listener:</li>
+</ul>
+<pre><code>
+package interfaces;
+
+
+public class TextView
+{
+  private TextWatcher textwatcher;
+
+  public void addTextChangedListener(TextWatcher textwatcher)
+  {
+    this.textwatcher = textwatcher;
+
+  }
+}</code></pre>
+<ul>
+<li>Declare and initialize a TextView field in ResidenceActivity.</li>
+</ul>
+<pre><code>  TextView textView = new TextView();</code></pre>
+<ul>
+<li>In a ResidenceActivity default constructor invoke addTextChangedListener on this TextView field:</li>
+</ul>
+<pre><code>textView.addTextChangedListener();</code></pre>
+<p>This will generate an error because we have not provided a suitable parameter.</p>
+<p>Recall the signature of TextView.addTextChangedListener:</p>
+<pre><code> addTextChangedListener(TextWatcher textwatcher)</code></pre>
+<p>We shall satisfy this parameter requirement with an anonymous class. First we shall implement the class and then describe how it works.</p>
+<ul>
+<li>Modify textView.addTextChangedListener by introducing an anonymous class of type TextWatcher as a parameter as follows:</li>
+</ul>
+<pre><code>    textView.addTextChangedListener(new TextWatcher() {
+
+    });</code></pre>
+<ul>
+<li>Errors are still presenent because the abstract method <code>void afterTextChanged()</code> has not been implemented. Implement this and the error disappears.</li>
+</ul>
+<pre><code>    textView.addTextChangedListener(new TextWatcher() {
+
+      @Override
+      public void afterTextChanged() {
+        // TODO Auto-generated method stub
+
+      }
+
+    });</code></pre>
+<ul>
+<li>Replace the stub code with a message. Here is the completed constructor:</li>
+</ul>
+<pre><code>  public ResidenceActivity() {
+    textView.addTextChangedListener(new TextWatcher() {
+
+      @Override
+      public void afterTextChanged() {
+        System.out.println(&quot;Text changed&quot;);
+
+      }
+
+    });
+  }</code></pre>
+<p>What is referred to as anonymous class is highlighted in blue in Figure 1 here. What takes place transparent to the user is that a synthetic class is created and this class implements the TextWatcher interface. An object of the class is then created, a reference to which is passed as a parameter to the method <code>textView.addTextChangedListener</code>. This object satisfies the typing requirement of the parameter, namely TextWatcher.</p>
+<p><img src="img/09.png" alt="Figure 1: Anonymous class used to set listener"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Functional interface</h1>
+<p>A functional interface is an interface that has just one abstract method, not including methods of the parent Java Object class, default methods or static methods.</p>
+<p>Here are four examples of functional interfaces, followed by an example of a non-functional interfaces.</p>
+<pre><code>interface Runnable {
+    void run();
+}</code></pre>
+<pre><code>interface StringCompare {
+  int compare(String o1, String o2);
+}</code></pre>
+<p>This next interface is also functional because the method <code>equals</code> is a method of the parent Object class and so the interface is considered to possess only 1 abstract method - <code>compare</code>.</p>
+<pre><code>interface AnotherStringCompare {
+   boolean equals(Object obj);
+  int compare(String o1, String o2);
+}</code></pre>
+<p>Here is the TextWatcher interface we have been working with in the earlier steps in this lab. It has only one abstract method, <code>afterTextChanged</code>, and so qualifies as a functional interface.</p>
+<pre><code>import java.util.Date;
+
+public interface TextWatcher {
+
+  // const declaration
+  int id = 1;
+
+  // static method
+  static long beforeTextChanged() {
+    return new Date().getTime();
+  }
+
+  // abstract method
+  void afterTextChanged();
+
+  // default method
+  default void onTextChanged() {
+    System.out.println(&quot;I hate change&quot;);
+  }
+}</code></pre>
+<p>The <a href="https://developer.android.com/reference/android/text/TextWatcher.html">Android TextWatcher interface</a> is an example of a non-functional interface because it has three abstract methods.</p>
+<pre><code>public interface TextWatcher {
+
+  void afterTextChanged(Editable s);
+  void beforeTextChanged(CharSequence s, int start, int count, int after);
+  void onTextChanged(CharSequence s, int start, int before, int count);
+
+}</code></pre>
+<p>Java language enthusiasts and budding language lawyers may be interested in the  complete formal definition which is available <a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-9.html#jls-9.8">here</a>.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Lambda expressions</h1>
+<p>A lambda expression could be described as an anonymous function - a block of code that is capable of expressing behaviour, is not associated with any class and that does not have a name.</p>
+<p>Figures 1 and 2<sup>1</sup> illustrate the syntax of lambda expressions.</p>
+<p><img src="img/10.png" alt="Figure 1: Lambda expression syntax"></p>
+<p><img src="img/11.png" alt="Figure 2: Lambda expression syntax"></p>
+<p>Consider, for example, the third lambda in Figure 2:</p>
+<pre><code>(int x, int y) -&gt; {return x + y;}</code></pre>
+<p>The behaviour of this lambda is equivalent to that of the following method:</p>
+<pre><code>int add(int x, int y) {
+  return x + y;
+}</code></pre>
+<p>A lambda expression becomes a valid parameter to a method where an object of a class that implements an interface with a single abstract method is expected. Such an interface is referred to as a <code>functional interface</code> as explained in an earlier step. We have already encountered an example of in practice. Here, again, is the signature of the TextView method to add a listener:</p>
+<pre><code>addTextChangedListener(TextWatcher textwatcher)</code></pre>
+<p>The formal parameter is <code>TextWatcher textwatcher</code>. Thus an object of a class that implements the TextWatcher interface satisfies the parameter type requirement. And so in this situation we may apply a lambda. This is illustrated in Figure 3 below.</p>
+<p>Here is the completed ResidenceActivity in which the anonymous class is replaced by a lambda.</p>
+<pre><code>
+package interfaces;
+
+public class ResidenceActivity {
+
+  TextView textView = new TextView();
+
+  public ResidenceActivity() {  
+    textView.addTextChangedListener(() -&gt; System.out.println(&quot;Text changed&quot;));
+  }
+}</code></pre>
+<p>Compare the above to the following in which an anonymous class is used:</p>
+<pre><code>package interfaces;
+
+public class ResidenceActivity {
+
+  TextView textView = new TextView();
+
+  public ResidenceActivity() {
+    textView.addTextChangedListener(new TextWatcher() {
+
+      @Override
+      public void afterTextChanged() {
+        System.out.println(&quot;Text changed&quot;);
+      }
+    });
+  }
+}</code></pre>
+<p><img src="img/12.png" alt="Figure 3: A lambda expression replaces an anonymous class"></p>
+<p>Experiment by adding a second abstract method to TextWatcher. In doing so, TextWatcher ceases to be a functional interface.</p>
+<pre><code>void onBeforeTextChanged();</code></pre>
+<p>Observe an error is now generated in ResidenceActivity. This is caused by an attempt to convert a non-functional interface to a lambda expression. See Figure 4.</p>
+<p><img src="img/13.png" alt="Figure 4: Error introduced by attempting to convert non-functional interface to lambda expression"></p>
+<h2> </h2>
+<p><sup>1</sup> <a href="https://www.youtube.com/watch?v=WXtVHTGDV9g&amp;list=PLMod1hYiIvSZL1xclvHcsV2dMiminf19x&amp;index=1">JDK 8 Lambdas MOOC Course. Oracle. Simon Ritter</a>. See Lesson 1-2.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Lambdas &amp; Android (Gradle configuration)</h1>
+<p>We are presently developing our Android apps in a Java 7 environment with <code>targetSdkVersion</code> set to 23 (Nougat).  Nougat, released in August 2016, introduces a new experimental tool chain called <a href="http://tools.android.com/tech-docs/jackandjill"><code>Jack and Jill</code></a> that provides support for a subset of Java 8 features. </p>
+<ul>
+<li>Java Android Compiler Kit (Jack)</li>
+<li>Java Intermediate Library Linker (Jill)</li>
+</ul>
+<p>There is, however, a plugin called <code>Retrolambda</code> that provides a backport of lambda syntax to our environment - Java 7 and version 23. We shall use this in this lab rather the Jack compiler to test the use of lambdas.  We can use Jack and Jill later (this lab will demonstrate using plugins in Gradle as well as lambdas).</p>
+<h2>Gradle files</h2>
+<p>Here we shall configure both gradle files to import the <code>retrolamda</code> plugin.</p>
+<p>Use your solution to MyRent-05 (or you can use ours located at <a href="https://github.com/wit-ictskills-2017/myrent-05.git">myrent-05</a></p>
+<p>Open the top-level build.gradle file (Project: MyRent).</p>
+<p>In the buildscript block add the following snippets in the locations shown:</p>
+<pre><code>buildscript {
+
+  repositories {
+    maven {
+      url &quot;https://plugins.gradle.org/m2/&quot;
+    }
+
+    ...
+    ...
+  }
+
+  dependencies {
+    ...
+    classpath &#39;me.tatarka:gradle-retrolambda:3.3.0&#39;
+    ...
+  }
+}</code></pre>
+<p>Here is the complete top level file:</p>
+<pre><code>// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url &quot;https://plugins.gradle.org/m2/&quot;
+        }
+    }
+    dependencies {
+        classpath &#39;com.android.tools.build:gradle:2.3.2&#39;
+        classpath &#39;me.tatarka:gradle-retrolambda:3.3.0&#39;
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}</code></pre>
+<p>In the module build.gradle file add the following snippets:</p>
+<p>At the head of the file:</p>
+<pre><code>apply plugin: &#39;me.tatarka.retrolambda&#39;</code></pre>
+<p>At the end of the <code>android</code> block, before its closing brace:</p>
+<pre><code>  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }</code></pre>
+<p>Here is the complete file:</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+apply plugin: &#39;me.tatarka.retrolambda&#39;
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion &quot;25.0.3&quot;
+    defaultConfig {
+        applicationId &quot;org.wit.myrent&quot;
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName &quot;1.0&quot;
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:2.2.2&#39;, {
+        exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39;
+    })
+    compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Lambdas &amp; Android (Convert anonymous class)</h1>
+<p>Open ResidenceActivity.java in Android Studio.</p>
+<p>We shall confine ourselves to refactoring the check box code only. Presently the listener associated with this widget is set using the interface or delegated method. We will change this to the use of an anonymous class and then convert the anonymous class to a lambda expression.</p>
+<ul>
+<li>Delete or comment out <code>CompoundButton.OnCheckedChangeListener</code> from the class header. This now becomes:</li>
+</ul>
+<pre><code>public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
+    View.OnClickListener,
+    DatePickerDialog.OnDateSetListener</code></pre>
+<p>Replace <code>rented.setOnCheckedChangeListener(this);</code> so as to use an anonymous inner class:</p>
+<pre><code>    rented.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+      @Override
+      public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        residence.rented = isChecked;
+      }
+    });</code></pre>
+<p>Toggle the code folding icon (+|-) immediately to the left of the line of code beginning <code>rented.set...</code>. Observe the folding feature. This is available if the appropriate setting is enabled in the Android Studio Preferences (Figures 1 &amp; 2).</p>
+<ul>
+<li>Editor &gt; General &gt; Code Folding<ul>
+<li>&quot;Closures (anonymous classes implementing one method, before Java 8&quot;</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/14.png" alt="Figure 1: Enable anonymous inner class code folding"></p>
+<p><img src="img/15.png" alt="Figure 2: Enable anonymous inner class code folding"></p>
+<p>We are allowed to convert this inner anonymous class to a lambda expression because the <a href="https://developer.android.com/reference/android/widget/CompoundButton.OnCheckedChangeListener.html"><code>OnCheckedChangedListener</code></a> interface contains a single abstract method and thus qualifies as a functional interface. This method, <code>onCheckedChanged</code>, has 2 parameters - a CompoundButton and a boolean. The lambda expression can infer these types and so it is not necessary to explicitly specify them. Here is the replacement lambda:</p>
+<pre><code>rented.setOnCheckedChangeListener((button, isChecked) -&gt; residence.rented = isChecked);</code></pre>
+<p>Test the app by created both a checked and unchecked residence, closing the app, reopening and ensuring the check box state is correctly represented. </p>
+<p>To summarize, three approaches to setting a listener are illustrated in Figure 3.</p>
+<p><img src="img/16.png" alt="Figure 3: Three methods of setting a listener"> </p>
+<p>Add, commit and push this change to your remote repo.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

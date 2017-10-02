@@ -1,0 +1,688 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      4-a: Navigation & Lifecycles
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-03 (Action Bar & Dialogs)">
+      MyRent-03 (Action Bar & Dialogs)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-03 (Action Bar & Dialogs)">
+        <h1>Action Bar &amp; Dialogs</h1>
+<p>In a significant update to the app, we introduce navigation within the app using an Action Bar. This will allow us to create new residences, or navigate to existing ones. Additionally, we will explore a simple date picker dialog to allow the user to select a registration date for the residence.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Overview</h1>
+<p>At the end of this session the following features will have been added:</p>
+<ul>
+<li>The action bar with menus as shown in Figure 1
+<img src="img/13.png" alt="Figure 1: Action bar and menu"></li>
+</ul>
+<ul>
+<li>Date picker as shown in Figure 2
+<img src="img/01.png" alt="Figure 2: Date picker to facilitate setting registration date"></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Resources</h1>
+<p>We will continue building the MyRent app that you commenced in the previous labs.</p>
+<p>We are now ready to proceed to introduce a new menu for display in ResidenceListActivity.</p>
+<p><img src="img/17.png" alt="Figure 1: ResidenceListActivity menu"></p>
+<ul>
+<li>Add these string resources to <em>res/values/strings.xml</em></li>
+</ul>
+<pre><code>  &lt;string name=&quot;new_residence&quot;&gt;New Residence&lt;/string&gt;
+  &lt;string name=&quot;settings&quot;&gt;Settings&lt;/string&gt;</code></pre>
+<p>Right click on the res directory and select New | Android Resource Directory.  Name the new directory <strong>menu</strong> and select the type as menu.  </p>
+<p><img src="img/17b.png" alt="Figure 1: Creating a res/menu folder"></p>
+<p>In the new folder <em>res/menu</em> create a new menu resource file called <em>residencelist</em>.</p>
+<p>Insert the following contents into the file: residencelist.xml</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    tools:context=&quot;org.wit.myrent.ResidenceActivity&quot;&gt;
+
+    &lt;item android:id=&quot;@+id/menu_item_new_residence&quot;
+        android:icon=&quot;@android:drawable/ic_menu_add&quot;
+        android:title=&quot;@string/new_residence&quot;
+        app:showAsAction=&quot;ifRoom|withText&quot;/&gt;
+
+
+    &lt;item
+        android:id=&quot;@+id/action_settings&quot;
+        android:orderInCategory=&quot;100&quot;
+        app:showAsAction=&quot;never&quot;
+        android:title=&quot;@string/settings&quot;/&gt;
+
+&lt;/menu&gt;</code></pre>
+<p>Next, we bind this newly-created menu to the activity within which we wish the menu to appear, namely ResidenceListActivity.</p>
+<ul>
+<li>Add this override to ResidenceListActivity:</li>
+</ul>
+<pre><code>  @Override
+  public boolean onCreateOptionsMenu(Menu menu)
+  {
+    MenuInflater menuInflater = getMenuInflater();
+    menuInflater.inflate(R.menu.residencelist, menu);
+    return true;
+  }</code></pre>
+<p>These imports are required:</p>
+<pre><code>import android.view.Menu;
+import android.view.MenuInflater;</code></pre>
+<p>Observe in the above method, <em>onCreateOptionsMenu</em>, how the <em>residencelist</em> menu is accessed.</p>
+<p>Figure 3 shows the relationship between the xml and display.</p>
+<p><img src="img/14.png" alt="Figure 3: Action Bar &amp; Menu"></p>
+<p>Build and run the application. You should see something like that shown in Figure 4.</p>
+<p><img src="img/16.png" alt="Figure 4: Action Bar Menu"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Helpers</h1>
+<p>Add a new class named <em>IntentHelper</em> to <em>org.wit.android.helpers</em>.</p>
+<p>Filename: IntentHelper.java</p>
+<pre><code>package org.wit.android.helpers;
+import java.io.Serializable;
+
+import android.app.Activity;
+import android.content.Intent;
+
+public class IntentHelper
+{
+  public static void startActivity (Activity parent, Class classname)
+  {
+    Intent intent = new Intent(parent, classname);
+    parent.startActivity(intent);
+  }   
+
+  public static void startActivityWithData (Activity parent, Class classname, String extraID, Serializable extraData)
+  {
+    Intent intent = new Intent(parent, classname);
+    intent.putExtra(extraID, extraData);
+    parent.startActivity(intent);
+  }  
+
+  public static void startActivityWithDataForResult (Activity parent, Class classname, String extraID, Serializable extraData, int idForResult)
+  {
+    Intent intent = new Intent(parent, classname);
+    intent.putExtra(extraID, extraData);
+    parent.startActivityForResult(intent, idForResult);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Activities (ResidenceListActivity)</h1>
+<p>Here we shall provide the coding to respond to menu selection:</p>
+<p>Import the helpers provided in the previous step:</p>
+<pre><code>import static org.wit.android.helpers.IntentHelper.startActivityWithData;
+import static org.wit.android.helpers.IntentHelper.startActivityWithDataForResult;</code></pre>
+<p>This import statement is necessary:</p>
+<pre><code>import android.view.MenuItem;</code></pre>
+<p>Now override <em>onOptionsItemSelected</em> to respond to selecting the menu item to create a new residence instance:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case R.id.menu_item_new_residence: Residence residence = new Residence();
+                                         portfolio.addResidence(residence);
+                                         startActivityWithDataForResult(this, ResidenceActivity.class, &quot;RESIDENCE_ID&quot;, residence.id, 0);
+                                         return true;    
+
+      default: return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>Add this line of code to <em>onItemClick</em></p>
+<pre><code>startActivityWithData(this, ResidenceActivity.class, &quot;RESIDENCE_ID&quot;, residence.id);</code></pre>
+<p>Delete remaining lines code: 
+<img src="img/10.png" alt=""></p>
+<p>Here is refactored method:</p>
+<pre><code>  @Override
+  public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id)
+  {
+    Residence residence = adapter.getItem(position);
+    startActivityWithData(this, ResidenceActivity.class, &quot;RESIDENCE_ID&quot;, residence.id);
+  }</code></pre>
+<p>We no longer use test data. Delete this line from Portfolio:
+<img src="img/11.png" alt=""></p>
+<p>Delete the now redundant method, also in Portfolio: <em>generateTestData</em></p>
+<p><img src="img/12.png" alt=""></p>
+<p>One small final change to org.wit.myrent.models.Residence:</p>
+<ul>
+<li>Add a default value for geoloction in the default constructor:</li>
+</ul>
+<pre><code>    geolocation = &quot;52.253456,-7.187162&quot;;</code></pre>
+<p>This will ensure the the residence list will always display some meaningful data.</p>
+<p>Here is the modified constructor:</p>
+<pre><code>  public Residence()
+  {
+    id = unsignedLong();
+    date = new Date().getTime();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+  }</code></pre>
+<p>Check that the app works as expected:</p>
+<ul>
+<li>Launch the app and select the menu item (+)</li>
+<li>Optionally, make some changes to the residence data in the detail view</li>
+<li>Switch back to the list view using the back-button.</li>
+</ul>
+<p>You should be presented with something similar to that shown in Figure 1.</p>
+<p><img src="img/15.png" alt="Figure 1: Using menu to add new residence"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Dialog</h1>
+<p>The dialog in Figure 1 is an instance of <a href="http://developer.android.com/reference/android/app/DatePickerDialog.html"><strong>DatePickerDialog</strong></a> which is a simple dialog containing a <a href="http://developer.android.com/reference/android/widget/DatePicker.html"><strong>DatePicker</strong></a>.</p>
+<ul>
+<li>A DatePicker is a widget for selecting a date.</li>
+</ul>
+<p><img src="img/02.png" alt="Figure 1: DatePicker widget"></p>
+<ul>
+<li>As shown in Figure 2, the DatePicker is contained in <em>ResidenceActivity</em>.</li>
+</ul>
+<p><img src="img/03.png" alt="Figure 2: Object diagram showing DatePickerDialog"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Activities (ResidenceActivity)</h1>
+<p>We shall now implement the code to allow a user to set the registration date of a residence.</p>
+<p>In <em>org.wit.myrent.activities.ResidenceActivity</em> add these import statements:</p>
+<pre><code>import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import android.app.DatePickerDialog;
+import android.view.View;
+import android.view.View.OnClickListener;</code></pre>
+<p>Delete line disabling date button:
+<img src="img/09.png" alt=""></p>
+<p>Change the signature of ResidenceActivity class by adding </p>
+<ul>
+<li>View.OnClickListener</li>
+<li>DatePickerDialog.OnDateSetListener</li>
+</ul>
+<p>to the list of implemented interfaces:</p>
+<pre><code>public class ResidenceActivity extends Activity implements TextWatcher, OnCheckedChangeListener, View.OnClickListener, DatePickerDialog.OnDateSetListener
+{
+...
+...
+}</code></pre>
+<p>This change will trigger errors. Add unimplemented methods manually or using the Android Studio hot keys to autogenerate the methods (ALT+Enter):</p>
+<ul>
+<li>public void onDateSet(DatePicker datePicker, int i, int i1, int i2) </li>
+<li>public void onClick(View view)</li>
+</ul>
+<p>Here is the implementation of these methods:</p>
+<pre><code>  @Override
+  public void onClick(View view)
+  {
+    switch (view.getId())
+    {
+      case R.id.registration_date      : Calendar c = Calendar.getInstance();
+                                         DatePickerDialog dpd = new DatePickerDialog (this, this, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
+                                         dpd.show();
+                                         break; 
+    }
+  }</code></pre>
+<pre><code>  @Override
+  public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+  {
+    Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+    residence.date = date.getTime();
+    dateButton.setText(residence.getDateString());
+  }</code></pre>
+<p>Set the date button listener in <em>onCreate</em>:</p>
+<pre><code>dateButton.setOnClickListener(this);</code></pre>
+<p>Launch the app and test that this code works as intended:</p>
+<ul>
+<li>Create a new residence</li>
+<li>Change the registration date</li>
+<li>Return to the list view and create a further residence.</li>
+<li>Return to the list view, click on the first residence, which opens its detail view, and observe that it retains the modified date.</li>
+</ul>
+<p><img src="img/18.png" alt="Figure 1: Date picker in action"></p>
+<p>For reference, here is the completed ResidenceActivity class:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.DatePicker;
+import android.widget.EditText;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import android.app.DatePickerDialog;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+
+
+public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
+                                                                    OnCheckedChangeListener,
+                                                                    View.OnClickListener,
+                                                                    DatePickerDialog.OnDateSetListener{
+
+    private EditText geolocation;
+    private Residence residence;
+    private CheckBox rented;
+    private Button dateButton;
+    private Portfolio portfolio;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_residence);
+
+        geolocation = (EditText) findViewById(R.id.geolocation);
+        residence   = new Residence();
+        geolocation.addTextChangedListener(this);
+
+        dateButton  = (Button)   findViewById(R.id.registration_date);
+        dateButton.setOnClickListener(this);
+
+        rented = (CheckBox) findViewById(R.id.isrented);
+        rented.setOnCheckedChangeListener(this);
+
+        MyRentApp app = (MyRentApp) getApplication();
+        portfolio = app.portfolio;
+
+        Long resId = (Long) getIntent().getExtras().getSerializable(&quot;RESIDENCE_ID&quot;);
+        residence = portfolio.getResidence(resId);
+        if (residence != null)
+        {
+            updateControls(residence);
+        }
+
+    }
+
+    public void updateControls(Residence residence)
+    {
+        geolocation.setText(residence.geolocation);
+        rented.setChecked(residence.rented);
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+        residence.setGeolocation(editable.toString());
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Log.i(this.getClass().getSimpleName(), &quot;rented Checked&quot;);
+        residence.rented = isChecked;
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+    {
+        Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+        residence.date = date.getTime();
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.registration_date      :
+                Calendar c = Calendar.getInstance();
+                DatePickerDialog dpd = new DatePickerDialog (this, this, c.get(Calendar.YEAR),
+                                                                         c.get(Calendar.MONTH),
+                                                                         c.get(Calendar.DAY_OF_MONTH));
+                dpd.show();
+                break;
+        }
+    }
+}</code></pre>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2017/myrent-03.git">myrent-03</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

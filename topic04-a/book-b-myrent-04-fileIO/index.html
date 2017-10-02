@@ -1,0 +1,908 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      4-a: Navigation & Lifecycles
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-04 (FileIO)">
+      MyRent-04 (FileIO)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-04 (FileIO)">
+        <h1>File IO</h1>
+<p>Introduce into MyRent a serialization mechanism to save and restore the residence list to and from a file. The app will load the contents of this file on launch and update the file if residence data is updated. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Residence</h1>
+<p>Continue building the MyRent app that you developed in the previous lab.</p>
+<p>The Residence.java model will need an ability to save and restore itself to some external format. A convenient choice for this format is JSON:</p>
+<ul>
+<li><a href="http://json.org/">http://json.org/</a></li>
+</ul>
+<p>The Android has support for this format in its libaries:</p>
+<pre><code>import org.json.JSONException;
+import org.json.JSONObject;</code></pre>
+<p>... we should define in our classes appropriate names for each of the fields we wish to serialize:</p>
+<pre><code>  private static final String JSON_ID             = &quot;id&quot;            ;
+  private static final String JSON_GEOLOCATION    = &quot;geolocation&quot;   ;
+  private static final String JSON_DATE           = &quot;date&quot;          ;
+  private static final String JSON_RENTED         = &quot;rented&quot;        ;</code></pre>
+<p>This Residence class will need a new constructor to load a Residence object from JSON:</p>
+<pre><code>  public Residence(JSONObject json) throws JSONException
+  {
+    id            = json.getLong(JSON_ID);
+    geolocation   = json.getString(JSON_GEOLOCATION);
+    date          = json.getLong(JSON_DATE);
+    rented        = json.getBoolean(JSON_RENTED);
+  }</code></pre>
+<p>... and a corresponding method to save an object to JSON:</p>
+<pre><code>  public JSONObject toJSON() throws JSONException
+  {
+    JSONObject json = new JSONObject();
+    json.put(JSON_ID            , Long.toString(id));
+    json.put(JSON_GEOLOCATION   , geolocation);
+    json.put(JSON_DATE          , date);
+    json.put(JSON_RENTED        , rented);
+    return json;
+  }</code></pre>
+<h2>Complete refactored model Residence class for reference purposes:</h2>
+<pre><code>package org.wit.myrent.models;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Date;
+import java.util.Random;
+
+
+public class Residence
+{
+  public Long id;
+  public Long date;
+
+  //a latitude longitude pair
+  //example &quot;52.4566,-6.5444&quot;
+  public String geolocation;
+  public boolean rented;
+
+  private static final String JSON_ID             = &quot;id&quot;            ;
+  private static final String JSON_GEOLOCATION    = &quot;geolocation&quot;   ;
+  private static final String JSON_DATE           = &quot;date&quot;          ;
+  private static final String JSON_RENTED         = &quot;rented&quot;        ;
+
+  public Residence()
+  {
+    id = unsignedLong();
+    date = new Date().getTime();
+    geolocation = &quot;52.253456,-7.187162&quot;;
+  }
+
+  /**
+   * Generate a long greater than zero
+   * @return Unsigned Long value greater than zero
+   */
+  private Long unsignedLong() {
+    long rndVal = 0;
+    do {
+      rndVal = new Random().nextLong();
+    } while (rndVal &lt;= 0);
+    return rndVal;
+  }
+
+  public Residence(JSONObject json) throws JSONException
+  {
+    id            = json.getLong(JSON_ID);
+    geolocation   = json.getString(JSON_GEOLOCATION);
+    date          = json.getLong(JSON_DATE);
+    rented        = json.getBoolean(JSON_RENTED);
+  }
+
+  public JSONObject toJSON() throws JSONException
+  {
+    JSONObject json = new JSONObject();
+    json.put(JSON_ID            , Long.toString(id));
+    json.put(JSON_GEOLOCATION   , geolocation);
+    json.put(JSON_DATE          , date);
+    json.put(JSON_RENTED        , rented);
+    return json;
+  }
+
+  public void setGeolocation(String geolocation)
+  {
+    this.geolocation = geolocation;
+  }
+
+  public String getGeolocation()
+  {
+    return geolocation;
+  }
+package org.wit.myrent.models;
+
+import java.util.Date;
+import java.util.Random;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class Residence
+{
+    public Long id;
+    public Long date;
+
+    //a latitude longitude pair
+    //example &quot;52.4566,-6.5444&quot;
+    public String geolocation;
+    public boolean rented;
+
+    //JSON names for instance fields
+    private static final String JSON_ID             = &quot;id&quot;            ;
+    private static final String JSON_GEOLOCATION    = &quot;geolocation&quot;   ;
+    private static final String JSON_DATE           = &quot;date&quot;          ;
+    private static final String JSON_RENTED         = &quot;rented&quot;        ;
+
+    public Residence()
+    {
+        id = unsignedLong();
+        date = new Date().getTime();
+        geolocation = &quot;52.253456,-7.187162&quot;;
+    }
+
+    //Constructor for loading JSON objects
+    public Residence(JSONObject json) throws JSONException
+    {
+        id            = json.getLong(JSON_ID);
+        geolocation   = json.getString(JSON_GEOLOCATION);
+        date          = json.getLong(JSON_DATE);
+        rented        = json.getBoolean(JSON_RENTED);
+    }
+
+    /**
+     * Generate a long greater than zero
+     * @return Unsigned Long value greater than zero
+     */
+    private Long unsignedLong() {
+        long rndVal = 0;
+        do {
+            rndVal = new Random().nextLong();
+        } while (rndVal &lt;= 0);
+        return rndVal;
+    }
+
+    public void setGeolocation(String geolocation)
+    {
+        this.geolocation = geolocation;
+    }
+
+    public String getGeolocation()
+    {
+        return geolocation;
+    }
+
+    public String getDateString() {
+        return &quot;Registered:&quot; + dateString();
+    }
+
+    private String dateString() {
+        String dateFormat = &quot;EEE d MMM yyyy H:mm&quot;;
+        return android.text.format.DateFormat.format(dateFormat, date).toString();
+    }
+
+    //Saves model as JSON object
+    public JSONObject toJSON() throws JSONException
+    {
+        JSONObject json = new JSONObject();
+        json.put(JSON_ID            , Long.toString(id));
+        json.put(JSON_GEOLOCATION   , geolocation);
+        json.put(JSON_DATE          , date);
+        json.put(JSON_RENTED        , rented);
+        return json;
+    }
+
+}
+
+  public String getDateString() {
+    return &quot;Registered:&quot; + dateString();
+  }
+
+  private String dateString() {
+    String dateFormat = &quot;EEE d MMM yyyy H:mm&quot;;
+    return android.text.format.DateFormat.format(dateFormat, date).toString();
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>PortfolioSerializer</h1>
+<p>In order to perform the actual serialization - we provide a new model class to save &amp; restore a list of Residences:</p>
+<pre><code>package org.wit.myrent.models;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONTokener;
+
+import android.content.Context;
+
+public class PortfolioSerializer
+{
+  private Context mContext;
+  private String mFilename;
+
+  public PortfolioSerializer(Context c, String f)
+  {
+    mContext = c;
+    mFilename = f;
+  }
+
+  public void saveResidences(ArrayList&lt;Residence&gt; residences) throws JSONException, IOException
+  {
+    // build an array in JSON
+    JSONArray array = new JSONArray();
+    for (Residence c : residences)
+      array.put(c.toJSON());
+
+    // write the file to disk
+    Writer writer = null;
+    try
+    {
+      OutputStream out = mContext.openFileOutput(mFilename, Context.MODE_PRIVATE);
+      writer = new OutputStreamWriter(out);
+      writer.write(array.toString());
+    }
+    finally
+    {
+      if (writer != null)
+        writer.close();
+    }
+  }
+
+  public ArrayList&lt;Residence&gt; loadResidences() throws IOException, JSONException
+  {
+    ArrayList&lt;Residence&gt; residences = new ArrayList&lt;Residence&gt;();
+    BufferedReader reader = null;
+    try
+    {
+      // open and read the file into a StringBuilder
+      InputStream in = mContext.openFileInput(mFilename);
+      reader = new BufferedReader(new InputStreamReader(in));
+      StringBuilder jsonString = new StringBuilder();
+      String line = null;
+      while ((line = reader.readLine()) != null)
+      {
+        // line breaks are omitted and irrelevant
+        jsonString.append(line);
+      }
+      // parse the JSON using JSONTokener
+      JSONArray array = (JSONArray) new JSONTokener(jsonString.toString()).nextValue();
+      // build the array of residences from JSONObjects
+      for (int i = 0; i &lt; array.length(); i++)
+      {
+        residences.add(new Residence(array.getJSONObject(i)));
+      }
+    }
+    catch (FileNotFoundException e)
+    {
+      // we will ignore this one, since it happens when we start fresh
+    }
+    finally
+    {
+      if (reader != null)
+        reader.close();
+    }
+    return residences;
+  }
+}</code></pre>
+<p>Place this complete class in the &#39;models&#39; package.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Portfolio</h1>
+<p>The portfolio class will now be equipped with the capability to use the serializer to save | restore the Residences it is managing. It will use the PortfolioSerializer class just developed to do this.</p>
+<p>First, introduce the serializer as a member of the Portfolio class:</p>
+<pre><code>  private PortfolioSerializer   serializer;</code></pre>
+<p>... then revise the constructor to take a serializer when it is being initialised:</p>
+<pre><code>  public Portfolio(PortfolioSerializer serializer)
+  {
+    this.serializer = serializer;
+    try
+    {
+      residences = serializer.loadResidences();
+    }
+    catch (Exception e)
+    {
+      info(this, &quot;Error loading residences: &quot; + e.getMessage());
+      residences = new ArrayList&lt;Residence&gt;();
+    }
+  }</code></pre>
+<p>The above will require an import statement for <em>info</em>:</p>
+<pre><code>import static org.wit.android.helpers.LogHelpers.info;</code></pre>
+<p>We can now introduce a new method to save all the residences to disk:</p>
+<pre><code>  public boolean saveResidences()
+  {
+    try
+    {
+      serializer.saveResidences(residences);
+      info(this, &quot;Residences saved to file&quot;);
+      return true;
+    }
+    catch (Exception e)
+    {
+      info(this, &quot;Error saving residences: &quot; + e.getMessage());
+      return false;
+    }
+  }</code></pre>
+<p>Teh method to add a residence to the list should be in your class already:</p>
+<pre><code>  public void addResidence(Residence residence)
+  {
+    residences.add(residence);
+  }</code></pre>
+<p>Here is the complete Portfolio class for reference purposes:</p>
+<pre><code>package org.wit.myrent.models;
+import java.util.ArrayList;
+
+import android.util.Log;
+
+import static org.wit.android.helpers.LogHelpers.info;
+
+public class Portfolio
+{
+    public ArrayList&lt;Residence&gt; residences;
+    private PortfolioSerializer   serializer;
+
+    public Portfolio(PortfolioSerializer serializer)
+    {
+        this.serializer = serializer;
+        try
+        {
+            residences = serializer.loadResidences();
+        }
+        catch (Exception e)
+        {
+            info(this, &quot;Error loading residences: &quot; + e.getMessage());
+            residences = new ArrayList&lt;Residence&gt;();
+        }
+    }
+
+    public void addResidence(Residence residence) {
+        residences.add(residence);
+    }
+
+    public Residence getResidence(Long id) {
+        Log.i(this.getClass().getSimpleName(), &quot;Long parameter id: &quot; + id);
+
+        for (Residence res : residences) {
+            if (id.equals(res.id)) {
+                return res;
+            }
+        }
+        return null;
+    }
+
+    public boolean saveResidences()
+    {
+        try
+        {
+            serializer.saveResidences(residences);
+            info(this, &quot;Residences saved to file&quot;);
+            return true;
+        }
+        catch (Exception e)
+        {
+            info(this, &quot;Error saving residences: &quot; + e.getMessage());
+            return false;
+        }
+    }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>MyRentApp</h1>
+<p>The entire loading process is initially triggered by the application object, which is the entry point for our application.</p>
+<p>In MyRentApp.java, introduce a field to hold the file name we will use to store the portfolio:</p>
+<pre><code>  private static final String FILENAME = &quot;portfolio.json&quot;;</code></pre>
+<p>Then we replace the current portfolio creation with the following:</p>
+<pre><code>    PortfolioSerializer serializer = new PortfolioSerializer(this, FILENAME);
+    portfolio = new Portfolio(serializer);</code></pre>
+<p>Add an import statement for PortfolioSerializer:</p>
+<pre><code>import org.wit.myrent.models.PortfolioSerializer;</code></pre>
+<p>Run the app now. See if you can create some Residences. Can you determine if they are being saved?</p>
+<p>To do this, it may not be enough to just exit the app and launch again - as you will be merely restoring the already active app. See if you can actually &#39;kill&#39; the application.</p>
+<p>If you manage to do this, you might find that the data is not actually saved. We will fix this in the next step.</p>
+<p>Here is the complete class for Reference Purposes:</p>
+<pre><code>package org.wit.myrent.app;
+
+import static org.wit.android.helpers.LogHelpers.info;
+
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.PortfolioSerializer;
+
+import android.app.Application;
+
+public class MyRentApp extends Application
+{
+  private static final String FILENAME = &quot;portfolio.json&quot;;
+
+  public Portfolio portfolio;
+
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    PortfolioSerializer serializer = new PortfolioSerializer(this, FILENAME);
+    portfolio = new Portfolio(serializer);
+
+    info(this, &quot;MyRent app launched&quot;);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>ResidenceActivity</h1>
+<p>One method of ensuring the data is in fact saved, will be to trigger a save when the user leaves the ResidenceActivity:</p>
+<pre><code>  @Override
+  public void onPause() 
+  {
+    super.onPause();
+    portfolio.saveResidences();
+  }</code></pre>
+<p>Before concluding this lab we shall fix an issue that prevents the <code>rented</code> residence field from being serialized. Replace this statement:</p>
+<pre><code>    rented.setChecked(residence.rented);</code></pre>
+<p>with this:</p>
+<pre><code>    rented.setOnCheckedChangeListener(this);</code></pre>
+<p>It should now be possible to save and load the residences. Verify that this works - you will need to completely kill the app for this to be verified.</p>
+<p><img src="img/02.png" alt="Figure 1: Kill app - remove from list"></p>
+<p>Here is the complete class for reference purposes:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.DatePicker;
+import android.widget.EditText;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import android.app.DatePickerDialog;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+
+
+public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
+                                                                    OnCheckedChangeListener,
+                                                                    View.OnClickListener,
+                                                                    DatePickerDialog.OnDateSetListener{
+
+    private EditText geolocation;
+    private Residence residence;
+    private CheckBox rented;
+    private Button dateButton;
+    private Portfolio portfolio;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_residence);
+
+        geolocation = (EditText) findViewById(R.id.geolocation);
+        residence   = new Residence();
+        geolocation.addTextChangedListener(this);
+
+        dateButton  = (Button)   findViewById(R.id.registration_date);
+        dateButton.setOnClickListener(this);
+
+        rented = (CheckBox) findViewById(R.id.isrented);
+        rented.setOnCheckedChangeListener(this);
+
+        MyRentApp app = (MyRentApp) getApplication();
+        portfolio = app.portfolio;
+
+        Long resId = (Long) getIntent().getExtras().getSerializable(&quot;RESIDENCE_ID&quot;);
+        residence = portfolio.getResidence(resId);
+        if (residence != null)
+        {
+            updateControls(residence);
+        }
+
+    }
+
+    public void updateControls(Residence residence)
+    {
+        geolocation.setText(residence.geolocation);
+        rented.setOnCheckedChangeListener(this);
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+        residence.setGeolocation(editable.toString());
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+        Log.i(this.getClass().getSimpleName(), &quot;rented Checked&quot;);
+        residence.rented = isChecked;
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+    {
+        Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+        residence.date = date.getTime();
+        dateButton.setText(residence.getDateString());
+    }
+
+    @Override
+    public void onClick(View view)
+    {
+        switch (view.getId())
+        {
+            case R.id.registration_date      :
+                Calendar c = Calendar.getInstance();
+                DatePickerDialog dpd = new DatePickerDialog (this, this, c.get(Calendar.YEAR),
+                                                                         c.get(Calendar.MONTH),
+                                                                         c.get(Calendar.DAY_OF_MONTH));
+                dpd.show();
+                break;
+        }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        portfolio.saveResidences();
+    }
+
+}</code></pre>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2017/myrent-04.git">myrent-04</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
