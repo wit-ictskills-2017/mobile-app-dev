@@ -1,0 +1,927 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      5-b (SUPPLEMENTAL): Fragments
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-07 (Fragments)">
+      MyRent-07 (Fragments)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-07 (Fragments)">
+        <h1>Fragments</h1>
+<p>An Activity may comprise one or more fragments, each of which represents a portion of a user interface. Multiple fragments can be combined in a single actiity to build a multi-pane screen. In this lab our purpose in introducing fragments is to later facilitate the inclusion of a horizontal swipe feature to the ResidenceActivity class.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Preview</h1>
+<p>In this lab we introduce fragments (Figure 1). Each activity is refactored and replaced by an activity-fragment pair.</p>
+<p><img src="img/05.png" alt="Figure 1: Using fragments"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>ResidenceActivity</h1>
+<p>Before proceeding with refactoring ResidenceActivity, it is necessary to make some changes as follows:</p>
+<p><h4>MyRentApp</h4>
+Declare a protected MyRentApp field, initialize it in onCreate and provide a getter:</p>
+<pre><code>  protected static MyRentApp app;
+  @Override
+  public void onCreate() {
+    ...
+    app = this;
+    ...
+  }
+
+  public static MyRentApp getApp(){
+    return app;
+  }</code></pre>
+<p><h4>Residence (model)</h4>
+Note that we have already protected Residence against a negative id:</p>
+<pre><code>  public Residence() {
+    id = unsignedLong();
+    ...
+  }
+
+  /**
+   * Generate a long greater than zero
+   * @return Unsigned Long value greater than zero
+   */
+  private Long unsignedLong() {
+    long rndVal = 0;
+    do {
+      rndVal = new Random().nextLong();
+    } while (rndVal &lt;= 0);
+    return rndVal;
+  }</code></pre>
+<p>We will continue building the MyRent app that you developed in the previous lab.</p>
+<p>Much of the content of ResidenceActivity from the previous version will be moved to its associated new fragment class, ResidenceFragment.</p>
+<p>We now begin refactoring:</p>
+<ul>
+<li>Replace the contents of <em>ResidenceActivity</em> with the following:</li>
+</ul>
+<pre><code>package org.wit.myrent.activities;
+
+
+import org.wit.myrent.R;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+
+public class ResidenceActivity extends AppCompatActivity
+{
+  ActionBar actionBar;
+
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.fragment_container);
+
+    actionBar = getSupportActionBar();
+
+    FragmentManager manager = getSupportFragmentManager();
+    Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
+    if (fragment == null)
+    {
+      fragment = new ResidenceFragment();
+      manager.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
+    }
+  }
+}</code></pre>
+<p>Add a container for the associated fragment:</p>
+<p>Filename: res/layout/fragment_container.xml</p>
+<pre><code>&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+  android:id=&quot;@+id/fragmentContainer&quot;
+  android:layout_width=&quot;match_parent&quot;
+  android:layout_height=&quot;match_parent&quot;
+  /&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>ResidenceFragment</h1>
+<p>Here is the new ResidenceFragment class which comprises, mostly, code migrated from ResidenceActivity in the previous version of MyRent:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+
+import android.Manifest;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.app.DatePickerDialog;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import static org.wit.android.helpers.ContactHelper.sendEmail;
+import static org.wit.android.helpers.ContactHelper.getEmail;
+import static org.wit.android.helpers.ContactHelper.getContact;
+import static org.wit.android.helpers.IntentHelper.navigateUp;
+
+public class ResidenceFragment extends Fragment implements TextWatcher,
+        OnCheckedChangeListener,
+        OnClickListener,
+        DatePickerDialog.OnDateSetListener
+{
+    public static   final String  EXTRA_RESIDENCE_ID = &quot;myrent.RESIDENCE_ID&quot;;
+    private static  final int     REQUEST_CONTACT = 1;
+
+    private EditText geolocation;
+    private CheckBox rented;
+    private Button   dateButton;
+    private Button   tenantButton;
+    private Button   reportButton;
+
+    private Residence   residence;
+    private Portfolio   portfolio;
+
+    private String emailAddress = &quot;&quot;;
+    // This field is initialized in `onActivityResult`.
+    private Intent data;
+    MyRentApp app;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+
+        Long resId = (Long) getActivity().getIntent().getSerializableExtra(EXTRA_RESIDENCE_ID);
+
+        app = MyRentApp.getApp();
+        portfolio = app.portfolio;
+        residence = portfolio.getResidence(resId);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState)
+    {
+        super.onCreateView(inflater,  parent, savedInstanceState);
+        View v = inflater.inflate(R.layout.fragment_residence, parent, false);
+
+        ResidenceActivity residenceActivity = (ResidenceActivity)getActivity();
+        residenceActivity.actionBar.setDisplayHomeAsUpEnabled(true);
+
+        addListeners(v);
+        updateControls(residence);
+
+        return v;
+    }
+
+    private void addListeners(View v)
+    {
+        geolocation  = (EditText) v.findViewById(R.id.geolocation);
+        dateButton   = (Button)   v.findViewById(R.id.registration_date);
+        rented       = (CheckBox) v.findViewById(R.id.isrented);
+        tenantButton = (Button)   v.findViewById(R.id.tenant);
+        reportButton = (Button)   v.findViewById(R.id.residence_reportButton);
+
+
+        geolocation .addTextChangedListener(this);
+        dateButton  .setOnClickListener(this);
+        rented      .setOnCheckedChangeListener(this);
+        tenantButton.setOnClickListener(this);
+        reportButton.setOnClickListener(this);
+    }
+
+    public void updateControls(Residence residence)
+    {
+        geolocation.setText(residence.geolocation);
+        rented.setChecked(residence.rented);
+        dateButton.setText(residence.getDateString());
+        tenantButton.setText(&quot;Tenant: &quot;+residence.tenant);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch (item.getItemId())
+        {
+            case android.R.id.home: navigateUp(getActivity());
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+        portfolio.saveResidences();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (resultCode != Activity.RESULT_OK)
+        {
+            return;
+        }
+
+        switch (requestCode)
+        {
+            case REQUEST_CONTACT:
+                this.data = data;
+                checkContactsReadPermission();
+                break;
+        }
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after)
+    { }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count)
+    {}
+
+    @Override
+    public void afterTextChanged(Editable c)
+    {
+        Log.i(this.getClass().getSimpleName(), &quot;geolocation &quot; + c.toString());
+        residence.geolocation = c.toString();
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+    {
+        residence.rented = isChecked;
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.registration_date      : Calendar c = Calendar.getInstance();
+                DatePickerDialog dpd = new DatePickerDialog (getActivity(), this,
+                                                c.get(Calendar.YEAR),
+                                                c.get(Calendar.MONTH),
+                                                c.get(Calendar.DAY_OF_MONTH));
+                dpd.show();
+                break;
+            case R.id.tenant :
+                Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+                startActivityForResult(i, REQUEST_CONTACT);
+                tenantButton.setText(&quot;Tenant: &quot;+residence.tenant);
+                break;
+            case R.id.residence_reportButton :
+                sendEmail(getActivity(), emailAddress, getString(R.string.residence_report_subject), residence.getResidenceReport(getActivity()));
+                break;
+        }
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
+    {
+        Date date = new GregorianCalendar(year, monthOfYear, dayOfMonth).getTime();
+        residence.date = date.getTime();
+        dateButton.setText(residence.getDateString());
+    }
+
+    //https://developer.android.com/training/permissions/requesting.html
+    private void checkContactsReadPermission() {
+        // Here, thisActivity is the current activity
+        if (ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            //We can request the permission.
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_CONTACT);
+        }
+        else {
+            //We already have permission, so go head and read the contact
+            readContact();
+        }
+    }
+
+    private void readContact() {
+        String name = getContact(getActivity(), data);
+        emailAddress = getEmail(getActivity(), data);
+        residence.tenant = name;
+        tenantButton.setText(&quot;Tenant: &quot;+residence.tenant);
+    }
+
+    //https://developer.android.com/training/permissions/requesting.html
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_CONTACT: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length &gt; 0
+                        &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // permission was granted
+                    readContact();
+                }
+            }
+        }
+    }
+}</code></pre>
+<p>Rename res/layout/activity_residence.xml to the more appropriate name: fragment_residence.xml. </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>ResidenceListActivity</h1>
+<p>As is the case with ResidenceActivity, much of ResidenceListActivity&#39;s code is also moved to its new associated fragment class - ResidenceListFragment.</p>
+<p>Here is the refactored ResidenceListActivity:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import org.wit.myrent.R;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
+
+public class ResidenceListActivity extends AppCompatActivity
+{
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_container);
+
+        FragmentManager manager = getSupportFragmentManager();
+        Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
+        if (fragment == null)
+        {
+            fragment = new ResidenceListFragment();
+            manager.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
+        }
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>ResidenceListFragment</h1>
+<p>Here is the ResidenceListFragment class which comprises, mostly, code migrated from ResidencyListActivity in the previous version of MyRent:</p>
+<pre><code>package org.wit.myrent.activities;
+
+import java.util.ArrayList;
+
+import org.wit.android.helpers.IntentHelper;
+import org.wit.myrent.R;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+
+import android.widget.ListView;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.TextView;
+import android.widget.CheckBox;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.ListFragment;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class ResidenceListFragment extends ListFragment implements OnItemClickListener
+{
+    private ArrayList&lt;Residence&gt; residences;
+    private Portfolio portfolio;
+    private ResidenceAdapter adapter;
+    MyRentApp app;
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+        getActivity().setTitle(R.string.app_name);
+
+        app = MyRentApp.getApp();
+        portfolio = app.portfolio;
+        residences = portfolio.residences;
+
+        adapter = new ResidenceAdapter(getActivity(), residences);
+        setListAdapter(adapter);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+        View v = super.onCreateView(inflater, parent, savedInstanceState);
+        return v;
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Residence res = ((ResidenceAdapter) getListAdapter()).getItem(position);
+        Intent i = new Intent(getActivity(), ResidenceActivity.class);
+        i.putExtra(ResidenceFragment.EXTRA_RESIDENCE_ID, res.id);
+        startActivityForResult(i, 0);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ((ResidenceAdapter) getListAdapter()).notifyDataSetChanged();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.residencelist, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_new_residence:
+                Residence residence = new Residence();
+                portfolio.addResidence(residence);
+
+                Intent i = new Intent(getActivity(), ResidenceActivity.class);
+                i.putExtra(ResidenceFragment.EXTRA_RESIDENCE_ID, residence.id);
+                startActivityForResult(i, 0);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+        Residence residence = adapter.getItem(position);
+        IntentHelper.startActivityWithData(getActivity(), ResidenceActivity.class, &quot;RESIDENCE_ID&quot;, residence.id);
+    }
+
+    class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
+    {
+        private Context context;
+
+        public ResidenceAdapter(Context context, ArrayList&lt;Residence&gt; residences) {
+            super(context, 0, residences);
+            this.context = context;
+        }
+
+        @SuppressLint(&quot;InflateParams&quot;)
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            if (convertView == null) {
+                convertView = inflater.inflate(R.layout.list_item_residence, null);
+            }
+            Residence res = getItem(position);
+
+            TextView geolocation = (TextView) convertView.findViewById(R.id.residence_list_item_geolocation);
+            geolocation.setText(res.geolocation);
+
+            TextView dateTextView = (TextView) convertView.findViewById(R.id.residence_list_item_dateTextView);
+            dateTextView.setText(res.getDateString());
+
+            CheckBox rentedCheckBox = (CheckBox) convertView.findViewById(R.id.residence_list_item_isrented);
+            rentedCheckBox.setChecked(res.rented);
+
+            return convertView;
+        }
+    }
+}</code></pre>
+<p>Build and install the app on a device and verify that it functions correctly. </p>
+<p>No major observable difference should exist in the performance of the application as a result of introducing fragments.</p>
+<p>We did make one minor change to the &quot;Prospective Tenant&quot; button.  The text on the button now states either:
+- Tenant: None Presently
+- Tenant: the actual tenant name retrieved from the Residence model</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Test</h1>
+<p>Build and install the app on a phsical device or emulator:</p>
+<ul>
+<li>Create a new residence</li>
+<li>Explore the various features.</li>
+<li>No difference in the behaviour of the app will be obvious (bar the text on the prospective tenant button) as a consequence of introducing fragments.</li>
+<li>The need for and use of fragments will be demonstrated later in the course.</li>
+</ul>
+<p>The application at the end of this lab is available for  download from GitHub: <a href="https://github.com/wit-ictskills-2017/android-myrent-2017.git">android-myrent-2017</a></p>
+<p>Select Releases, followed by V7.0.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

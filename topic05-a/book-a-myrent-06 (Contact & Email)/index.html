@@ -1,0 +1,686 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      5-a (SUPPLEMENTAL): Persistence & Communication
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-06 (Contact & Email)">
+      MyRent-06 (Contact & Email)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-06 (Contact & Email)">
+        <h1>Contact list &amp; Email support</h1>
+<p>Activities within an application can reach out to activities in other applications to perform specific tasks. In this lab we introduce two new features - selecting a contact from the phone&#39;s contact lists, and sending an email to the selected user. Both of these features require the use of &#39;implicit&#39; intents.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Resources</h1>
+<p>Continue building the MyRent app that you developed in the previous lab.</p>
+<p>In preparing for our new features, we define some strings that will be used by the application. This step is not strictly necessary - but taking this approach is considered best practice, and enables the application to be internationalized more easily.</p>
+<p>These are the new strings:</p>
+<h2>res/strings.xml</h2>
+<pre><code>  &lt;string name=&quot;landlord&quot;&gt;Prospective Tenant&lt;/string&gt;
+  &lt;string name=&quot;residence_report&quot;&gt;Send Residence Information&lt;/string&gt;
+
+  &lt;string name=&quot;residence_report_rented&quot;&gt;The residence is already let.&lt;/string&gt;
+  &lt;string name=&quot;residence_report_not_rented&quot;&gt;The residence is still available.&lt;/string&gt;
+  &lt;string name=&quot;residence_report_nobody_interested&quot;&gt;There is no other prospective tenant at this time.&lt;/string&gt;
+  &lt;string name=&quot;residence_report_prospective_tenant&quot;&gt;The prospective tenant is %s.&lt;/string&gt;
+  &lt;string name=&quot;residence_report_subject&quot;&gt;Status Report on Residence Availability&lt;/string&gt;
+  &lt;string name=&quot;send_report&quot;&gt;Send residence report via&lt;/string&gt;</code></pre>
+<p>We need 2 new buttons which will enable the user to select a contact, and send an email:</p>
+<p><img src="img/01.png" alt="Figure 1: Prospective Tenant &amp; Send Residence Information Buttons added"></p>
+<p>These are the button characteristics:</p>
+<h2>res/layout/activity_residence.xml</h2>
+<pre><code>    &lt;Button
+        android:id=&quot;@+id/tenant&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:layout_marginLeft=&quot;16dp&quot;
+        android:layout_marginRight=&quot;16dp&quot;
+        android:text=&quot;@string/landlord&quot; /&gt;  
+
+    &lt;Button android:id=&quot;@+id/residence_reportButton&quot;
+          android:layout_width=&quot;match_parent&quot;
+          android:layout_height=&quot;wrap_content&quot;
+          android:layout_marginLeft=&quot;16dp&quot;
+          android:layout_marginRight=&quot;16dp&quot;
+          android:text=&quot;@string/residence_report&quot;
+        /&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Helpers</h1>
+<p>Our IntentHelper class is a useful location for methods that involved intents, either explicit or implicit. Here we introduce a new method to trigger contact list and email access:</p>
+<h2>IntentHelper</h2>
+<pre><code>  public static void selectContact(Activity parent, int id)
+  {
+    Intent selectContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+    parent.startActivityForResult(selectContactIntent, id);
+  }</code></pre>
+<p>The import statement needed for the above is:</p>
+<pre><code>import android.provider.ContactsContract;</code></pre>
+<p>We will make use of these in the next step.</p>
+<h2>ContactHelper</h2>
+<p>Accessing the phone&#39;s contact list can be complex, requiring us to engage with the &#39;Content Provider&#39; API for the Contact List. Having this awkward code in our activities can make them hard to read - so we resort to another helper:</p>
+<pre><code>package org.wit.android.helpers;
+
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.ContactsContract;
+import android.content.ContentResolver;
+
+
+public class ContactHelper
+{ 
+  public static String getDisplayName(Context context, Intent data)
+  {
+    String contact = &quot;unable to find contact&quot;;
+    Uri contactUri = data.getData();
+    String[] queryFields = new String[] { ContactsContract.Contacts.DISPLAY_NAME };
+    Cursor c = context.getContentResolver().query(contactUri, queryFields, null, null, null);
+    if (c.getCount() == 0)
+    {
+      c.close();
+      return contact;
+    }
+    c.moveToFirst();
+    contact = c.getString(0);
+    c.close();
+
+    return contact;
+  }
+
+  public static String getEmail(Context context, Intent data)
+  {
+    String email = &quot;no email&quot;;
+
+    Uri contactUri = data.getData();
+    ContentResolver cr = context.getContentResolver();
+
+    Cursor cur = cr.query(contactUri, null, null, null, null);
+
+    if (cur.getCount() &gt; 0)
+    {
+      try
+      {
+        cur.moveToFirst();
+        String contactId = cur.getString(cur.getColumnIndex(ContactsContract.Contacts._ID));
+        Cursor emails = cr.query(ContactsContract.CommonDataKinds.Email.CONTENT_URI, null,
+            ContactsContract.CommonDataKinds.Email.CONTACT_ID + &quot; = &quot; + contactId, null, null);
+        emails.moveToFirst();
+        email = emails.getString(emails.getColumnIndex(ContactsContract.CommonDataKinds.Email.DATA));
+        emails.close();
+      }
+      catch (Exception e)
+      {
+      }
+    }
+    return email;
+  }
+
+  public static String getContact(Context context, Intent data)
+  {
+    String contact = &quot;unable to find contact&quot;;
+    Uri contactUri = data.getData();
+    String[] queryFields = new String[] { ContactsContract.Contacts.DISPLAY_NAME };
+    Cursor c = context.getContentResolver().query(contactUri, queryFields, null, null, null);
+    if (c.getCount() == 0)
+    {
+      c.close();
+      return contact;
+    }
+    c.moveToFirst();
+    contact = c.getString(0);
+    c.close();
+
+    return contact;
+  }
+
+  public static void sendEmail(Context context, String email, String subject, String body)
+  {
+    Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(&quot;mailto&quot;, email, null));
+    emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+    emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+    context.startActivity(Intent.createChooser(emailIntent, &quot;Sending Email&quot;));
+  }
+
+}</code></pre>
+<p>The above is fairly crudely implemented - we can either get users &#39;Display Name&#39; or their &#39;Email&#39; - but not both.</p>
+<p>The second method we&#39;ve added - getting an email - will require explicit permission to acccess the detail in a contact; otherwise it will fail. In the manifest, introduce the following before the application element:</p>
+<pre><code>    &lt;uses-permission android:name=&quot;android.permission.READ_CONTACTS&quot; /&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Residence</h1>
+<p>The Residence model class will need to be extended to include a new field (the tenant) and also a new method, one to generate a report. First introduce these imports:</p>
+<pre><code>import org.wit.myrent.R;
+import android.content.Context;</code></pre>
+<p>This is the new field:</p>
+<pre><code>public String  tenant;</code></pre>
+<p>Initialize this in the default constructor with a String literal to avoid a future null pointer exception error:</p>
+<pre><code>  public Residence()
+  {
+    ...
+    ...
+    tenant      = &quot;: none presently&quot;;
+  }</code></pre>
+<p>To keep serialization on track - add an identifier for this new field:</p>
+<pre><code>  private static final String JSON_TENANT         = &quot;tenant&quot;;</code></pre>
+<p>... which will need to be engaged in the overloaded constructor:</p>
+<pre><code>  public Residence(JSONObject json) throws JSONException
+  {
+    ...
+    ...
+    tenant        = json.getString(JSON_TENANT);
+  }</code></pre>
+<p>... and the serialization itself:</p>
+<pre><code>    json.put(JSON_TENANT        , tenant);</code></pre>
+<p>Finally, a new method to generate the contents of the email:</p>
+<pre><code>  public String getResidenceReport(Context context) {
+    String rentedString = &quot;&quot;;
+    if (rented) {
+      rentedString = context.getString(R.string.residence_report_rented);
+    }
+    else {
+      rentedString = context.getString(R.string.residence_report_not_rented);
+    }
+
+    String prospectiveTenant = tenant;
+    if (tenant == null) {
+      prospectiveTenant = context.getString(R.string.residence_report_nobody_interested);
+    }
+    else {
+      prospectiveTenant = context.getString(R.string.residence_report_prospective_tenant, tenant);
+    }
+    String report = &quot;Location &quot; + geolocation + &quot; Date: &quot; + dateString() + &quot; &quot; + rentedString + &quot; &quot; + prospectiveTenant;
+    return report;
+
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>ResidenceActivity - Tenant</h1>
+<p>We can then start to wire up a &quot;Prospective Tenant&quot; button in the ResidenceActivity class.</p>
+<p>The imports:</p>
+<pre><code>import static org.wit.android.helpers.ContactHelper.getContact;
+import static org.wit.android.helpers.ContactHelper.getEmail;
+import static org.wit.android.helpers.IntentHelper.selectContact;
+import android.content.Intent;</code></pre>
+<p>An ID we will use for the implicit Intent:</p>
+<pre><code>private static final int REQUEST_CONTACT = 1;</code></pre>
+<p>The button to trigger the intent:</p>
+<pre><code>private Button   tenantButton;</code></pre>
+<p>Initialization in <em>onCreate</em> of the button:</p>
+<pre><code>tenantButton = (Button)   findViewById(R.id.tenant);</code></pre>
+<p>Its event handler set up in <em>updateControls</em>:</p>
+<pre><code>tenantButton.setOnClickListener(this);</code></pre>
+<p>And then the event handler itself:</p>
+<pre><code>  @Override
+  public void onClick(View view)
+  {
+    switch (view.getId())
+    {
+      //...
+
+      case R.id.tenant : selectContact(this, REQUEST_CONTACT);
+                                         break;                                       
+    }
+  }</code></pre>
+<p>This last method (selectContact in the IntentHelper class) will trigger a &#39;startActivityForResult&#39; - which we will have to deal with in order to recover the actual contact. This will be provided by the following new method in the ResidenceActivity class:</p>
+<pre><code>    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        switch (requestCode)
+        {
+            case REQUEST_CONTACT:
+                String name = getContact(this, data);
+                emailAddress = getEmail(this, data);
+                tenantButton.setText(name + &quot; : &quot; + emailAddress);
+                residence.tenant = name;
+                break;
+        }
+    }</code></pre>
+<p>Fix the issue that arises from introduction of above by introducing a new field:</p>
+<pre><code>  private String emailAddress = &quot;&quot;;</code></pre>
+<h2>Setting up contact details:</h2>
+<ul>
+<li>Start your emulator and set up two contacts on your device:</li>
+</ul>
+<p><img src="img/01a.png" alt="Figure 1: Setting up contact details on your emulator"></p>
+<h2>Test as follows:</h2>
+<ul>
+<li>build and install the app on an emulator or device, </li>
+<li>create a residence </li>
+<li>press the Prospective Tenant button. You should be taken to your contact list. </li>
+<li>select a contact. This should return you to the MyRent Residence Activity screen.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>ResidenceActivity - Email</h1>
+<p>Now we can engage the report button to actually send the email.</p>
+<p>The imports:</p>
+<pre><code>import static org.wit.android.helpers.ContactHelper.sendEmail;</code></pre>
+<p>The Button object:</p>
+<pre><code>private Button   reportButton;</code></pre>
+<p>Initialisation of the button:</p>
+<pre><code>reportButton = (Button)   findViewById(R.id.residence_reportButton);</code></pre>
+<p>Enabling the event handler:</p>
+<pre><code>reportButton.setOnClickListener(this);</code></pre>
+<p>The event handler itself:</p>
+<pre><code>  @Override
+  public void onClick(View view)
+  {
+    switch (view.getId())
+    {
+      //...
+
+      case R.id.residence_reportButton : 
+        sendEmail(this, emailAddress,
+         getString(R.string.residence_report_subject), residence.getResidenceReport(this));
+        break;                                        
+    }
+  }</code></pre>
+<p>Test this now. Make sure the contact you select actually has an email address in the contact info. If you attempt to test this feature on an Android emulator then it appears you require to use an online account&#39;s contacts else you may encounter an <code>unsupported acion</code> error with no explanation as to its cause. One approach that works is to send the email message to your own account.</p>
+<p>If gmail is the default mail handling app, it may look like this:</p>
+<p><img src="img/02.png" alt="Figure 1: Sample Email"></p>
+<p>The application at the end of this lab is available for  download from GitHub: <a href="https://github.com/wit-ictskills-2017/android-myrent-2017.git">android-myrent-2017</a></p>
+<p>Select Releases, followed by V6.0.</p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

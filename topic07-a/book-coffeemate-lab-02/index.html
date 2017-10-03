@@ -1,0 +1,1084 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7-a: UI Design 1 & App Structure
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-03">
+      Lab-03
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-03">
+        <h1>Objectives</h1>
+<p>In this Lab, you will be required to refactor our CoffeeMate Case Study, called <b>CoffeeMate.2.0</b>. We will build on the previous lab and add in some new features and UI Design. In this version we will add in a few more activities and some extra layouts. On completion of this lab you&#39;ll be able to</p>
+<ul>
+<li><p>use &#39;Bundles&#39; to pass data between activities</p>
+</li>
+<li><p>use Custom Layouts</p>
+</li>
+<li><p>use Custom Adapters</p>
+</li>
+<li><p>use Fragments</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup - Starter Code</h1>
+<p>As with the previous lab, you can download some starter code for this lab here - <a href="archives/CoffeeMate.2.0.Starter.zip">CoffeeMate.2.0.Starter</a>. It contains all the resources you&#39;ll need to complete this lab along with some of the code.</p>
+<p>To open this in Android Studio, first extract the archive somewhere on our hard disk and select &#39;File-&gt;Open&#39; etc. like you did in Lab 02.</p>
+<p>Once you open/import the <b>CoffeeMate 2.0 Starter</b> Project it should looks as follows:</p>
+<p><img src="img/starter.png" alt=""></p>
+<p>Take some time to familiarise yourself with the <b>new (highlighted)</b> classes in your project and explore the resources that you will be referring to throughout the lab, especially the layouts in both &#39;Graphical Layout&#39; view and &#39;XML&#39; view. It&#39;s also probably a good idea to run the App at this stage too, so you can set up your AVD (if you haven&#39;t done so already) and confirm that the starter app is configured properly and running (so basically it&#39;s Version 1 with a few style changes).</p>
+<p>In this lab, you are required to do the following:</p>
+<ul>
+<li><p>Display the list of Coffees in a visually appealing list.</p>
+</li>
+<li><p>Allow Coffees in the list to be updated (edited) and/or deleted from the list.</p>
+</li>
+</ul>
+<p>The following steps will guide you through these requirements, so we&#39;ll start with displaying the Coffees in a nice list.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Our &#39;new look&#39; Home Screen</h1>
+<p>When we&#39;re finsihed this lab, we&#39;ll have something like this</p>
+<p><img src="img/lab0301.png" alt="">
+So, first of all, have a quick look again at the resource layout (home.xml). We&#39;re using a <b><i>FrameLayout</i></b> as the container for our List of Coffees, which ultimately holds a <b>Fragment</b>, but we&#39;ll talk more about that later.</p>
+<p>Once you&#39;ve had a look at the layout, open your <b>Base.java</b> Activity class and familiarize yourself with the new variables this class now has.</p>
+<p>There&#39;s two new instance variables</p>
+<pre><code class="lang-java">  protected Bundle            activityInfo; // Used for persistence (of sorts)
+  protected CoffeeFragment    coffeeFragment; // How we&#39;ll &#39;share&#39; our List of Coffees between Activities</code></pre>
+<p>The first thing to do is refactor the Home Screen <b><i>onCreate()</i></b> method to make use of a helper method, (<b><i>setupCoffees()</i></b>) so make sure your new <b><i>onCreate()</i></b> method looks something like this:</p>
+<pre><code class="lang-java">  protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.ic_launcher1);
+
+        recentList = (TextView) findViewById(R.id.recentlyAddedListEmpty);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, &quot;Information&quot;, Snackbar.LENGTH_LONG)
+                        .setAction(&quot;More Info...&quot;, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                openInfoDialog(Home.this);
+                            }
+                        }).show();
+            }
+        });
+        setupCoffees();
+    }</code></pre>
+<p>Note that we have removed any Eventlistener settings - we now handle <b><i>onClick()</i></b> events in the layout (via the xml).</p>
+<p>The <b><i>setupCoffees()</i></b> method adds a few Coffee objects to our static <b><i>coffeeList</i></b>, so maybe run the App again just to confirm you&#39;re not seeing a blank screen anymore, but your coffees.</p>
+<p>Next we&#39;ll start with the task of displaying our Coffees in a custom ListView.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Our &#39;new look&#39; Home Screen - Displaying the List of Coffees</h1>
+<p>There are 3 major components (classes) involved in implementing this feature:</p>
+<ul>
+<li><p><i>CoffeeItem</i></p>
+</li>
+<li><p><i>CoffeeListAdapter</i></p>
+</li>
+<li><p><i>CoffeeFragment</i></p>
+</li>
+</ul>
+<p>We&#39;ll take each class in turn and insert the necessary code to complete this feature of the App.</p>
+<h1>CoffeeItem</h1>
+<p>The main purpose of this class is to represent a single coffee row in our custom list, so the first thing we need to do is decide how the row should actually look - the associated layout (coffeerow.xml) is already supplied:</p>
+<p><img src="img/lab0302.png" alt=""></p>
+<p>but familarise yourself with the widgets (the &#39;fields&#39; or Views) as you will need to access them in your code.</p>
+<p>Inside <b>CoffeeItem.java</b> you will need to finish the <b><i>updateControls()</i></b> method to ensure all the coffee data is displayed correctly. This will involve &quot;binding&quot; to each of the widgets (Views) on the layout and setting their value.  You can see how the coffee name widget is set below:</p>
+<pre><code class="lang-java">private void updateControls(Coffee coffee) {
+        ((TextView) view.findViewById(R.id.rowCoffeeName)).setText(coffee.name);
+
+        // Do the same for shop, rating, price &amp; the favourite image here
+        // and set the favourite on/off depending on the coffees favourite value
+    }</code></pre>
+<h1>CoffeeListAdapter</h1>
+<p>The main purpose of this class is to bind our coffeeList data to a particular view (a ListView in our case) and ultimately display it like so:</p>
+<p><img src="img/lab0303.png" alt=""></p>
+<p>It&#39;s worth noting that this class is a <i><u>custom</u></i> adapter class, and it&#39;s the only way we get to display or coffee data in the &quot;custom&quot; format we want (ie our CoffeeItem rows) - if we were to use a standard Adapter, we would only be able to display our coffees in a very basic fashion.</p>
+<p>To &quot;customise&quot; our adapter, we first say that it will manage Coffee Objects (already done) :</p>
+<pre><code class="lang-Java">public class CoffeeListAdapter extends ArrayAdapter&lt;Coffee&gt;
+{
+...</code></pre>
+<p>and then override a number of methods:</p>
+<pre><code class="lang-Java">  @Override
+  public View getView(int position, View convertView, ViewGroup parent)
+  {
+    return null;
+  }
+
+  @Override
+  public int getCount()
+  {
+    return 0;
+  }
+
+  @Override
+  public Coffee getItem(int position)
+  {
+      return null;
+  }
+
+  @Override
+  public long getItemId(int position)
+  {
+    return 0;
+  }
+
+  @Override
+  public int getPosition(Coffee c)
+  {
+    return 0;
+  }
+}</code></pre>
+<p>Remember, the <b><i>getView()</i></b> method is automatically called for every object that exists in the underlying data (ie our coffeeList) so you should be returning a <b>CoffeeItem</b> reference here - try and have a go at this without referring to the notes.</p>
+<p>The remaining methods are all related to the coffeeList itself, so again, give it a go without the notes!</p>
+<h1>CoffeeFragment</h1>
+<p>The main purpose of this class is to allow us to reuse a component (the Fragment) which contains our list of coffees:</p>
+<p><img src="img/lab0306.png" alt=""></p>
+<p>The only thing we need to do at this stage is create an instance of our custom adapter and associate it with our Fragment, so inside the <b><i>onCreate()</i></b> method of the fragment insert the following:</p>
+<pre><code class="lang-Java">    listAdapter = new CoffeeListAdapter(activity, this, Base.coffeeList);
+    setListAdapter (listAdapter);</code></pre>
+<hr>
+<p>The last thing we need to do is attach this Fragment to the Home Screen, so inside our <b><i>onResume()</i></b> method in <b><i>Home.java</i></b> you need to insert the following:</p>
+<pre><code class="lang-Java">      coffeeFragment = CoffeeFragment.newInstance(); //get a new Fragment instance
+      getFragmentManager().beginTransaction().add(R.id.fragment_layout, coffeeFragment).commit(); // add it to the current activity</code></pre>
+<p>You&#39;ll get an error on <i>R.id.fragment_layout</i> so you need to replace the <b>ListView</b> element in <b>content_home.xml</b> with the following:</p>
+<pre><code class="lang-xml">&lt;FrameLayout
+            android:id=&quot;@+id/fragment_layout&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_above=&quot;@+id/footerLinearLayout&quot;
+            android:layout_alignParentLeft=&quot;true&quot;
+            android:layout_alignParentRight=&quot;true&quot;
+            android:layout_alignParentTop=&quot;true&quot; /&gt;</code></pre>
+<p>Build your project and if you run your app again you should see your list displayed on the Home Screen like so (with a small bug to fix!) :</p>
+<p><img src="img/lab0301.png" alt=""></p>
+<p>and you should be able to &quot;Add a Coffee&quot; so make sure to check this functionality. On a related note, you&#39;ve probably noticed your list &#39;duplicates&#39; the data, so it&#39;s worth removing the <b>setupCoffees()</b> method, now we know our &#39;Add&#39; works.</p>
+<p>However, if you select a row in the list, or select the &#39;delete&#39; button, nothing happens - that&#39;s the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Our &#39;new look&#39; Home Screen - Delete a Coffee</h1>
+<p>Having a nice custom list isn&#39;t really much use unless the user can interact with the list by clicking on a row (or an element within the row). Over the next few steps we&#39;ll build in the ability to both edit a coffee&#39;s details, and if the user wishes, delete it from the list.</p>
+<h1>Deleting a Coffee</h1>
+<p>To give the user the option of deleting a coffee (by pressing the &#39;X&#39; button) we first need to &quot;listen&quot; for such an event, so we should attach some kind of Listener to that button. If you have a closer look at our <b>CoffeeItem</b> constructor, you&#39;ll see that we already have that setup:</p>
+<pre><code class="lang-java">    ImageView imgDelete = (ImageView) view.findViewById(R.id.imgDelete);
+    imgDelete.setTag(coffee);
+    imgDelete.setOnClickListener(deleteListener);</code></pre>
+<p>Be clear about what is going on here as the <b><i>setTag()</i></b> method is important in the overall scheme of things.</p>
+<p>The rest of the work we need to do is carried out in the <b>CoffeeFragment</b> class so firstly, look again at how we create our <b>CoffeeListAdapter</b> instance, <i>listAdapter</i>:</p>
+<pre><code class="lang-java">listAdapter = new CoffeeListAdapter(activity, this, Base.coffeeList);</code></pre>
+<p>Notice that the <b>OnClickListener</b> parameter, is a reference to the class itself (<i>this</i>) so the <b>CoffeeFragment</b> class needs to implement this interface as follows:</p>
+<p>You completed <b><i>onClick()</i></b> method should look something like this:</p>
+<pre><code class="lang-java">@Override
+  public void onClick(View view)
+  {
+    if (view.getTag() instanceof Coffee)
+    {
+      onCoffeeDelete ((Coffee) view.getTag());
+    }
+  }</code></pre>
+<p>Here we use the Views &#39;Tag&#39; to see if it&#39;s a coffee, and if it is, that&#39;s the one we delete. You can just copy &amp; paste the following code for the <b><i>onCoffeeDelete()</i></b> method:</p>
+<pre><code class="lang-java">public void onCoffeeDelete(final Coffee coffee)
+  {
+    String stringName = coffee.name;
+    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+    builder.setMessage(&quot;Are you sure you want to Delete the \&#39;Coffee\&#39; &quot; + stringName + &quot;?&quot;);
+    builder.setCancelable(false);
+
+    builder.setPositiveButton(&quot;Yes&quot;, new DialogInterface.OnClickListener()
+    {
+      public void onClick(DialogInterface dialog, int id)
+      {
+        Base.coffeeList.remove(coffee); // remove from our list
+        listAdapter.coffeeList.remove(coffee); // update adapters data
+        listAdapter.notifyDataSetChanged(); // refresh adapter
+      }
+    }).setNegativeButton(&quot;No&quot;, new DialogInterface.OnClickListener()
+    {
+      public void onClick(DialogInterface dialog, int id)
+      {
+        dialog.cancel();
+      }
+    });
+    AlertDialog alert = builder.create();
+    alert.show();
+  }</code></pre>
+<p>Pay particular attention to the following:</p>
+<pre><code class="lang-java">public void onClick(DialogInterface dialog, int id)
+      {
+        Base.coffeeList.remove(coffee); // remove from our list
+        listAdapter.coffeeList.remove(coffee); // update adapters data
+        listAdapter.notifyDataSetChanged(); // refresh adapter
+      }</code></pre>
+<p>and understand what is happening here, as this is an important piece of the puzzle.</p>
+<p>So now, when you run the app and select the delete button, you should get something like this:</p>
+<p><img src="img/lab0307.png" alt=""></p>
+<p>and if you choose &#39;Yes&#39;, then the coffee should be removed from the list.</p>
+<p>Now, onto editing a coffee.....</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Our &#39;new look&#39; Home Screen - Edit a Coffee</h1>
+<p>The user now has the ability to delete (or remove) a coffee from the list of coffees displayed. But what if the user wants to update some of the coffees details? Maybe make it one of his or hers favourite coffees? That&#39;s what this step is about, so we&#39;ll be taking a similar approach as the previous step, but implementing a slightly different kind of Listener.</p>
+<h1>Editing a Coffee</h1>
+<p>To give the user the option of Editing a coffee (by pressing the full row) we first need to &quot;listen&quot; for such an event, so we need to attach a Listener that &#39;listens&#39; for individual row click events, and not just an element of the row.</p>
+<p>If you remember from the previous step, our <b>CoffeeFragment</b> was responsible for handling &#39;delete&#39; events, so naturally, this class will also manage any updates or edits the user wants to make.</p>
+<p>Open your <b>CoffeeFragment.java</b> and override the <b><i>onListItemClick()</i></b> method - this will execute every time a user selects a single row (or listItem) in the list, so this is where you need to</p>
+<ul>
+<li><p>find out which coffee was selected (and it&#39;s &#39;ID&#39;)</p>
+</li>
+<li><p>launch another activity so we can update the selected coffee</p>
+</li>
+<li><p>make sure the change to our coffee is reflected in our coffeeList</p>
+</li>
+</ul>
+<p>We need to use <b>Bundles</b> and <b>Intents</b> and specifically, the first two parts are partially achieved as follows:</p>
+<pre><code class="lang-java">    Bundle activityInfo = new Bundle(); // Creates a new Bundle object
+    activityInfo.putInt(&quot;coffeeID&quot;, /* pass in the coffees id here */);
+
+    Intent goEdit = new Intent(getActivity(), Edit.class); // Creates a new Intent
+    /* Add the bundle to the intent here */
+    getActivity().startActivity(goEdit); // Launch the Intent</code></pre>
+<p>Have a go at completing the above as best you can.</p>
+<p>Once you have that done, the rest of the work we need to do is carried out in the <b>Edit</b> Activity class so firstly, have a look at the <b><i>onCreate()</i></b> method - there&#39;s some code already in there, but if you try and run the app, it&#39;ll crash.</p>
+<p>Any ideas why??</p>
+<p>Next thing to do is setup the correct view for the activity - this is done using the <b><i>setContentView()</i></b> method, so see can you implement that, without referring to the solution below.</p>
+<p>Also you need to &#39;bind&#39; to and setup event handling on <i>favouriteImage</i> in the xml to avoid a NullPointerException, as follows:</p>
+<pre><code class="lang-xml">android:onClick=&quot;toggle&quot;</code></pre>
+<pre><code class="lang-java">favouriteImage = (ImageView) findViewById(R.id.favouriteImageView);</code></pre>
+<p>and you need to retrieve the &#39;coffeeID&#39; from the Bundle, and get the coffee from our list using the <b><i>getCoffeeObject()</i></b> helper method - once again, try and have a go at this without referring to the solution code:</p>
+<p>(and here it is!)</p>
+<pre><code class="lang-java">  setContentView(R.layout.edit);
+
+  activityInfo = getIntent().getExtras();
+  aCoffee = getCoffeeObject(activityInfo.getInt(&quot;coffeeID&quot;));
+
+  favouriteImage = (ImageView) findViewById(R.id.favouriteImageView);</code></pre>
+<p>Now if you run your app, and select a row, you should launch the &#39;Edit&#39; Screen.</p>
+<p><img src="img/lab0308.png" alt=""></p>
+<p>However, there&#39;s nothing to edit - so that&#39;s the next step - displaying the coffee data so we can change it (like above).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Our &#39;new look&#39; Home Screen - Edit a Coffee</h1>
+<p>We can now launch the Edit Screen, but nothing gets displayed, so there&#39;s nothing to edit. What we need to do now is</p>
+<ul>
+<li><p>&#39;bind&#39; the specific coffee data to the individual views/fields on the Edit Screen</p>
+</li>
+<li><p>if any changes are made, ensure these changes are reflected in the global coffeeList</p>
+</li>
+</ul>
+<h1>Displaying the data for Update</h1>
+<p>First of all, open your <i>edit.xml</i> layout and familarise yourself with the &#39;names&#39; or id&#39;s of all the relevant views you need to access (<i><u>coffeeNameTextView</u></i> is highlighted in the screenshot below).</p>
+<p><img src="img/lab0309.png" alt=""></p>
+<p>And here&#39;s how we set the title &#39;field&#39; to the name of the coffee</p>
+<pre><code class="lang-java">((EditText)findViewById(R.id.nameEditText)).setText(aCoffee.name);</code></pre>
+<p>Run the app again, and see what you get - now have a go at the rest of the coffee data yourself.</p>
+<p>The completed section of missing code is as follows:</p>
+<pre><code class="lang-java">        setContentView(R.layout.edit);
+
+        activityInfo = getIntent().getExtras();
+        aCoffee = getCoffeeObject(activityInfo.getInt(&quot;coffeeID&quot;));
+
+        ((TextView)findViewById(R.id.coffeeNameTextView)).setText(aCoffee.name);
+        ((TextView)findViewById(R.id.coffeeShopTextView)).setText(aCoffee.shop);
+
+        ((EditText)findViewById(R.id.nameEditText)).setText(aCoffee.name);
+        ((EditText)findViewById(R.id.shopEditText)).setText(aCoffee.shop);
+        ((EditText)findViewById(R.id.priceEditText)).setText(&quot;&quot;+aCoffee.price);
+        ((RatingBar) findViewById(R.id.coffeeRatingBar)).setRating((float)aCoffee.rating);
+
+        favouriteImage = (ImageView) findViewById(R.id.favouriteImageView);
+
+        if (aCoffee.favourite == true) {
+            favouriteImage.setImageResource(R.drawable.ic_favourite_on);
+            isFavourite = true;
+        } else {
+            favouriteImage.setImageResource(R.drawable.ic_favourite_off);
+            isFavourite = false;
+        }</code></pre>
+<p>including attaching a listener to the &#39;Update&#39; Button, via xml.</p>
+<pre><code class="lang-xml">android:onClick=&quot;update&quot;</code></pre>
+<p>with our <b>toggle()</b> method looking something like this:</p>
+<pre><code class="lang-java">public void toggle(View arg0) {
+
+        if (isFavourite) {
+            aCoffee.favourite = false;
+            toastMessage(&quot;Removed From Favourites&quot;);
+            isFavourite = false;
+            favouriteImage.setImageResource(R.drawable.ic_favourite_off);
+        } else {
+            aCoffee.favourite = true;
+            toastMessage(&quot;Added to Favourites !!&quot;);
+            isFavourite = true;
+            favouriteImage.setImageResource(R.drawable.ic_favourite_on);
+        }
+    }</code></pre>
+<p>It&#39;s still not finished however - there&#39;s a small but significant bug in loading up the correct coffee to update on the edit screen and the <i><b>update()</b></i> method is nearly complete, but there&#39;s a few lines of (very important) code still to be added, so run the app once more and try and identify what needs to be done to fully implement this Edit/Update feature.</p>
+<p>You&#39;ll find the necessary code extracts in the the next step, but try and have a go before you proceed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Our &#39;new look&#39; Home Screen - Edit a Coffee</h1>
+<h1>Updating the data in our coffeeList</h1>
+<p>The first issue was, no matter which coffee we &#39;clicked&#39; on we always got the first coffee to edit - this is because the coffee id never gets set, so you need to refactor the <b>Coffee</b> model and add an autoincrement number to act as a unique id. It&#39;s a bit crude but it&#39;ll do the job until we move on to more sophisticated approaches in later labs.</p>
+<p>probably easiest to do something like this</p>
+<pre><code class="lang-java">public class Coffee implements Serializable
+{
+
+    public static int autoid = 1;
+    public int coffeeId;
+    public String name;
+    public String shop;
+    public double rating;
+    public double price;
+    public boolean favourite;
+
+
+    public Coffee() {}
+
+    public Coffee(String name, String shop, double rating, double price, boolean fav)
+    {
+        this.coffeeId = autoid++;
+        this.name = name;
+        this.shop = shop;
+        this.rating = rating;
+        this.price = price;
+        this.favourite = fav;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Coffee [name=&quot; + name
+                + &quot;, shop =&quot; + shop + &quot;, rating=&quot; + rating + &quot;, price=&quot; + price
+                + &quot;, fav =&quot; + favourite + &quot;]&quot;;
+    }
+}</code></pre>
+<p>And you probably worked out that the problem was, even if we changed the data, it was only updated in our list of coffees if we clicked the &#39;Update&#39; Button, but nothing else happens - we&#39;d need to hit the &#39;back&#39; button to return to the previous screen.</p>
+<p>It&#39;s worth noting that we never actually &#39;put it back&#39; in the list after we updated it, but because our list is <i>static</i>, that&#39;s ok - any changes to a single coffee are updated in the global list. We might need to revisit this in later labs, but for now, it&#39;s all good.</p>
+<p>In the <i><b>update()</b></i> method we need something like this</p>
+<pre><code class="lang-java">goToActivity(this,Home.class, activityInfo);</code></pre>
+<p>so see if you can work out where this should be inserted.</p>
+<p>You should run you app once more and fully test it for the features now implemented.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Deleting Multiple Coffees with a Context Menu &amp; ActionMode</h1>
+<p>Currently, if we wanted to delete more than one coffee at a time we need to delete them individually, which does achieve what we want, but is not a great User Experience if there are dozens of coffees to remove.</p>
+<p>This is where we can utilise a Context Menu and the ActionBar / Action Mode features available to us in Android.</p>
+<h1>Setting up your Resources &amp; XML</h1>
+<p>This is what we want when the user &#39;Long Clicks&#39; a row in our List.</p>
+<p><img src="img/lab0310.png" alt=""></p>
+<p>Note the different (Context) Menu for deleting.</p>
+<p>And then subsequently</p>
+<p><img src="img/lab0311.png" alt=""></p>
+<p>To achieve this we need to</p>
+<ul>
+<li><p>design the Context Menu</p>
+</li>
+<li><p>update the coffeerow design (for when it&#39;s selected) and</p>
+</li>
+<li><p>update our application &#39;style&#39; to reflect what and how our Context Menu overlays.</p>
+</li>
+</ul>
+<p>First, let&#39;s design the Menu to look something this:</p>
+<p><img src="img/lab0312.png" alt=""></p>
+<p>and</p>
+<p><img src="img/lab0313.png" alt=""></p>
+<p>create a new menu resource in the &#39;menu&#39; folder called &#39;delete_list_context.xml&#39; and place the following code inside it - just make sure you have the proper string resource set up beforehand (&#39;deleteCoffeesLbl&#39;)</p>
+<pre><code class="lang-XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item
+        android:id=&quot;@+id/menu_item_delete_coffee&quot;
+        android:icon=&quot;@android:drawable/ic_menu_delete&quot;
+        android:title=&quot;@string/deleteCoffeesLbl&quot; /&gt;
+&lt;/menu&gt;</code></pre>
+<p>Next, create a new drawable <b>selector</b> resource xml file in the &#39;drawable&#39; folder called &#39;background_activated.xml&#39; and place the following inside</p>
+<pre><code class="lang-XML">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &gt;
+    &lt;item
+        android:state_activated=&quot;true&quot;
+        android:drawable=&quot;@color/appFooterBGColor&quot;
+        /&gt;
+&lt;/selector&gt;</code></pre>
+<p>Now, edit your <b>coffeerow.xml</b> and add the resource you just created as the background color property for the whole layout (at the top), like so</p>
+<pre><code class="lang-xml"> android:background=&quot;@drawable/background_activated&quot;</code></pre>
+<p>Finally, edit your <b>styles.xml</b> and add the following to your &#39;AppTheme&#39; style. If you like, you can experiment with you own colors?</p>
+<pre><code class="lang-xml">&lt;item name=&quot;windowActionModeOverlay&quot;&gt;true&lt;/item&gt;
+&lt;item name=&quot;actionModeBackground&quot;&gt;@color/colorPrimary&lt;/item&gt;</code></pre>
+<h1>Implementing the MultiChoice Listener interface</h1>
+<p>The first thing to do is open up &#39;CoffeeFragment.java&#39; and make sure this class implements the interface we need:</p>
+<pre><code class="lang-java">public class CoffeeFragment  extends ListFragment implements  OnClickListener,
+                                          AbsListView.MultiChoiceModeListener
+{
+    . . .
+}</code></pre>
+<p>add the necessary imports and accept the defaults for all the callbacks, we&#39;ll implement what we need to next.</p>
+<p>The MultiChoiceModeListener methods are :</p>
+<pre><code class="lang-java">/* ************ MultiChoiceModeListener methods (begin) *********** */
+ @Override
+ public boolean onCreateActionMode(ActionMode actionMode, Menu menu)
+ { . . . }
+
+ @Override
+ public boolean onPrepareActionMode(ActionMode actionMode, Menu menu)
+ { . . . }
+
+ @Override
+ public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem)
+ { . . . }
+
+ @Override
+ public void onDestroyActionMode(ActionMode actionMode)
+ {}
+
+ @Override
+ public void onItemCheckedStateChanged(ActionMode actionMode, int position, long id, boolean checked)
+ {}
+ /* ************ MultiChoiceModeListener methods (end) *********** */</code></pre>
+<p>We only need to implement a few of them, and supply one other local method to actually carry out the deleting of multiple coffees, when selected.</p>
+<p>Using the lecture material as reference, have a go at implementing the necessary methods to achieve the desired functionality. (The solution is on the next step anyway, but have a go first).</p>
+<h1>Setting up the List as MultipleChoice</h1>
+<p>You&#39;ve now, hopefully, implemented the necessary callbacks for handling the MultiChoiceMode, but there&#39;s one step needs to be carried - the ListView itself needs to be &#39;aware&#39; that it&#39;s items can be selected individually AND as multiple items. This is achieved through setting some of the List properties as the &#39;View&#39; is created.</p>
+<p>To help you along, here&#39;s the method you need to add to &#39;CoffeeFragment&#39;, to achieve the desired results, but be sure what&#39;s going on here, before proceeding.</p>
+<pre><code class="lang-java">@Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    View v = super.onCreateView(inflater, parent, savedInstanceState);
+
+    listView = (ListView) v.findViewById(android.R.id.list);
+    listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+    listView.setMultiChoiceModeListener(this);
+
+    return v;
+  }</code></pre>
+<p>Run the app again and see if you can now delete multiple coffees through the use of a Context Menu and ActionMode/ActionBar.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Completed CoffeeFragment</h1>
+<p>Here&#39;s the full source code for the updated CoffeeFragment class, and the full solution can be found on the next, final step.</p>
+<pre><code class="lang-java">package ie.cm.fragments;
+
+import ie.cm.R;
+import ie.cm.activities.Base;
+import ie.cm.activities.Edit;
+import ie.cm.adapters.CoffeeListAdapter;
+import ie.cm.models.Coffee;
+
+import android.app.AlertDialog;
+import android.app.ListFragment;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.ActionMode;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.ListView;
+
+public class CoffeeFragment  extends ListFragment implements  OnClickListener,
+                                          AbsListView.MultiChoiceModeListener
+{
+  protected         Base                activity;
+  protected static  CoffeeListAdapter     listAdapter;
+  protected         ListView             listView;
+
+  public CoffeeFragment() {
+    // Required empty public constructor
+  }
+
+  public static CoffeeFragment newInstance() {
+    CoffeeFragment fragment = new CoffeeFragment();
+    return fragment;
+  }
+@Override
+  public void onAttach(Context context)
+  {
+    super.onAttach(context);
+    this.activity = (Base) context;
+  }
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    listAdapter = new CoffeeListAdapter(activity, this, Base.coffeeList);
+    setListAdapter (listAdapter);
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    View v = super.onCreateView(inflater, parent, savedInstanceState);
+
+    listView = (ListView) v.findViewById(android.R.id.list);
+    listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+    listView.setMultiChoiceModeListener(this);
+
+    return v;
+  }
+
+
+
+  @Override
+  public void onStart()
+  {
+    super.onStart();
+  }
+
+  @Override
+  public void onClick(View view)
+  {
+    if (view.getTag() instanceof Coffee)
+    {
+      onCoffeeDelete ((Coffee) view.getTag());
+    }
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+    ((CoffeeListAdapter) getListAdapter()).notifyDataSetChanged();
+  }
+
+  @Override
+  public void onListItemClick(ListView l, View v, int position, long id)
+  {
+    Bundle activityInfo = new Bundle();
+    activityInfo.putInt(&quot;coffeeID&quot;, v.getId());
+
+    Intent goEdit = new Intent(getActivity(), Edit.class);
+    goEdit.putExtras(activityInfo);
+    getActivity().startActivity(goEdit);
+  }
+
+  public void onCoffeeDelete(final Coffee coffee)
+  {
+    String stringName = coffee.name;
+    AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+    builder.setMessage(&quot;Are you sure you want to Delete the \&#39;Coffee\&#39; &quot; + stringName + &quot;?&quot;);
+    builder.setCancelable(false);
+
+    builder.setPositiveButton(&quot;Yes&quot;, new DialogInterface.OnClickListener()
+    {
+      public void onClick(DialogInterface dialog, int id)
+      {
+        Base.coffeeList.remove(coffee); // remove from our list
+        listAdapter.coffeeList.remove(coffee); // update adapters data
+        listAdapter.notifyDataSetChanged(); // refresh adapter
+      }
+    }).setNegativeButton(&quot;No&quot;, new DialogInterface.OnClickListener()
+    {
+      public void onClick(DialogInterface dialog, int id)
+      {
+        dialog.cancel();
+      }
+    });
+    AlertDialog alert = builder.create();
+    alert.show();
+  }
+
+  /* ************ MultiChoiceModeListener methods (begin) *********** */
+  @Override
+  public boolean onCreateActionMode(ActionMode actionMode, Menu menu)
+  {
+    MenuInflater inflater = actionMode.getMenuInflater();
+    inflater.inflate(R.menu.delete_list_context, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onPrepareActionMode(ActionMode actionMode, Menu menu)
+  {
+    return false;
+  }
+
+  @Override
+  public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem)
+  {
+    switch (menuItem.getItemId())
+    {
+      case R.id.menu_item_delete_coffee:
+        deleteCoffees(actionMode);
+        return true;
+      default:
+        return false;
+    }
+
+  }
+
+  private void deleteCoffees(ActionMode actionMode)
+  {
+    for (int i = listAdapter.getCount() - 1; i &gt;= 0; i--)
+    {
+      if (listView.isItemChecked(i))
+      {
+        Base.coffeeList.remove(listAdapter.getItem(i));
+      }
+    }
+    actionMode.finish();
+    listAdapter.notifyDataSetChanged();
+  }
+
+  @Override
+  public void onDestroyActionMode(ActionMode actionMode)
+  {}
+
+  @Override
+  public void onItemCheckedStateChanged(ActionMode actionMode, int position, long id, boolean checked)
+  {}
+  /* ************ MultiChoiceModeListener methods (end) *********** */
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <h1>Exercises</h1>
+<h2>Solution</h2>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="archives/CoffeeMate.2.0.Solution.zip">CoffeeMate.2.0.Solution</a></li>
+</ul>
+<h2>Exercise</h2>
+<p>In this lab you have experimented with Custom Adapters &amp; Fragments:</p>
+<ul>
+<li>Experiment with modifying the custom layout of our Coffee Row in our List</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

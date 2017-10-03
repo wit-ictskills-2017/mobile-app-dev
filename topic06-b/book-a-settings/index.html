@@ -1,0 +1,600 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      6-b (SUPPLEMENTAL): Settings
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-10 (Settings)">
+      MyRent-10 (Settings)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-10 (Settings)">
+        <h1>Settings</h1>
+<p>Settings allow a user to modify application features and behaviour. In this lab we demonstrate the use of settings to input a username, password pair, the size of the list of residences to download from the cloud and the frequency at which this list is automatically refreshed by a service or services. Services will be the subject of a future lab.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Settings</h1>
+<h2>Layout</h2>
+<p>Create a new xml type folder in the resources directory (&#39;res&#39;) called &#39;xml&#39;.</p>
+<p>Within this new directory, create a resource file called <code>settings.xml</code> with the following content:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;PreferenceScreen xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &gt;
+    &lt;EditTextPreference 
+        android:key=&quot;username&quot; 
+        android:summary=&quot;@string/username_summary&quot; 
+        android:title=&quot;@string/username&quot;/&gt;
+
+    &lt;EditTextPreference 
+        android:key=&quot;password&quot;
+        android:summary=&quot;@string/password_summary&quot;
+        android:title=&quot;@string/password&quot;
+        android:inputType=&quot;textPassword&quot;/&gt;
+
+    &lt;EditTextPreference
+        android:key=&quot;nmr_residences&quot;
+        android:summary=&quot;@string/nmr_residences_summary&quot;
+        android:title=&quot;@string/nmr_residences&quot;
+        android:inputType=&quot;text&quot;/&gt;
+
+    &lt;EditTextPreference
+        android:key=&quot;refresh_interval&quot;
+        android:summary=&quot;@string/set_refresh_interval_summary&quot;
+        android:title=&quot;@string/set_refresh_interval&quot;
+        android:inputType=&quot;text&quot;/&gt;
+
+&lt;/PreferenceScreen&gt;</code></pre>
+<p>This layout references a number of strings - such as <code>username</code>, <code>password</code> and so on. Here is the additional content to be added to <code>res/values/strings.xml</code> to satisfy these references::</p>
+<pre><code>  &lt;string name=&quot;username_summary&quot;&gt;Please enter your user name&lt;/string&gt;
+  &lt;string name=&quot;username&quot;&gt;Username&lt;/string&gt;
+  &lt;string name=&quot;password_summary&quot;&gt;You may set your password here&lt;/string&gt;
+  &lt;string name=&quot;password&quot;&gt;Password&lt;/string&gt;
+  &lt;string name=&quot;nmr_residences&quot;&gt;Configure Downloads&lt;/string&gt;
+  &lt;string name=&quot;nmr_residences_summary&quot;&gt;How many Residences to store locally?&lt;/string&gt;
+  &lt;string name=&quot;set_refresh_interval&quot;&gt;Refresh&lt;/string&gt;
+  &lt;string name=&quot;set_refresh_interval_summary&quot;&gt;Frequency of cloud updates (minutes)&lt;/string&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Activity-Fragment</h1>
+<p>Next we shall introduce the settings activity-fragment pair that will be located in a new package <code>org.wit.myrent.settings</code>. You may create this package by placing a new package named <code>settings</code> in <code>myrent</code>.</p>
+<p>Within this folder, create the SettingsActivity class:</p>
+<pre><code>package org.wit.myrent.settings;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+
+import org.wit.myrent.R;
+
+public class SettingsActivity extends AppCompatActivity
+{
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    if (savedInstanceState == null) {
+      SettingsFragment fragment = new SettingsFragment();
+      getFragmentManager().beginTransaction()
+          .add(android.R.id.content, fragment, fragment.getClass().getSimpleName())
+          .commit();
+    }
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.residencelist, menu);
+    return true;
+  }
+
+}</code></pre>
+<p>Next create the skeleton of the associated fragment class: SettingsFragment.</p>
+<pre><code>package org.wit.myrent.settings;
+
+import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import org.wit.myrent.R;
+
+public class SettingsFragment extends PreferenceFragment
+{
+  @Override
+  public void onCreate(Bundle savedInstanceState)  {
+    super.onCreate(savedInstanceState);
+    addPreferencesFromResource(R.xml.settings);
+  }
+}</code></pre>
+<p>Add a <a href="https://developer.android.com/reference/android/content/SharedPreferences.html">SharedPreference</a> field and associated import:</p>
+<pre><code>import android.content.SharedPreferences;</code></pre>
+<pre><code>  private SharedPreferences prefs;</code></pre>
+<p>Override <code>onStart</code> and initialize the SharePreference field:</p>
+<pre><code>  @Override
+  public void onStart()
+  {
+    super.onStart();
+    prefs = PreferenceManager
+        .getDefaultSharedPreferences(getActivity());
+  }</code></pre>
+<p>Add the required import statement:</p>
+<pre><code>import android.preference.PreferenceManager;</code></pre>
+<p>Add the following menu-handler code to onOptionsItemSelected(MenuItem item) in ResidenceListFragment:</p>
+<pre><code>      case R.id.action_settings:
+        startActivity(new Intent(getActivity(), SettingsActivity.class));
+        return true;</code></pre>
+<p>Import SettingsActivity:</p>
+<pre><code>import org.wit.myrent.settings.SettingsActivity;</code></pre>
+<p>Add a new activity node to the manifest file:</p>
+<pre><code>    &lt;activity
+        android:name=&quot;.settings.SettingsActivity&quot;
+        android:label=&quot;@string/settings&quot; &gt;
+      &lt;meta-data
+          android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+          android:value=&quot;.activities.ResidenceListActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<p>Test by compiling and installing onto the emulator or device. Check that the settings menu can be displayed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>SettingsFragment (continued)</h1>
+<p>Here we shall implement the SharedPreferences.OnSharedPreferenceChangeListener interface:</p>
+<pre><code>public class SettingsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener 
+{
+  ...
+  ...
+}</code></pre>
+<p>Implement the interface&#39;s method:</p>
+<pre><code>
+  @Override
+  public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+
+  }</code></pre>
+<p>Register the listener in onStart:</p>
+<pre><code>  @Override
+  public void onStart()
+  {
+    super.onStart();
+    prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+    prefs.registerOnSharedPreferenceChangeListener(this);
+  }</code></pre>
+<p>Unregister the listener in onStop:</p>
+<pre><code>
+  @Override
+  public void onStop()
+  {
+    super.onStop();
+    prefs.unregisterOnSharedPreferenceChangeListener(this);
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h2>SettingsFragment (continued)</h2>
+<p>Enable up button in onCreate:</p>
+<pre><code>    setHasOptionsMenu(true);</code></pre>
+<p>Add the menu handler for the up button:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item)
+  {
+    switch (item.getItemId())
+    {
+      case android.R.id.home:
+        navigateUp(getActivity());
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>These imports are required:</p>
+<pre><code>import android.view.MenuItem;
+import org.wit.myrent.R;
+import static org.wit.android.helpers.IntentHelper.navigateUp;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Settings pane</h1>
+<p>On launching MyRent the user is presented with the residence list view and it is here we decide to facilitate access to settings. This is illustrated in Figure 1:</p>
+<p><img src="img/01.png" alt="Figure 1: Settings pane accessible from list view"></p>
+<p>The default settings menu item has already been included as shown in Figure 2:</p>
+<p><img src="img/02.png" alt="Figure 2: Default settings menu item"></p>
+<p>Add a log statement and associated import to SettingsFragment.onSharedPreferenceChanged method:</p>
+<pre><code>import static org.wit.android.helpers.LogHelpers.info;</code></pre>
+<pre><code> info(getActivity(), &quot;Setting change - key : value = &quot; + key + &quot; : &quot; + sharedPreferences.getString(key, &quot;&quot;));</code></pre>
+<p>Create a logCat filter as shown in Figure 3.</p>
+<p><img src="img/04.png" alt="Figure 3: logcat filter for Settings"></p>
+<p>Build and test by exercising this new menu option. It should be possible to display the settings pane as demonstrated in Figure 1.</p>
+<p>Introduce a test value for each of the four items in the settings pane. The output in the logcat pane should include something similar to that shown in Figure 4.</p>
+<p><img src="img/03.png" alt="Figure 4: logcat displays result of changed settings"></p>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2017/myrent-10.git">myrent-10</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

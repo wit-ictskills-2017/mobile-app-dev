@@ -1,0 +1,715 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      6-a (SUPPLEMENTAL): Deletion & ViewPager
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-09 (ViewPager)">
+      MyRent-09 (ViewPager)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-09 (ViewPager)">
+        <h1>ViewPager</h1>
+<p>Here we incorporate a new feature to support horizontal &#39;swipe&#39; interaction. This allows a user to page through the entire residence list, beginning from within any details view, in either direction. In providing this feature, we make of the Android ViewPager layout manager PageAdapter abstract class.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>ViewPager</h1>
+<p>Continue building MyRent from the end of the previous lab.</p>
+<p>Here we shall refactor MyRent by incorporating a ViewPager.</p>
+<ul>
+<li>This will allow us to swipe between pages as illustrated in Figure 1.</li>
+</ul>
+<p><img src="img/19.png" alt="Figure 1: Swipe between pages"></p>
+<p>The refactoring is shown in Figure 2 where the changes are highlighted: compare this object diagram to that in the previous step and you will see that the main change is the replacement of ResidenceActivity with a new class ResidencePagerActivity. </p>
+<p><img src="img/20.png" alt="Figure 2: Object diagram following introduction of ViewPager"></p>
+<p>The current ResidenceActivity class code is as follows:</p>
+<pre><code class="lang-java">package org.wit.myrent.activities;
+
+import org.wit.myrent.R;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+
+public class ResidenceActivity extends AppCompatActivity
+{
+    ActionBar actionBar;
+
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.fragment_container);
+
+        actionBar = getSupportActionBar();
+
+        FragmentManager manager = getSupportFragmentManager();
+        Fragment fragment = manager.findFragmentById(R.id.fragmentContainer);
+        if (fragment == null)
+        {
+            fragment = new ResidenceFragment();
+            manager.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
+        }
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Create ResidencePagerActivity</h1>
+<p>Delete or refactor ResidenceActivity and replace with ResidencePagerActivity, the code for which follows. Refactoring will have the advantage of renaming any other instances of ResidenceActivity in the application.</p>
+<p>Filename: ResidencePagerActivity.java</p>
+<pre><code>package org.wit.myrent.activities;
+
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+
+public class ResidencePagerActivity extends AppCompatActivity
+{
+  private ViewPager viewPager;
+
+
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+  }
+}</code></pre>
+<p>Create and show ViewPager:</p>
+<ul>
+<li>Add this code to ResidencePagerActivity.onCreate following the call to <em>super.onCreate</em>.<ul>
+<li>This creates a view programatically (i.e. select <em>create field</em> to resolve the error).</li>
+</ul>
+</li>
+</ul>
+<pre><code>    viewPager = new ViewPager(this);
+    viewPager.setId(R.id.viewPager);
+    setContentView(viewPager);</code></pre>
+<p>Import:</p>
+<pre><code>import android.support.v4.view.ViewPager;
+import org.wit.myrent.R;</code></pre>
+<p>Next we introduce code to facilitate retrieval of views that are required as a user swipes left or right.</p>
+<p>Introduce instance variables for the list of residences and for a portfolio:</p>
+<pre><code>  private ArrayList&lt;Residence&gt; residences;  
+  private Portfolio portfolio;</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import org.wit.myrent.models.Portfolio;
+import org.wit.myrent.models.Residence;
+import java.util.ArrayList;</code></pre>
+<p>Add this private method to obtain a reference to the list of residences stored in the model layer:</p>
+<pre><code>  private void setResidenceList()
+  {
+    MyRentApp app = (MyRentApp) getApplication();
+    portfolio = app.portfolio; 
+    residences = portfolio.residences;    
+  }</code></pre>
+<p>An import statement for MyRentApp is necessary:</p>
+<pre><code>import org.wit.myrent.app.MyRentApp;</code></pre>
+<p>Invoke <em>setResidenceList</em> immediately following <em>setContentView</em> in <em>onCreate</em>.</p>
+<pre><code>setResidenceList();</code></pre>
+<p>Declare a PageAdapter instance variable. We shall implement this class in a future step.</p>
+<pre><code>  private PagerAdapter pagerAdapter;</code></pre>
+<pre><code>import android.support.v4.view.ViewPager;</code></pre>
+<p>Instantiate the pageAdapter at the end of onCreate:</p>
+<pre><code>    pagerAdapter = new PagerAdapter(getSupportFragmentManager(), residences);</code></pre>
+<p>Use the newly created PageAdapter object as a parameter in ViewPager.setAdapter:</p>
+<pre><code>
+    viewPager.setAdapter(pagerAdapter);</code></pre>
+<p>Errors will be generated (PagerAdapter is abstract; cannot be instantiated) because we have yet to define our own PagerAdapter. This we shall do in a future step.</p>
+<p><br></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>PagerAdapter</h1>
+<p>Here we implement the PagerAdapter class. Since it is being used only by ResidencePagerActivity, we shall make it a <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html">nested class</a>, located as shown here in Figure 1.</p>
+<p><img src="img/25.png" alt="Figure 1: PagerAdapter - a subclass of Android FragmentStatePagerAdapter"></p>
+<pre><code>  class PagerAdapter extends FragmentStatePagerAdapter 
+  {
+    private ArrayList&lt;Residence&gt;  residences; 
+
+    public PagerAdapter(FragmentManager fm, ArrayList&lt;Residence&gt; residences)
+    {
+      super(fm);
+      this.residences = residences;
+    }
+
+    @Override
+    public int getCount()  
+    {  
+      return residences.size();  
+    }
+
+    @Override
+    public Fragment getItem(int pos) 
+    {
+      Residence residence = residences.get(pos);
+      Bundle args = new Bundle();
+      args.putSerializable(ResidenceFragment.EXTRA_RESIDENCE_ID, residence.id);
+      ResidenceFragment fragment = new ResidenceFragment();
+      fragment.setArguments(args);
+      return fragment;
+    } 
+  }</code></pre>
+<p>These import statements are required by PageAdapter:</p>
+<pre><code>import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Resources (ViewPager)</h1>
+<p>Create a new file <em>ids.xml</em> in res/values folder which will be used to store viewPager id numbers:</p>
+<p>Filename: ids.xml</p>
+<pre><code>&lt;resources&gt;
+    &lt;item type=&quot;id&quot; name=&quot;viewPager&quot; /&gt;
+&lt;/resources&gt;</code></pre>
+<p>Change the ResidenceActivity node in the manifest file to ResidencePagerActivity. This should already be the done if you chose refactoring in the previous step.</p>
+<p><img src="img/01.png" alt=""></p>
+<pre><code>    &lt;activity 
+        android:name=&quot;.activities.ResidencePagerActivity&quot;
+        android:label=&quot;@string/app_name&quot;&gt;
+
+        &lt;meta-data  
+          android:name=&quot;android.support.PARENT_ACTIVITY&quot;
+          android:value=&quot;.activities.ResidenceListActivity&quot;/&gt;
+    &lt;/activity&gt;</code></pre>
+<h4>ResidenceFragment</h4>
+
+<p>Delete this line in ResidenceFragment (and the line above it that creates the residenceActivity variable:</p>
+<pre><code>residenceActivity.actionBar.setDisplayHomeAsUpEnabled(true);</code></pre>
+<p>Also, replace this line in ResidenceFragment:</p>
+<pre><code>Long resId  (Long)getActivity().getIntent().getSerializableExtre(EXTRA_RESIDENCE_ID);</code></pre>
+<p>with this:</p>
+<pre><code>Long resId = (Long)getArguments().getSerializable(EXTRA_RESIDENCE_ID);</code></pre>
+<p>This last line of code extracts the current residence id from the Bundle object that was created in the <em>PagerAdapter.getItem</em> method which is located in the file ResidencePagerActivity. </p>
+<ul>
+<li>There we added a fragment argument to the Bundle object. The value of this argument is the current residence id.</li>
+<li>See here for a brief summary of fragment arguments taken from the Android Book by Hardy &amp; Philips:
+<img src="img/05.png" alt=""></li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Set current item</h1>
+<p>The following code is required to ensure that the correct residence detail view is opened when you click on a residence in the list. </p>
+<p>Implement <code>setCurrentItem</code> in ResidencePagerActivity:</p>
+<pre><code>  /*
+  * Ensure selected residence is shown in details view
+  */
+  private void setCurrentItem() {
+    Long resId = (Long) getIntent().getSerializableExtra(ResidenceFragment.EXTRA_RESIDENCE_ID);
+    for (int i = 0; i &lt; residences.size(); i++) {
+      if (residences.get(i).id.equals(resId)) {
+        viewPager.setCurrentItem(i);
+        break;
+      }
+    }
+  }</code></pre>
+<ul>
+<li><p>Invoke <code>setCurrentItem</code> at the end of <code>ResidencePagerActivity.onCreate</code>. Here is a brief description of the how it works:</p>
+<ul>
+<li>obtain the id of the residence to be displayed in the details view from the activity intent,</li>
+<li>iterate through the list of residences to find a match</li>
+<li>having found a matching residence, invoke <code>viewPager.setCurrentItem</code> using the index position of the residence object as an argument.</li>
+</ul>
+</li>
+</ul>
+<p>Here is the final <em>onCreate</em>:</p>
+<pre><code>  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    viewPager = new ViewPager(this);
+    viewPager.setId(R.id.viewPager);
+    setContentView(viewPager);
+    setResidenceList();
+    pagerAdapter = new PagerAdapter(getSupportFragmentManager(), residences);
+    viewPager.setAdapter(pagerAdapter);
+    setCurrentItem();
+
+  }</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Integrate ResidencePagerActivity</h1>
+<p>To date in ResidenceListFragment.onListItemClick:</p>
+<ul>
+<li>When a list item is clicked the ResidenceActivity is started.</li>
+</ul>
+<p>We now wish to start ResidencePagerActivity:</p>
+<ul>
+<li>To do so, in ResidenceListFragment, replace the following code:</li>
+</ul>
+<p><img src="img/24.png" alt=""></p>
+<p>with this:</p>
+<pre><code>Intent i = new Intent(getActivity(), ResidencePagerActivity.class);</code></pre>
+<p>In ResidenceListFragment, replace any other references to ResidenceActivity with ResidencePagerActivity.</p>
+<p><strong>Note</strong> that if you choose refactoring in step-03 then the name changes should already have taken place.</p>
+<p>Test the app at this stage: the swipe feature should be available. In particular conduct the following checks:</p>
+<ul>
+<li>Create three residences, assigning different latitudes to each so as to easiy distinguish between them.</li>
+<li>In the residence list click on each item in turn and verify that the correct detail view is displayed.</li>
+<li>Exercise the swipe feature both left and right horizontally. </li>
+<li>To swipe on an emulator click and hold down the left mouse button on any detail view and then more the mouse left or right. Should you have difficulty doing so on an emulator, try it on a physical device.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Listener</h1>
+<p>The code implemented in the previous steps is sufficient to allow detailed residence pages to be swiped left and right. The following instructions show how you can intervene when a new page is displayed and perform some other tasks. Soley for demonstration purposes we choose to change the label in the action bar to display the geolocation rather than the application name (as shown in Fugure 1). </p>
+<p><img src="img/21.png" alt="Figure 1: Changing Action Bar Title"></p>
+<p>Here is how it&#39;s done.</p>
+<p>Change the signature of ResidencePagerActivity so as to implement <a href="https://developer.android.com/reference/android/support/v4/view/ViewPager.OnPageChangeListener.html">ViewPager.OnPageChangeListener</a>:</p>
+<pre><code>public class ResidencePagerActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener</code></pre>
+<p>This change requires the implementation of these interface methods:</p>
+<pre><code>
+  @Override
+  public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
+  {
+
+  }
+
+  @Override
+  public void onPageSelected(int position)
+  {
+
+  }
+
+  @Override
+  public void onPageScrollStateChanged(int state)
+  {
+
+  }</code></pre>
+<p>We are only interested in full implementation of <em>onPageScrolled</em>. Here it is:</p>
+<pre><code>
+  @Override
+  public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    info(this, &quot;onPageScrolled: position &quot;+ position +&quot; arg1 &quot;+ positionOffset +&quot; positionOffsetPixels &quot;+ positionOffsetPixels);
+    Residence residence = residences.get(position);
+    if (residence.geolocation != null)
+    {
+      setTitle(residence.geolocation);
+    }</code></pre>
+<p>The method <em>info</em> is implemented in the helpers folder and may be imported using Alt+Enter (import static org.wit.android.helpers.LogHelpers.info).</p>
+<p>Register the OnPageListener</p>
+<pre><code>    viewPager.addOnPageChangeListener(this);</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Test</h1>
+<p>Build and run the app and verify the page swipe functions correctly. </p>
+<ul>
+<li>If using the Android emulator, click on a residence details view and maintaining a button press swipe left or right (assuming at least 2 residence list items exist).</li>
+</ul>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2017/myrent-09.git">myrent-09</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

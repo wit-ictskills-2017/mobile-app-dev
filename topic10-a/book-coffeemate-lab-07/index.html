@@ -1,0 +1,1143 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      10: Firebase
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-08">
+      Lab-08
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" data-tab="Solution">
+      Solution
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-08">
+        <h1>Objectives</h1>
+<p>This lab &#39;takes a big step forward&#39;, in that we refactor the previous version (6.0) of our Case Study <b>CoffeeMate</b> and introduce <strong>Firebase Support</strong> via <strong>Google Authentication</strong> and a <strong>Realtime Database</strong> in version <b>CoffeeMateFBI.1.0</b></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup - Starter Code</h1>
+<p>It can be quite difficult to try and &#39;bolt on&#39; Firebase to an Android App, depending on the number and type of APis being used, but we can start with a version which does include a number of the Google APis that we need, namely <b>CoffeeMate.6.0</b>, which you can download here - <a href="archives/CoffeeMate.6.0.zip">CoffeeMate.6.0</a>.</p>
+<p>As always, It&#39;s probably still a good idea to run the App and confirm that the app (or your 6.0 version app) is configured properly and (still) running.</p>
+<p>You might also want to rename the app to what I will be referring to throughout the rest of the lab - <b>CoffeeMateFBI.1.0</b>.</p>
+<p>On completion of this lab, you will be able to do the following:</p>
+<ul>
+<li><p>Create/Import a new project to your Firebase Console (found <a href="https://console.firebase.google.com">here</a>) and configure your project as required</p>
+</li>
+<li><p>Add Firebase Authentication (including Google Sign-In)</p>
+</li>
+<li><p>Add CRUD (Create Retrieve Update Delete) functionality via your Firebase Realtime Database</p>
+</li>
+</ul>
+<p>The following steps will help you achieve this, so before we can do anything with Firebase, let&#39;s setup our CoffeeMate Project on the Firebase Console.</p>
+<p>The instructions on the official developer docs are as good a place to start as any, so check how to &#39;Add Firebase to your Project&#39; <a href="https://firebase.google.com/docs/android/setup">here</a>.</p>
+<p>The final list of dependencies/plugins required are as below, so confirm your list against mine and add them in at this stage if you so wish?</p>
+<pre><code>dependencies {
+    compile fileTree(include: [&#39;*.jar&#39;], dir: &#39;libs&#39;)
+    compile project(&#39;:volley&#39;)
+    compile &#39;com.android.support:appcompat-v7:25.2.0&#39;
+    compile &#39;com.android.support:support-v4:25.2.0&#39;
+    compile &#39;com.android.support:design:25.2.0&#39;
+    compile &#39;com.makeramen:roundedimageview:2.2.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    compile &#39;com.google.code.gson:gson:2.7&#39;
+    compile &#39;com.google.android.gms:play-services-auth:11.0.2&#39;
+    compile &#39;com.google.android.gms:play-services-maps:11.0.2&#39;
+    compile &#39;com.google.android.gms:play-services-location:11.0.2&#39;
+
+    compile &#39;com.google.firebase:firebase-core:11.0.2&#39;
+    compile &#39;com.google.firebase:firebase-auth:11.0.2&#39;
+    compile &#39;com.google.firebase:firebase-database:11.0.2&#39;
+    compile &#39;com.firebaseui:firebase-ui-database:1.0.0&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+}
+
+apply plugin: &#39;com.google.gms.google-services&#39;</code></pre>
+<p>Once you have your project set up, you can continue on to the next step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Signing In with Firebase Authentication</h1>
+<p>First of all, make sure you have your Firebase Project set up and you&#39;ve added your existing CoffeeMate project to it, like so</p>
+<p><img src="img/labfb01.png" alt=""></p>
+<p>Notice I&#39;ve renamed the package to <strong>ie.cmfbi</strong> - there were a few issues when I initially set up the project with the existing <strong>ie.cm</strong> package name (which you might get too) like</p>
+<p><img src="img/labfb02.png" alt=""></p>
+<p>so I just decided to rename the package. If you take this approach make sure you update your Google Maps APi authorised package name and SHA-1 key on the developer console here <a href="https://console.developers.google.com">https://console.developers.google.com</a></p>
+<p>Also, you&#39;ll need an updated <strong>google-services.json</strong> file so make sure you download it during the setup process</p>
+<p><img src="img/labfb03.png" alt=""></p>
+<p>and</p>
+<p><img src="img/labfb04.png" alt=""></p>
+<p>Some other useful links</p>
+<p><a href="https://console.cloud.google.com/home/dashboard">https://console.cloud.google.com/home/dashboard</a></p>
+<p><a href="https://developers.google.com/mobile/add">https://developers.google.com/mobile/add</a></p>
+<p>For this Lab we&#39;ll be using Google Sign-In Authentication with Firebase, so visit your firebase console again here <a href="https://console.firebase.google.com">https://console.firebase.google.com</a> and turn on the required Authentication.</p>
+<p> <img src="img/labfb05.png" alt=""></p>
+<p> We&#39;ll be using a lot of this <a href="https://firebase.google.com/docs/auth/android/google-signin">https://firebase.google.com/docs/auth/android/google-signin</a> for reference on this step.</p>
+<p>Now, open your <strong>Login.java</strong> and update your <strong>GoogleSignInOptions</strong> object to &#39;requestIDToken()&#39; like so</p>
+<pre><code class="lang-java">app.mGoogleSignInOptions = new GoogleSignInOptions
+                .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .requestProfile()
+                .build();</code></pre>
+<p>Next, add the following property to your <strong>CoffeeMateApp</strong></p>
+<pre><code class="lang-java">public FirebaseAuth mFirebaseAuth;
+public FirebaseUser mFirebaseUser;</code></pre>
+<p>and bring in and/or update the following</p>
+<pre><code class="lang-java">private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+
+       Log.v(TAG, &quot;firebaseAuthWithGoogle:&quot; + acct.getId());
+
+       AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+       app.mFirebaseAuth.signInWithCredential(credential)
+               .addOnCompleteListener(this, new OnCompleteListener&lt;AuthResult&gt;() {
+                   @Override
+                   public void onComplete(@NonNull Task&lt;AuthResult&gt; task) {
+                       Log.v(TAG, &quot;signInWithCredential:onComplete:&quot; + task.isSuccessful());
+                       validateFirebaseUser();
+                       // If sign in fails, display a message to the user. If sign in succeeds
+                       // the auth state listener will be notified and logic to handle the
+                       // signed in user can be handled in the listener.
+                       if (!task.isSuccessful()) {
+                           Log.v(TAG, &quot;signInWithCredential&quot;, task.getException());
+                           Toast.makeText(Login.this, &quot;Authentication failed.&quot;,
+                                   Toast.LENGTH_SHORT).show();
+                       }
+                       else
+                           startHomeScreen();
+                   }
+               });
+   }
+
+    private void validateFirebaseUser()
+    {
+        Log.v(TAG,&quot;Calling validateFirebaseUser() &quot; );
+        if(app.mFirebaseUser == null)
+            app.mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        final String userName = app.mFirebaseUser.getDisplayName();
+        final String userId = app.mFirebaseUser.getUid();
+        final String email = app.mFirebaseUser.getEmail();
+
+        Log.v(TAG,&quot;Validating Firebase User Details for: &quot; + app.mFirebaseUser.getEmail());
+
+    }</code></pre>
+<p>Add this to your <strong>onCreate()</strong></p>
+<pre><code class="lang-java">app.mFirebaseAuth = FirebaseAuth.getInstance();</code></pre>
+<p>and try and work out where you should be calling</p>
+<pre><code class="lang-java">firebaseAuthWithGoogle(...)</code></pre>
+<p>Run your app and keep track of the Logs in Android Studio to verify Firebase Authentication.</p>
+<p>If everything is configured correctly, you should now be seeing a new user on your console</p>
+<p> <img src="img/labfb06.png" alt=""></p>
+<p> and going forward</p>
+<p>  <img src="img/labfb06a.png" alt=""></p>
+<p>And for completeness you should probably sign out your current user from Firebase, whenever they log out of the app using</p>
+<pre><code class="lang-java">FirebaseAuth.getInstance().signOut();
+app.mFirebaseUser = null;
+Log.v(&quot;coffeemate&quot;, &quot;User Logged out of Firebase&quot;);</code></pre>
+<p>The next step will involving Adding coffees to our Firebase Realtime database.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Firebase CRUD - Add/Verify a User</h1>
+<p>Before you go any further, here&#39;s where we&#39;re at so far</p>
+<ul>
+<li><a href="archives/CoffeeMateFBI.1.0.sofar.zip">CoffeeMateFBI.1.0.sofar</a></li>
+</ul>
+<p>and remember to retain your own <strong>google-services.json</strong> file (as this archive doesn&#39;t contain one!).</p>
+<p>We&#39;ll be using some of this <a href="http://www.amalhichri.net/android-firebase-realtime-database-basic-cruds/">http://www.amalhichri.net/android-firebase-realtime-database-basic-cruds/</a> tutorial for this and subsequent steps.</p>
+<p>So based on the above link, go ahead and add &quot;Firebase offline Persistence&quot;, wherever you think is most appropriate.</p>
+<p>Now, in order to perform any operation on the database, whether it be read or write (or update or delete), you need to get a reference to the database first.
+the code that follows gives you a reference to the database JSON top node (and a lot more). From here you need to use the child node names to traverse further. And to keep our code as reusable as possible, we&#39;ll introduce a few new classes to manage our Firebase database calls (similar to what we did for our SQLite calls).</p>
+<p>First, introduce the following into your <strong>models</strong> package, so that we can associate specific users with their own coffees.</p>
+<pre><code class="lang-java">public class User {
+
+    public String userId;
+    public String userName;
+    public String userEmail;
+    public String userProfilePic;
+
+    public User(){
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+
+    public User(String userId, String userName, String userEmail, String userProfilePic ){
+        this.userId = userId;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userProfilePic = userProfilePic;
+    }
+}</code></pre>
+<p>Create a new interface <strong>FBDBListener</strong> and for simplicity, place it in the same api package we have our <strong>VolleyListener</strong> class.</p>
+<pre><code class="lang-java">public interface FBDBListener {
+    void onSuccess(DataSnapshot dataSnapshot);
+    void onFailure();
+}</code></pre>
+<p>Now, create a new class called <strong>FBDBManager</strong> and do the same.</p>
+<p>Add the following properties</p>
+<pre><code class="lang-java">  private static final String TAG = &quot;coffeemate&quot;;
+  public DatabaseReference mFirebaseDatabase;
+  public static String mFBUserId;
+  public FBDBListener mFBDBListener;</code></pre>
+<p>and methods (for the moment)</p>
+<pre><code class="lang-java">public void open() {
+      //Set up local caching
+      FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
+      //Bind to remote Firebase Database
+      mFirebaseDatabase = FirebaseDatabase.getInstance().getReference();
+      Log.v(TAG, &quot;Database Connected :&quot; + mFirebaseDatabase.getKey());
+  }
+
+  public void attachListener(FBDBListener listener) {
+       mFBDBListener = listener;
+   }
+
+//Check to see if the Firebase User exists in the Database
+//if not, create a new User
+public void checkUser(final String userid,final String username,final String email) {
+        Log.v(TAG, &quot;checkUser ID == &quot; + userid);
+        mFirebaseDatabase.child(&quot;users&quot;).child(userid).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        mFBDBListener.onSuccess(dataSnapshot);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        mFBDBListener.onFailure();
+                    }
+                }
+        );
+    }</code></pre>
+<p>Then, open up your <strong>Login</strong> activity and update these existing methods</p>
+<pre><code class="lang-java">private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+
+       Log.v(TAG, &quot;firebaseAuthWithGoogle:&quot; + acct.getEmail());
+
+       AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+       app.mFirebaseAuth.signInWithCredential(credential)
+               .addOnCompleteListener(this, new OnCompleteListener&lt;AuthResult&gt;() {
+                   @Override
+                   public void onComplete(@NonNull Task&lt;AuthResult&gt; task) {
+                       Log.v(TAG, &quot;signInWithCredential:onComplete:&quot; + task.isSuccessful());
+                       validateFirebaseUser();
+                       // If sign in fails, display a message to the user. If sign in succeeds
+                       // the auth state listener will be notified and logic to handle the
+                       // signed in user can be handled in the listener.
+                       if (!task.isSuccessful()) {
+                           Log.v(TAG, &quot;signInWithCredential&quot;, task.getException());
+                           Toast.makeText(Login.this, &quot;Authentication failed.&quot;,
+                                   Toast.LENGTH_SHORT).show();
+                       }
+                   }
+               });
+   }
+
+   private void validateFirebaseUser()
+   {
+       Log.v(TAG,&quot;Calling validateFirebaseUser() &quot; );
+       if(app.mFirebaseUser == null)
+           app.mFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+       app.mFBDBManager.checkUser(app.mFirebaseUser.getUid(),
+                               app.mFirebaseUser.getDisplayName(),
+                               app.mFirebaseUser.getEmail());
+   }</code></pre>
+<p>and make <strong>Login</strong> implement the <strong>FBDBListener</strong> interface.</p>
+<p>Add the following to <em>onSuccess()</em></p>
+<pre><code class="lang-java">if(dataSnapshot.exists()){
+            Log.v(TAG, &quot;User found : &quot;);
+        }
+        else{
+            Log.v(TAG, &quot;User not found, Creating User on Firebase&quot;);
+            User newUser = new User(app.mFirebaseUser.getUid(),
+                                    app.mFirebaseUser.getDisplayName(),
+                                    app.mFirebaseUser.getEmail(), null);
+            app.mFBDBManager.mFirebaseDatabase.child(&quot;users&quot;)
+                                            .child(app.mFirebaseUser.getUid())
+                                            .setValue(newUser);
+        }
+        app.mFBDBManager.mFBUserId = app.mFirebaseUser.getUid();
+
+        startHomeScreen();</code></pre>
+<p>and this to <em>onFailure()</em></p>
+<pre><code class="lang-java">Log.v(TAG, &quot;Unable to Validate Existing Firebase User: &quot;);
+Toast.makeText(this,&quot;Unable to Validate Existing Firebase User:&quot;,Toast.LENGTH_LONG).show();</code></pre>
+<p>and see if you can make the necessary modifications to the project to</p>
+<ul>
+<li>open the database &#39;link&#39; to Firebase on App Startup</li>
+<li>attach your listener and</li>
+<li>verify the currently signed-in user against the database</li>
+</ul>
+<p>If it all checks out you should see something like this</p>
+<p>Initially, with no users</p>
+<p> <img src="img/labfb07.png" alt=""></p>
+<p> then with one new user (me :-) )</p>
+<p> <img src="img/labfb08.png" alt=""></p>
+<p>  etc. etc.</p>
+<p> <img src="img/labfb09.png" alt=""></p>
+<p> We can now verify a user against our database but more importantly, we can associate this user with a specific coffee when we add a coffee to our database - so that&#39;s next.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Firebase CRUD - Add a Coffee</h1>
+<p>At this point, we have to essentially &#39;break&#39; our app insofar as we need to change our <strong>Coffee</strong> model to allow us to store a user id with the coffee, when we add it to the firebase database.</p>
+<p>First of all, introduce the following property into the coffee models</p>
+<pre><code class="lang-java">public String uid;
+public double latitude;
+public double longitude;</code></pre>
+<p>and update your constructors accordingly.</p>
+<p>Next, introduce the following method into your <strong>Coffee</strong> class for mapping our fields to JSON for storage</p>
+<pre><code class="lang-java">@Exclude
+    public Map&lt;String, Object&gt; toMap() {
+        HashMap&lt;String, Object&gt; result = new HashMap&lt;&gt;();
+        result.put(&quot;uid&quot;, uid);
+        result.put(&quot;name&quot;, name);
+        result.put(&quot;shop&quot;, shop);
+        result.put(&quot;rating&quot;, rating);
+        result.put(&quot;price&quot;, price);
+        result.put(&quot;favourite&quot;, favourite);
+        result.put(&quot;usertoken&quot;, usertoken);
+        result.put(&quot;googlephoto&quot;, googlephoto);
+        result.put(&quot;address&quot;, address);
+        result.put(&quot;latitude&quot;, latitude);
+        result.put(&quot;longitude&quot;, longitude);
+
+        return result;
+    }</code></pre>
+<p>Finally, introduce the following methods into your <strong>FBDBManager</strong> class</p>
+<pre><code class="lang-java">public void addCoffee(final Coffee c)
+    {
+        mFirebaseDatabase.child(&quot;users&quot;).child(mFBUserId).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // Get user value
+                        User user = dataSnapshot.getValue(User.class);
+
+                        if (user == null) {
+                            // User is null, error out
+                            Log.v(TAG, &quot;User &quot; + mFBUserId + &quot; is unexpectedly null&quot;);
+
+                        } else {
+                            // Write new coffee here
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.v(TAG, &quot;getUser:onCancelled&quot;, databaseError.toException());
+                    }
+                });
+    }
+
+    private void writeNewCoffee(Coffee c) {
+        // Create new coffee at /user-coffees/$userid/$coffeeid and at
+        // /coffees/$coffeeid simultaneously
+        String key = mFirebaseDatabase.child(&quot;coffees&quot;).push().getKey();
+        Map&lt;String, Object&gt; coffeeValues = c.toMap();
+
+        Map&lt;String, Object&gt; childUpdates = new HashMap&lt;&gt;();
+        //All our coffees
+        childUpdates.put(&quot;/coffees/&quot; + key, coffeeValues);
+        //All coffees per user
+        childUpdates.put(&quot;/user-coffees/&quot; + mFBUserId + &quot;/&quot; + key, coffeeValues);
+
+        mFirebaseDatabase.updateChildren(childUpdates);
+    }</code></pre>
+<p>and see can you now add a coffee to your firebase database.</p>
+<p>If you can, you should be seeing something like this</p>
+<p><img src="img/labfb10.png" alt=""></p>
+<p>Experiment with different users to confirm your app is working correctly, like so</p>
+<p><img src="img/labfb11.png" alt=""></p>
+<p><img src="img/labfb12.png" alt=""></p>
+<p>so the next step will be to retrieve these coffees from Firebase and display them in the list on the device.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Firebase CRUD - Get All Coffees</h1>
+<p>At the moment we can see our coffees being added on the Firebase console, but that&#39;s not of much use to the user, so this step will involve retrieving all of the users coffees.</p>
+<p>To leverage the realtime nature of our firebase database, we are going to make use of a <strong>FirebaseListAdapter</strong> which you can find out more about here <a href="https://github.com/firebase/FirebaseUI-Android/blob/master/README.md">https://github.com/firebase/FirebaseUI-Android/blob/master/README.md</a></p>
+<p>We will need to replace our current version of our custom list adapter with a version that extends the above. To use the latest version of the FirebaseUI project (as of July 2017) we need to make a few changes to our project and module gradle files.</p>
+<p>First, open your <strong>project</strong> build.gradle and make sure you have the following</p>
+<pre><code class="lang-xml">allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url &quot;https://maven.google.com&quot;
+        }
+    }
+}</code></pre>
+<p>Now open your <strong>module</strong> build.gradle and confirm the following dependencies</p>
+<pre><code class="lang-xml">dependencies {
+    compile fileTree(include: [&#39;*.jar&#39;], dir: &#39;libs&#39;)
+    compile project(&#39;:volley&#39;)
+    compile &#39;com.android.support:appcompat-v7:25.4.0&#39;
+    compile &#39;com.android.support:support-v4:25.4.0&#39;
+    compile &#39;com.android.support:design:25.4.0&#39;
+    compile &#39;com.makeramen:roundedimageview:2.2.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    compile &#39;com.google.code.gson:gson:2.7&#39;
+    compile &#39;com.google.android.gms:play-services-auth:11.0.2&#39;
+    compile &#39;com.google.android.gms:play-services-maps:11.0.2&#39;
+    compile &#39;com.google.android.gms:play-services-location:11.0.2&#39;
+
+
+    compile &#39;com.google.firebase:firebase-core:11.0.2&#39;
+    compile &#39;com.google.firebase:firebase-auth:11.0.2&#39;
+    compile &#39;com.google.firebase:firebase-database:11.0.2&#39;
+    compile &#39;com.firebaseui:firebase-ui-database:2.1.0&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+}</code></pre>
+<p>Sync your project again and you should be good to go.</p>
+<p>Now, replace your existing <strong>CoffeeListAdapter</strong> with this one</p>
+<pre><code class="lang-java">//https://github.com/firebase/FirebaseUI-Android/blob/master/README.md
+
+//https://github.com/firebase/FirebaseUI-Android/blob/master/database/README.md
+
+//https://groups.google.com/forum/#!topic/firebase-talk/O1kJ4VLUg10
+
+public class CoffeeListAdapter extends FirebaseListAdapter&lt;Coffee&gt; {
+
+  private OnClickListener deleteListener;
+  public Query           query ;
+
+  public CoffeeListAdapter(Activity context, OnClickListener deleteListener,
+                           Query query) {
+    super(context, Coffee.class,R.layout.coffeerow, query);
+    Log.v(&quot;coffeemate&quot;,&quot;Creating Adapter with :&quot; + query);
+    this.deleteListener = deleteListener;
+    this.query = query;
+  }
+
+  @Override
+  protected void populateView(View row, Coffee coffee,int position) {
+    Log.v(&quot;coffeemate&quot;,&quot;Populating View Adapter with :&quot; + coffee);
+    //Set the rows TAG to the coffee &#39;key&#39;
+    row.setTag(getRef(position).getKey());
+
+    ((TextView) row.findViewById(R.id.rowCoffeeName)).setText(coffee.name);
+    ((TextView) row.findViewById(R.id.rowCoffeeShop)).setText(coffee.shop);
+    ((TextView) row.findViewById(R.id.rowRating)).setText(coffee.rating + &quot; *&quot;);
+    ((TextView) row.findViewById(R.id.rowPrice)).setText(&quot;€&quot; +
+            new DecimalFormat(&quot;0.00&quot;).format(coffee.price));
+
+    ImageView imgIcon = (ImageView) row.findViewById(R.id.RowImage);
+
+    if (coffee.favourite == true)
+      imgIcon.setImageResource(R.drawable.ic_favourite_on);
+    else
+      imgIcon.setImageResource(R.drawable.ic_favourite_off);
+
+
+    ImageView imgDelete = (ImageView) row.findViewById(R.id.imgDelete);
+    imgDelete.setTag(getRef(position).getKey());
+    imgDelete.setOnClickListener(deleteListener);
+  }
+}</code></pre>
+<p>Open your <strong>FBDBManager</strong> class and introduce the following methods</p>
+<pre><code class="lang-java">public Query getAllCoffees()
+{
+    Query query = mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId)
+            .orderByChild(&quot;rating&quot;);
+
+    return query;
+}</code></pre>
+<p>and finally, open your <strong>CoffeeFragment</strong> class and bring in/update the following properties/methods/code extracts</p>
+<pre><code class="lang-java">public Query            query;
+public OnClickListener  deleteListener;
+
+//Replace the CoffeeApi calls with
+ query = app.mFBDBManager.getAllCoffees();
+
+//Replace CoffeeListAdapter call with
+CoffeeListAdapter(getActivity(), deleteListener, query);
+
+//Add to onResume()
+updateUI();</code></pre>
+<p>and remove all <strong>VolleyListener</strong> references and implemented methods.</p>
+<p>(We&#39;ll sort out deleting and filtering on &#39;favourites&#39; later on)</p>
+<p>Now, run your app again and once you sign in, you should be seeing the coffees associated with the user stored in the Firebase database.</p>
+<p><img src="img/labfb13.png" alt=""></p>
+<p>Now if you visit your Firebase console and manually edit some coffee data (change the rating value or the name for example) and keep an eye on your list on your device (all going well!) you&#39;ll see the data automatically change, without any swipe/refreshing of the list, demonstrating the FirebaseUI realtime updates, like so</p>
+<p><img src="img/labfb14.png" alt=""></p>
+<p>pretty cool I think :)</p>
+<p>On to the next step.....</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Firebase CRUD - Get Favourite Coffees</h1>
+<p>At the moment we can see our coffees being added on the Firebase console, and see them displayed in our list in the app, so let&#39;s now start to refactor all the other features of the app, starting with a relatively simple job of displaying just the favourite coffees belonging to the user.</p>
+<p>First thing to do is open up your <strong>FBDBManager</strong> class and add the following method, to get our favourite coffees</p>
+<pre><code class="lang-java">public Query getFavouriteCoffees()
+    {
+        Query query = mFirebaseDatabase.child(/* replace as necessary*/).child(/* replace as necessary*/)
+                .orderByChild(/* replace as necessary*/).equalTo(true);
+
+        return query;
+    }</code></pre>
+<p>Then, open your <strong>CoffeeFragment</strong> class and add</p>
+<pre><code class="lang-java">if(favourites)
+  query = app.mFBDBManager.getFavouriteCoffees();</code></pre>
+<p>when you think it should be placed.</p>
+<p>Experiment with manually changing the &#39;favourite&#39; field on your console and see what happens when you&#39;re viewing your &#39;Favourites&#39;</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Firebase CRUD - Update a Coffee</h1>
+<p>Up to now, to see any changes/updates to our list of coffees we had to manually make those changes on the console. This step will involve allowing a coffee to be updated on the app and subsequently we&#39;ll be able to see those changes happen in realtime on our Firebase console.</p>
+<p>Similar to <strong>CoffeeMate.6.0</strong> we have to first retrieve the particular coffee from the server and then <strong>PUT</strong> in back so first, open your <strong>FBDBManager</strong> class and add the following</p>
+<pre><code class="lang-java">public void getACoffee(final String coffeeKey)
+   {
+       mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId).child(coffeeKey).addValueEventListener(
+               new ValueEventListener() {
+                   @Override
+                   public void onDataChange(DataSnapshot dataSnapshot) {
+                       Log.v(TAG,&quot;The read Succeeded: &quot; + dataSnapshot.toString());
+                       mFBDBListener.onSuccess(dataSnapshot);
+                   }
+                   @Override
+                   public void onCancelled(DatabaseError firebaseError) {
+                       Log.v(TAG,&quot;The read failed: &quot; + firebaseError.getMessage());
+                       mFBDBListener.onFailure();
+                   }
+               });
+   }
+
+   public void updateACoffee(final String coffeeKey,final Coffee updatedCoffee)
+   {
+       mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId).child(coffeeKey).addListenerForSingleValueEvent(
+               new ValueEventListener() {
+                   @Override
+                   public void onDataChange(DataSnapshot dataSnapshot) {
+                       Log.v(TAG,&quot;The update Succeeded: &quot; + dataSnapshot.toString());
+                       dataSnapshot.getRef().setValue(updatedCoffee);
+                   }
+                   @Override
+                   public void onCancelled(DatabaseError firebaseError) {
+                       Log.v(TAG,&quot;The update failed: &quot; + firebaseError.getMessage());
+                       mFBDBListener.onFailure();
+                   }
+               });
+   }</code></pre>
+<p>Once you&#39;ve fixed any errors, open <strong>EditFragment</strong> and replace <em>VolleyListener</em> with <em>FBDBListener</em>, and again fix the resultant errors.</p>
+<p>Next, to begin with, for completeness (and identifying a few changes we need to make) rename the &#39;coffeeID&#39; property to &#39;coffeeKey&#39; - don&#39;t forget to make the relevant change in <strong>CoffeeFragment</strong>.</p>
+<p>Then &#39;attach&#39; the Listener to the fragment and see can you correctly call the &#39;getACoffee()&#39; method and implement the Listener methods.</p>
+<p>You&#39;ll need this (and a bit more) in your <em>onResume()</em></p>
+<pre><code class="lang-java">app.mFBDBManager.getACoffee(coffeeKey);</code></pre>
+<p>and this in the Listener methods</p>
+<pre><code class="lang-java">aCoffee = dataSnapshot.getValue(Coffee.class);</code></pre>
+<p>and remember to call <em>updateUI()</em> to display the coffee data on screen.</p>
+<p>The last thing to do is actually update the data on the server once the user clicks &#39;update&#39; so using this method call</p>
+<pre><code class="lang-java"> app.mFBDBManager.updateACoffee(coffeeKey,aCoffee);</code></pre>
+<p>have a go at that.</p>
+<p>If you can remember way back to <strong>CoffeeMate.6.0</strong>, the user could toggle on/off the favourites star independently from having to update the coffee details so just to be complete, we&#39;ll do that now too.</p>
+<p>Open up <strong>FBDBManager</strong> class and add the following</p>
+<pre><code class="lang-java">public void toggleFavourite(final String coffeeKey,final boolean isFavourite)
+    {
+        mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId).child(coffeeKey).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        snapshot.getRef().child(&quot;favourite&quot;).setValue(isFavourite);
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError firebaseError) {
+                        Log.v(TAG,&quot;The toggle failed: &quot; + firebaseError.getMessage());
+                    }
+                });
+    }</code></pre>
+<p>and have a go at that too.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Firebase CRUD - Deleting Coffees</h1>
+<p>This step involves two features</p>
+<ul>
+<li>deleting a single coffee and</li>
+<li>deleting multiple coffees</li>
+</ul>
+<p>so we&#39;ll start with the slightly more difficult option - deleting a single coffee.</p>
+<p>First, open your <strong>FBDBManager</strong> class and add the following</p>
+<pre><code class="lang-java">public void deleteACoffee(final String coffeeKey)
+    {
+        mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId).child(coffeeKey).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot snapshot) {
+                        snapshot.getRef().removeValue();
+                    }
+                    @Override
+                    public void onCancelled(DatabaseError firebaseError) {
+                        Log.v(TAG,&quot;The delete failed: &quot; + firebaseError.getMessage());
+                    }
+                });
+    }</code></pre>
+<p>You&#39;ll need to make use of the <em>deleteListener</em> object we declared earlier, inside your <strong>CoffeeFragment</strong>&#39;s <em>onCreatView()</em> like so</p>
+<pre><code class="lang-java">deleteListener = new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        onCoffeeDelete (view.getTag().toString());
+      }
+    };</code></pre>
+<p>This ensures that we bind the listener (and an onClick() event) specifically to the delete button inside our <strong>CoffeeListAdapter</strong>.</p>
+<p>Now, try and work out where <em>deleteACoffee</em> should be called and the minor changes that need to be made to the existing <em>onCoffeeDelete</em>.</p>
+<p>To finish this step, deleting multiple coffees is literally one line of code, so try and work that out too (at least without looking at the notes first :) )</p>
+<p>and you may find the following method useful?</p>
+<pre><code class="lang-java">listView.getChildAt()</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Firebase CRUD - Searching &amp; Filtering Coffees</h1>
+<p>At the time of writing (July/2017) there is still no way to search Firebase like you would a normal relational Database using SQL LIKE etc. For reference though and if you fancy seeing if you can integrate any of the following, I found some useful links worth a looking</p>
+<p><a href="https://github.com/xdrop/fuzzywuzzy">https://github.com/xdrop/fuzzywuzzy</a></p>
+<p><a href="https://support.google.com/firebase/answer/6318765?hl=en">https://support.google.com/firebase/answer/6318765?hl=en</a></p>
+<p><a href="https://cloud.google.com/bigquery/docs/reference/libraries">https://cloud.google.com/bigquery/docs/reference/libraries</a></p>
+<p><a href="https://groups.google.com/forum/#!topic/firebase-talk/kHFSfp7zNDk">https://groups.google.com/forum/#!topic/firebase-talk/kHFSfp7zNDk</a> (and subsequent links within)</p>
+<p>I&#39;ll revisit this once I have time (or if Firebase adds this functionality :) )</p>
+<p>As a result, we&#39;re a bit limited in what we can do in terms of searching our list, but we will implement some basic searching &amp; filtering on our &#39;Search&#39; screen to try and replicate what we had in the previous version of <strong>CoffeeMate</strong>.</p>
+<p>So, first, open your <strong>FBDBManager</strong> and add the following</p>
+<pre><code class="lang-java">public Query nameFilter(String s)
+  {
+      Query query = mFirebaseDatabase.child(&quot;user-coffees&quot;).child(mFBUserId)
+              .orderByChild(&quot;name&quot;).startAt(s).endAt(s+&quot;\uf8ff&quot;);
+
+      return query;
+  }</code></pre>
+<p>Next, open your <strong>CoffeeFilter</strong> and replace it with the following (and fix any import errors)</p>
+<pre><code class="lang-java">public class CoffeeFilter extends Filter {
+    private String                 filterText;
+    private CoffeeListAdapter     adapter;
+    private Query                query;
+    private CoffeeFragment        fragment;
+
+    public CoffeeFilter(Query originalCoffeeQuery, String filterText
+            ,CoffeeListAdapter adapter,CoffeeFragment fragment) {
+        super();
+        this.query = originalCoffeeQuery;
+        this.filterText = filterText;
+        this.adapter = adapter;
+        this.fragment = fragment;
+    }
+
+    public void setFilter(String filterText) {
+        this.filterText = filterText;
+    }
+
+    @Override
+    protected FilterResults performFiltering(CharSequence prefix) {
+        FilterResults results = new FilterResults();
+
+        if(prefix != null)
+            if (prefix.length() &gt; 0)
+                query = fragment.app.mFBDBManager.nameFilter(prefix.toString());
+
+        else {
+            if (filterText.equals(&quot;all&quot;)) {
+                query = fragment.app.mFBDBManager.getAllCoffees();
+            } else if (filterText.equals(&quot;favourites&quot;)) {
+                query = fragment.app.mFBDBManager.getFavouriteCoffees();
+            }
+        }
+        results.values = query;
+
+        return results;
+    }
+
+    @Override
+    protected void publishResults(CharSequence prefix, FilterResults results) {
+
+        fragment.updateUI((Query) results.values);
+    }
+}</code></pre>
+<p>Now this will trigger a list of errors so open your <strong>CoffeeFragment</strong> and <strong>SearchFragment</strong> classes and update your <em>coffeeilter</em> (in the relevant places) so that it takes a <em>query</em> as the first parameter, instead of the existing list. And do the same for the <em>updateUI()</em> method.</p>
+<p>Some refactoring of both classes is necessary at this stage so go ahead and carry out the following</p>
+<ul>
+<li>move the instantiation of your <em>coffeeFilter</em> from <strong>CoffeeFragment</strong>&#39;s <em>onResume()</em> to <strong>SearchFragment</strong>&#39;s <em>onResume()</em></li>
+<li>remove the following from <strong>CoffeeFragment</strong>&#39;s <em>onResume()</em><pre><code class="lang-java">    coffeeFilter.setFilter(&quot;favourites&quot;); // Set the filter text field from &#39;all&#39; to &#39;favourites&#39;
+    coffeeFilter.filter(null); // Filter the data, but don&#39;t use any prefix</code></pre>
+</li>
+<li>Add a call to <em>getFavouriteCoffees()</em> on your <em>query</em> reference BEFORE you create the filter in your <em>deleteCoffees()</em> method, while checking for &#39;favourites&#39;</li>
+</ul>
+<p>Run your app once again, and you should be able to see something like the following</p>
+<p>Our initial &#39;Search&#39; screen</p>
+<p><img src="img/labfb15.png" alt=""></p>
+<p>Filtering on &#39;Favourites&#39;</p>
+<p><img src="img/labfb16.png" alt=""></p>
+<p>Filtering on String name &#39;C&#39;</p>
+<p><img src="img/labfb17.png" alt=""></p>
+<p>Filtering on String name &#39;Cu&#39;</p>
+<p><img src="img/labfb18.png" alt=""></p>
+<p>If you wish, you can do some housekeeping on the entire project at this stage and remove the <strong>mSwipeRefreshLayout</strong> references, as we don&#39;t actually need it anymore due to the <strong>FirebaseUI</strong> api and the realtime nature of our database, but I&#39;ll leave it in the solution for reference.</p>
+<p>The last thing we need to do is make sure our Map is showing the correct marker locations, as currently we&#39;re still retrieving from the herokuapp server and not Firebase, so that&#39;s next.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>Firebase CRUD - Managing our Coffee Map</h1>
+<p>Currently our <strong>MapsFragment</strong> is implementing the <em>VolleyListener</em> interface and requesting the list of coffees from the herokuapp server, so this step requires a refactoring of the interface to use, and the call we need to make to get our coffees from Firebase.</p>
+<p>First thing to do is add the following to your <strong>FBDBManager</strong></p>
+<pre><code class="lang-java">public void getAllCoffeesSnapshot()
+   {
+       ValueEventListener vel = mFirebaseDatabase.child(&quot;user-coffees&quot;)
+                                           .child(mFBUserId)
+                                           .addValueEventListener(
+               new ValueEventListener() {
+                   @Override
+                   public void onDataChange(DataSnapshot dataSnapshot) {
+                       mFBDBListener.onSuccess(dataSnapshot);
+                   }
+                   @Override
+                   public void onCancelled(DatabaseError firebaseError) {
+                       mFBDBListener.onFailure();
+                   }
+               });
+   }</code></pre>
+<p>This will allow us to load the Map and display the coffees but only AFTER they have been retrieved successfully - our <em>FBDBListener</em> will control when this is triggered.</p>
+<p>The changes that need to be made are very similar to how we implemented the <em>VolleyListener</em> interface, so have a go at making the necessary changes. If you simply replace the VolleyListener calls and code with the the FBDBListener implementation, you won&#39;t go too far wrong.</p>
+<p>You will probably need this code to convert your firebase <em>snapshot</em> into a list of coffees, to add to the Map</p>
+<pre><code class="lang-java">List &lt;Coffee&gt; coffeeList = new ArrayList&lt;Coffee&gt;();
+        for (DataSnapshot coffeeSnapshot: dataSnapshot.getChildren()) {
+            Coffee c = coffeeSnapshot.getValue(Coffee.class);
+            coffeeList.add(c);
+        }</code></pre>
+<p>Hopefully, you&#39;ll then see something like this</p>
+<p>Our Firebase coffees</p>
+<p><img src="img/labfb19.png" alt=""></p>
+<p>And the same coffees on the Map</p>
+<p><img src="img/labfb20.png" alt=""></p>
+<p><img src="img/labfb21.png" alt=""></p>
+<p>All Done!!!</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solution">
+        <h1>Solution</h1>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="archives/CoffeeMateFBI.1.0.Solution.zip">CoffeeMateFBI.1.0.Solution</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

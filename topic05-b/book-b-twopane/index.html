@@ -1,0 +1,1051 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      5-b (SUPPLEMENTAL): Fragments
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Two Pane">
+      Two Pane
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="Exercises">
+      Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Two Pane">
+        <h1>Fragments</h1>
+<p> In the previous lab we gained experience in using single-pane screens, a pane containing only a single fragment. Here we develop a simple application to demonstate how two fragments may be successively rendered on a single pane in portrait mode. We provide the same feature in landscape mode but additionaly allow the simultaneous rendering of an additional fragment. This is sometimes referred to as the master-detail pattern.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Preview</h1>
+<p>Many strategies exist for creating screen layouts. Some of these are discussed in the official documentation article <a href="https://developer.android.com/training/design-navigation/multiple-sizes.html">Design for Multiple Tablet Orientations</a>. In this lab we provide a simple demonstration of the master-detail pattern in landscape mode. A single pane (activity) simultaneously hosts two fragments.</p>
+<p> In portrait mode in the demonstration, a pane may support only one fragment at any one time.  A menu option is provided to attach either of two fragments to a single activity. This is  illustrated here in Figures 1 and 2.</p>
+<p><img src="img/01.png" alt="Figure 1: Fragments swapped in and out of a single activity"></p>
+<p><img src="img/02.png" alt="Figure 2: Two fragments simultaneously displayed on same pane"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Baseline app</h1>
+<p>Using Android Studio IDE create a baseline app, selecting an empty activity and wizard default values. To facilitate direct use of code snippets in this lab, choose <code>wit.ie</code> as domain and <code>Two Pane</code> as the app name. The aim is to ensure your applicationId as shown below in the sample gradle file is `ie.wit.twopane&#39;.</p>
+<p>Change to app build.gradle to align with the Android SDK NUC configuration.</p>
+<pre><code>apply plugin: &#39;com.android.application&#39;
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion &quot;25.0.3&quot;
+    defaultConfig {
+        applicationId &quot;ie.wit.twopane&quot;
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName &quot;1.0&quot;
+        testInstrumentationRunner &quot;android.support.test.runner.AndroidJUnitRunner&quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:2.2.2&#39;, {
+        exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39;
+    })
+    compile &#39;com.android.support:appcompat-v7:25.3.1&#39;
+    compile &#39;com.android.support.constraint:constraint-layout:1.0.2&#39;
+    testCompile &#39;junit:junit:4.12&#39;
+}</code></pre>
+<p>Initialize a git repository, provide a .gitignore file, add and commit with an appropriate message. Continue with successive steps to add and commit, thus providing a meaningful history for the lab.</p>
+<p>Here is a sample gitignore file:</p>
+<pre><code>#built application files
+*.apk
+*.ap_
+.idea
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+
+# Android Studio
+# https://www.jetbrains.com/idea/help/project.html
+*.iml
+.gradle
+build/</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Layouts</h1>
+<p>For ease of identification we shall colour fragment backgrounds. Add the following colours to the <code>colors.xml</code> file in <code>res/values</code>:</p>
+<pre><code>  &lt;color name=&quot;pink100&quot;&gt;#F8BBD0&lt;/color&gt;
+  &lt;color name=&quot;purple100&quot;&gt;#E1BEE7&lt;/color&gt;
+  &lt;color name=&quot;indigo100&quot;&gt;#C5CAE9&lt;/color&gt;
+  &lt;color name=&quot;blue100&quot;&gt;#BBDEFB&lt;/color&gt;
+  &lt;color name=&quot;orange200&quot;&gt;#FFCC80&lt;/color&gt;</code></pre>
+<p>See the <a href="https://material.google.com/style/color.html#color-color-palette">Android Material Palette</a> for a full range of colours.</p>
+<p>In <code>res/layout</code> create a file named <code>activity_fragment_container.xml</code> with the following content:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+             android:id=&quot;@+id/detailFragmentContainer&quot;
+             android:layout_width=&quot;match_parent&quot;
+             android:layout_height=&quot;match_parent&quot;/&gt;</code></pre>
+<p>This framelayout will be used as a container for a number of fragments that we shall work with and which we shall define shortly.</p>
+<p>Create another layout file named <code>fragment_1.xml</code>:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    android:background=&quot;@color/blue100&quot;
+    tools:context=&quot;ie.wit.twopane.MainActivity&quot;&gt;
+
+  &lt;TextView
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot;
+      android:text=&quot;Fragment 1&quot;
+      android:id=&quot;@+id/textViewFrag1&quot;
+      android:layout_marginTop=&quot;46dp&quot;
+      android:layout_alignParentStart=&quot;true&quot;/&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+<p>Refactor the name of <code>activity_main.xml</code>, changing it to <code>fragment_2.xml</code> and replacing its content with the following: </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    android:background=&quot;@color/indigo100&quot;
+    tools:context=&quot;ie.wit.twopane.MainActivity&quot;&gt;
+
+
+  &lt;TextView
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot;
+      android:text=&quot;Fragment 2&quot;
+      android:id=&quot;@+id/textViewFrag2&quot;
+      android:layout_marginTop=&quot;46dp&quot;
+      android:layout_alignParentStart=&quot;true&quot;/&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+<p>To resolve the @dimens errors in the above XML, create a new &quot;values resource file&quot; in the res/values folder.  Call this file dimens.xml and copy the following code into it:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+    &lt;dimen name=&quot;activity_vertical_margin&quot;&gt;16dp&lt;/dimen&gt;
+    &lt;dimen name=&quot;activity_horizontal_margin&quot;&gt;16dp&lt;/dimen&gt;
+&lt;/resources&gt;</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Fragment (Java)</h1>
+<p>Corresponding to the 2 fragment layouts just defined, add the following two Java fragments in <code>ie.wit.twopane</code>:</p>
+<p>Fragment_1.java</p>
+<pre><code>
+package ie.wit.twopane;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class Fragment_1 extends Fragment
+{
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    View v = inflater.inflate(R.layout.fragment_1, parent, false);
+    return v;
+  }
+}</code></pre>
+<p>Fragment_2.java</p>
+<pre><code>
+package ie.wit.twopane;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class Fragment_2 extends Fragment
+{
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    View v = inflater.inflate(R.layout.fragment_2, parent, false);
+    return v;
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Activity</h1>
+<p>Refactor the default MainActivity Java file as follows:</p>
+<p>Add an ActionBar field:</p>
+<pre><code>  ActionBar actionBar;</code></pre>
+<p>Initialize it in <code>onCreate</code>:</p>
+<pre><code>    actionBar = getSupportActionBar();</code></pre>
+<p>Provide this import:</p>
+<pre><code>import android.support.v7.app.ActionBar;</code></pre>
+<p>In onCreate, update setContentView to use our layout container:</p>
+<pre><code>    setContentView(R.layout.activity_fragment_container);</code></pre>
+<p>Use the FragmentManager to add and commit a new transaction using an instance of a fragment as a parameter. Add this code snippet to the end of <code>onCreate</code>:</p>
+<pre><code>        FragmentManager manager = getSupportFragmentManager();
+        Fragment fragment = manager.findFragmentById(R.id.detailFragmentContainer);
+        if (fragment == null)
+        {
+            fragment = new Fragment_1();
+            manager.beginTransaction().add(R.id.detailFragmentContainer, fragment).commit();
+        }</code></pre>
+<p>These import statements are required:</p>
+<pre><code>import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;</code></pre>
+<p>Build and run the app. The output should resemble that in Figure 1.</p>
+<p><img src="img/03.png" alt="Figure 1: Display single fragment"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Fragments (menu)</h1>
+<p>We shall now provide the following features. These, it must be stressed, are purely for test and demonstration purposes and would not feature in production-standard code.</p>
+<ul>
+<li>A menu with options to attach either of Fragment 1 and Fragment 2.</li>
+<li>The necessary Java code to implement the menu selection. </li>
+</ul>
+<h2>Menu</h2>
+<p>Create a menu directory in res. Within this create a menu resource file <code>menu_twopane.xml</code> with the following content:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    tools:context=&quot;org.wit.myrent.ResidenceActivity&quot;&gt;
+
+    &lt;item
+        android:id=&quot;@+id/fragment_1&quot;
+        android:orderInCategory=&quot;100&quot;
+        android:title=&quot;@string/fragment_1&quot;
+        app:showAsAction=&quot;never&quot; /&gt;
+
+    &lt;item
+        android:id=&quot;@+id/fragment_2&quot;
+        android:orderInCategory=&quot;100&quot;
+        android:title=&quot;@string/fragment_2&quot;
+        app:showAsAction=&quot;never&quot; /&gt;
+
+&lt;/menu&gt;</code></pre>
+<p>Add the referenced strings in the strings.xml file:</p>
+<pre><code>  &lt;string name=&quot;fragment_1&quot;&gt;Fragment 1&lt;/string&gt;
+  &lt;string name=&quot;fragment_2&quot;&gt;Fragment 2&lt;/string&gt;</code></pre>
+<p>Override onCreateOptionsMenu in MainActivity:</p>
+<pre><code>  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.menu_twopane, menu);
+    // return true so that the menu pop up is opened
+    return true;
+  }</code></pre>
+<p>Override onOptionsItemSelected, also in MainActivity.</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.fragment_1:
+
+        Log.d(&quot;Twopane&quot;, &quot;Fragment 1 attaching&quot;);
+        return true;
+      case R.id.fragment_2:
+
+        Log.d(&quot;Twopane&quot;, &quot;Fragment 2 attaching&quot;);
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>These import statements will be required:</p>
+<pre><code>import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;</code></pre>
+<p>Build and run the app. Exercise the menus. Check the logcat pane and verify the log messages in onOptionsItemSelected are displayed.</p>
+<p><img src="img/04.png" alt="Figure 1: Menu select fragment to be displayed"></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Fragments (swap)</h1>
+<p>Refactor MainActivty to allow menu choice to determine which fragment is displayed:</p>
+<p>Create a method <code>replacementFragment</code>:</p>
+<pre><code>  /**
+   * @param replacementFragment The fragment to be displayed, replacing existing fragment.
+   */
+  private void swapFragments(Fragment replacementFragment) {
+    FragmentManager manager = getSupportFragmentManager();
+    FragmentTransaction transaction = manager.beginTransaction();
+
+    // Replace whatever is in the fragment_container view with this fragment,
+    transaction.replace(R.id.detailFragmentContainer, replacementFragment)
+        .addToBackStack(null) // and add the transaction to the back stack
+        .commit(); // Commit the transaction
+  }</code></pre>
+<p>You will need to import:</p>
+<pre><code>import android.support.v4.app.FragmentTransaction;</code></pre>
+<p>Invoke this new method in response to a menu selection, using the appropriate fragment as a parameter. Here is the refactored menu handler:</p>
+<pre><code>  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.fragment_1:
+        swapFragments(new Fragment_1()); 
+        Log.d(&quot;Twopane&quot;, &quot;Fragment 1 attaching&quot;);
+        return true;
+      case R.id.fragment_2:
+        swapFragments(new Fragment_2());
+        Log.d(&quot;Twopane&quot;, &quot;Fragment 2 attaching&quot;);
+        return true;
+      default:
+        return super.onOptionsItemSelected(item);
+    }
+  }</code></pre>
+<p>Build and run the app. Exercise the menu and verify that the appropriate fragment is displayed in response to a particular menu option choice. This should work both in portrait and landscape mode.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>Master-Detail pattern</h1>
+<p>We now implement the master-detail pattern in landscape mode. In portrait mode, no change in the functionality of the app should be apparent.</p>
+<p>This requires the introduction of the following:</p>
+<ul>
+<li>A landscape version of <code>activity_fragment_container.xml</code>. This will be located in a new folder named <code>layout-land</code> and contain two FrameLayout elements:<ul>
+<li>one for the new fragment (Fragment Main), </li>
+<li>the other for the particular fragment chosen by the menu selection (Fragment 1 or Fragment 2). </li>
+</ul>
+</li>
+<li>A new third fragment to represent the view on the left side of the screen (Fragment Main).</li>
+</ul>
+<p>This new feature is illustrated in Figure 1. The menu item Fragment Main is not required in landscape mode. It is left as an exercise to hide this option.</p>
+<p><img src="img/05.png" alt="Figure 1: Master-Detail pattern - landscape mode"></p>
+<p>Create a new resource directory called &#39;layout-land&#39;.  If you can&#39;t see it in your Project pane, switch the view to &quot;Project&quot; and you should see it.</p>
+<p>Create a new <code>res/layout-land/activity_fragment_container.xml</code> file (the code is below). 
+- Observe that it contains two framelayouts (the portrait version only has one). 
+- Note the first framelayout (+id/fragmentContainer) is intended for the left-hand fragment in the landscape 2-fragment pane.  The second framelayout (+id/detailFragmentContainer) is the one we used in the portrait view.  </p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+              android:layout_width=&quot;match_parent&quot;
+              android:layout_height=&quot;match_parent&quot;
+              android:divider=&quot;?android:attr/dividerHorizontal&quot;
+              android:showDividers=&quot;middle&quot;
+              android:background=&quot;@color/orange200&quot;
+              android:orientation=&quot;horizontal&quot;&gt;
+
+  &lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+               android:id=&quot;@+id/fragmentContainer&quot;
+               android:layout_width=&quot;0dp&quot;
+               android:layout_height=&quot;match_parent&quot;
+               android:layout_weight=&quot;1&quot;/&gt;
+  &lt;FrameLayout
+      android:id=&quot;@+id/detailFragmentContainer&quot;
+      android:layout_width=&quot;0dp&quot;
+      android:layout_height=&quot;match_parent&quot;
+      android:layout_weight=&quot;3&quot; /&gt;
+&lt;/LinearLayout&gt;</code></pre>
+<p>Refactor MainActivity as follows.</p>
+<p>First, we require a means of determining whether the application is in portrait or landscape mode. A number of approaches are possible. Our approach is to obtain the current width and height of the screen in pixels. If the width is less than the height then the screen is in portrait mode. </p>
+<pre><code>  /**
+   * Determines screen orientation by examining screen width and height
+   * If the width is less than the height then the orientation is portrait.
+   *
+   * @return The screen orientation, portrait (1) or landscape (2).
+   */
+  public int screenOrientation() {
+    DisplayMetrics dm = getApplicationContext().getResources().getDisplayMetrics();
+    int w = dm.widthPixels;
+    int h = dm.heightPixels;
+    return w &lt; h ? Configuration.ORIENTATION_PORTRAIT : Configuration.ORIENTATION_LANDSCAPE;
+
+  }</code></pre>
+<p>The above code requires these import statements:</p>
+<pre><code>import android.content.res.Configuration;
+import android.util.DisplayMetrics;</code></pre>
+<p>Create a FragmentManager field. We make this choice because we will be using fragment manager repeatedly.</p>
+<pre><code>  FragmentManager manager;</code></pre>
+<p>In <code>onCreate</code> the manager is already created and intialised:</p>
+<pre><code>    FragmentManager manager = getSupportFragmentManager();</code></pre>
+<p>Refactor this line to instantiate the global field instead of a local one:</p>
+<pre><code>    manager = getSupportFragmentManager();</code></pre>
+<p>In the interest of conciseness, create two constants to represent portrait and landscape modes:</p>
+<pre><code>  public static final int PORTRAIT = Configuration.ORIENTATION_PORTRAIT;
+  public static final int LANDSCAPE = Configuration.ORIENTATION_LANDSCAPE;</code></pre>
+<p>In <code>onCreate</code>, following the initialization of fragmentManager, create an if-else block:</p>
+<pre><code>if (screenOrientation() == PORTRAIT) {
+
+} else { // Orientation is landscape
+
+}</code></pre>
+<p>In the first if-else block attach fragment 1. This is the default display.  Note that we already have this code in the onCreate method; we just need to move it into the &quot;if&quot; section.</p>
+<pre><code>            Fragment fragment = manager.findFragmentById(R.id.detailFragmentContainer);
+            if (fragment == null){
+                fragment = new Fragment_1();
+                manager.beginTransaction().add(R.id.detailFragmentContainer, fragment).commit();
+            }</code></pre>
+<p>Also insert this line into the &quot;if&quot; part, to log our orientation:</p>
+<pre><code>      Log.d(&quot;Twopane&quot;, &quot;Orientation: &quot; + screenOrientation());</code></pre>
+<p>Here is the code for the second block (i.e. the else part): </p>
+<pre><code>           // attach Fragment 1 to the right frame
+            Fragment fragment = manager.findFragmentById(R.id.detailFragmentContainer);
+            if (fragment == null) {
+                fragment = new Fragment_1();
+                manager.beginTransaction()
+                        .add(R.id.detailFragmentContainer, fragment)
+                        .commit();
+            }
+            // attach Fragment Main to the left frame
+            fragment = manager.findFragmentById(R.id.fragmentContainer);
+            if(fragment == null) {
+                fragment = new Fragment_main();
+                manager.beginTransaction()
+                        .add(R.id.fragmentContainer, fragment)
+                        .commit();
+            }
+            Log.d(&quot;Twopane&quot;, &quot;Orientation: &quot; + screenOrientation());</code></pre>
+<p>For reference, here is the complete class. Errors will be generated. These will be resolved in the next step.</p>
+<pre><code>package ie.wit.twopane;
+
+import android.content.res.Configuration;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+
+public class MainActivity extends AppCompatActivity {
+
+    public static final int PORTRAIT = Configuration.ORIENTATION_PORTRAIT;
+    public static final int LANDSCAPE = Configuration.ORIENTATION_LANDSCAPE;
+
+    ActionBar actionBar;
+    FragmentManager manager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fragment_container);
+
+        actionBar = getSupportActionBar();
+
+        manager = getSupportFragmentManager();
+        if (screenOrientation() == PORTRAIT) {
+            Fragment fragment = manager.findFragmentById(R.id.detailFragmentContainer);
+            if (fragment == null) {
+                fragment = new Fragment_1();
+                manager.beginTransaction()
+                        .add(R.id.detailFragmentContainer, fragment)
+                        .commit();
+            }
+            Log.d(&quot;Twopane&quot;, &quot;Orientation: &quot; + screenOrientation());
+        }
+        else { // Orientation is landscape
+            // attach Fragment 1 to the right frame
+            Fragment fragment = manager.findFragmentById(R.id.detailFragmentContainer);
+            if (fragment == null) {
+                fragment = new Fragment_1();
+                manager.beginTransaction()
+                        .add(R.id.detailFragmentContainer, fragment)
+                        .commit();
+            }
+            // attach Fragment Main to the left frame
+            fragment = manager.findFragmentById(R.id.fragmentContainer);
+            if(fragment == null) {
+                fragment = new Fragment_main();
+                manager.beginTransaction()
+                        .add(R.id.fragmentContainer, fragment)
+                        .commit();
+            }
+            Log.d(&quot;Twopane&quot;, &quot;Orientation: &quot; + screenOrientation());
+        }
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_twopane, menu);
+        // return true so that the menu pop up is opened
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.fragment_1:
+                swapFragments(new Fragment_1());
+                Log.d(&quot;Twopane&quot;, &quot;Fragment 1 attaching&quot;);
+                return true;
+            case R.id.fragment_2:
+                swapFragments(new Fragment_2());
+                Log.d(&quot;Twopane&quot;, &quot;Fragment 2 attaching&quot;);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /**
+     * @param replacementFragment The fragment to be displayed, replacing existing fragment.
+     */
+    private void swapFragments(Fragment replacementFragment) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+
+        // Replace whatever is in the fragment_container view with this fragment,
+        transaction.replace(R.id.detailFragmentContainer, replacementFragment)
+                .addToBackStack(null) // and add the transaction to the back stack
+                .commit(); // Commit the transaction
+    }
+
+    /**
+     * Determines screen orientation by examining screen width and height
+     * If the width is less than the height then the orientation is portrait.
+     *
+     * @return The screen orientation, portrait (1) or landscape (2).
+     */
+    public int screenOrientation() {
+        DisplayMetrics dm = getApplicationContext().getResources().getDisplayMetrics();
+        int w = dm.widthPixels;
+        int h = dm.heightPixels;
+        return w &lt; h ? Configuration.ORIENTATION_PORTRAIT : Configuration.ORIENTATION_LANDSCAPE;
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>Master-Detail (Fragment)</h1>
+<p>We require a new fragment to locate in the left-most position in the landscape master-detail pane.</p>
+<p>Fragment_main</p>
+<pre><code>package ie.wit.twopane;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class Fragment_main extends Fragment
+{
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+  }
+
+  @Override
+  public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+    View v = inflater.inflate(R.layout.fragment_main, parent, false);
+    return v;
+  }
+}</code></pre>
+<p>Add a corresponding menu item:</p>
+<pre><code>
+    &lt;item
+        android:id=&quot;@+id/fragment_main&quot;
+        android:orderInCategory=&quot;100&quot;
+        app:showAsAction=&quot;never&quot;
+        android:title=&quot;@string/fragment_main&quot;/&gt;</code></pre>
+<p>And the referenced string:</p>
+<pre><code>    &lt;string name=&quot;fragment_main&quot;&gt;Fragment Main&lt;/string&gt;</code></pre>
+<p>A layout named <code>fragment_main</code> is referenced in Fragment_main.java. </p>
+<p>File: res/layout/fragment_main.xml:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:paddingBottom=&quot;@dimen/activity_vertical_margin&quot;
+    android:paddingLeft=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingRight=&quot;@dimen/activity_horizontal_margin&quot;
+    android:paddingTop=&quot;@dimen/activity_vertical_margin&quot;
+    android:background=&quot;@color/purple100&quot;
+    tools:context=&quot;ie.wit.twopane.MainActivity&quot;&gt;
+
+
+  &lt;TextView
+      android:layout_width=&quot;wrap_content&quot;
+      android:layout_height=&quot;wrap_content&quot;
+      android:textAppearance=&quot;?android:attr/textAppearanceLarge&quot;
+      android:text=&quot;@string/fragment_main&quot;
+      android:id=&quot;@+id/textViewFragMain&quot;
+      android:layout_marginTop=&quot;46dp&quot;
+      android:layout_alignParentStart=&quot;true&quot;/&gt;
+&lt;/RelativeLayout&gt;</code></pre>
+<p>Build, run and exercise the menu options in both landscape and portrait and verify expected behaviour as shown in Figures 1 and 2 in step 01.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Exercises">
+        <p>[1] Hide the menu option <code>Fragment Main</code> in landscape mode in the Master-Detail pattern. See <a href="http://stackoverflow.com/questions/10692755/how-do-i-hide-a-menu-item-in-the-actionbar">Stackoverflow article - How do I hide a menu item in the actionbar?</a></p>
+<p>[2] Examine the code in the previous lab. The activity-fragment design contains a fundamental error:</p>
+<ul>
+<li>Can you identify it?</li>
+<li>Any suggestions on how to correct it?</li>
+</ul>
+<h2>Solutions:</h2>
+<p><a href="archives/twopane-lab-solution.zip">TwoPane lab solution</a> </p>
+<p><a href="archives/twopane-exercise-solution.zip">TwoPane exercises solution</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

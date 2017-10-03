@@ -1,0 +1,776 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      7-b: UI Design 2
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-04">
+      Lab-04
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="Solution">
+      Solution
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-04">
+        <h1>Objectives</h1>
+<p>In this Lab, you will continue to refactor our CoffeeMate Case Study, this version is called <b>CoffeeMate.3.0</b>. We will build on the previous lab and add in more new features and UI Design. In this version we will add in a few more activities and some extra layouts. On completion of this lab you&#39;ll be able to</p>
+<ul>
+<li><p>use multiple Fragments in different Activities</p>
+</li>
+<li><p>use Spinners (dropdown lists)</p>
+</li>
+<li><p>filter lists based on different criteria</p>
+</li>
+<li><p>use the <b>Application</b> Object</p>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup - Starter Code</h1>
+<p>As with the previous lab, you can download some starter code for this lab here - <a href="archives/CoffeeMate.3.0.Starter.zip">CoffeeMate.3.0.Starter</a>. It contains all the resources you&#39;ll need to complete this lab along with some of the code.</p>
+<p>Once you open the <b>CoffeeMate 3.0 Starter</b> Project in Android Studio it should looks as follows:</p>
+<p><img src="img/starter.3.png" alt=""></p>
+<p>Take a few moments to familiarise yourself with the <b>new</b> classes in your project and explore the resources that you will be referring to throughout the lab, especially the new layouts in both &#39;Design&#39; view and &#39;Text&#39; view. It&#39;s also probably a good idea to run the App at this stage too, so you can set up your AVD (if you haven&#39;t done so already) and confirm that the starter app is configured properly and running (although &#39;Search&#39; and &#39;Favourites&#39; don&#39;t really do anything).</p>
+<p>In this lab, you are required to do the following:</p>
+<ul>
+<li><p>Display a list of the users &#39;Favourite&#39; Coffees</p>
+</li>
+<li><p>Allow Coffees in the list to be filtered on their type and name.</p>
+</li>
+</ul>
+<p>The following steps will guide you through these requirements, so we&#39;ll start with refactoring the necessary classes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>CoffeeMate 3.0 - A First Look</h1>
+<p>When we&#39;re finsihed this lab, we&#39;ll be able to display the users Favourite coffees and apply a filter to the list of coffees so the user can search on a coffee name or type, or both. If you&#39;ve run the starter code (and it&#39;s recommended you do) you&#39;ll see that the &#39;Search&#39; &amp; &#39;Favourites&#39; buttons are working, but not functioning properly - we&#39;re not seeing any refined list of coffees.</p>
+<p> <img src="img/lab0402a.png" alt=""> <img src="img/lab0403a.png" alt=""></p>
+<p>Furthermore, there&#39;s nothing to select from the Spinner (second screenshot above) so this lab is all about refactoring existing classes to get these features working.</p>
+<p>It&#39;s also worth taking a look at our <b>Home.java</b> below just to confirm you understand how we implemented the button functionality (see below).</p>
+<p>The following steps will take you through completing <b><i>CoffeeMate 3.0</i></b>.</p>
+<pre><code class="lang-java">package ie.cm.activities;
+
+import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
+
+import ie.cm.R;
+import ie.cm.fragments.CoffeeFragment;
+import ie.cm.models.Coffee;
+
+public class Home extends Base {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.home);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.ic_launcher1);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, &quot;Information&quot;, Snackbar.LENGTH_LONG)
+                        .setAction(&quot;More Info...&quot;, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                openInfoDialog(Home.this);
+                            }
+                        }).show();
+            }
+        });
+    this.setupCoffees();
+    }
+
+    public void add(View v)
+    {
+        goToActivity(this,Add.class,null);
+    }
+
+    public void search(View v)
+    {
+        goToActivity(this,Search.class,null);
+    }
+
+    public void favourites(View v)
+    {
+        goToActivity(this,Favourites.class,null);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+            coffeeFragment = CoffeeFragment.newInstance(); //get a new Fragment instance
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_layout, coffeeFragment)
+                    .commit(); // add/replace in the current activity
+    }
+
+    public void setupCoffees(){
+        coffeeList.add(new Coffee(&quot;Standard Black&quot;, &quot;Some Shop&quot;,2.5,1.99,false));
+        coffeeList.add(new Coffee(&quot;Regular Joe&quot;, &quot;Joe&#39;s Place&quot;,3.5,2.99,true));
+        coffeeList.add(new Coffee(&quot;Espresso&quot;, &quot;Ardkeen Stores&quot;,4.5,1.49,true));
+    }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Reusing Fragments - &#39;Search&#39; &amp; Favourites&#39;</h1>
+<p>If you recall in <b><i>CoffeeMate 2.0</i></b> we used a <b><i>Fragment</i></b> to display our list of coffees inside our Home Screen. A Fragments main purpose is to be <u><i>reused</i></u> so we can use our existing Fragment in both our Search &amp; Favourites Screens.</p>
+<h1>Search &amp; Favourites Screens</h1>
+<p>The first thing we&#39;ll do is add the Fragment to our <b>Search.java</b> and <b>Favourites.java</b> Activity classes. This is pretty staright forward as we have already done this in our <b>Home.java</b> in <b><i>CoffeeMate 2.0</i></b>.</p>
+<pre><code class="lang-java">  coffeeFragment = CoffeeFragment.newInstance(); //get a new Fragment instance
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_layout, coffeeFragment)
+                    .commit(); // add/replace in the current activity</code></pre>
+<p>You can literally cut &amp; paste the above code into both activity classes <b>onResume()</b> method and run the app, so see what you get?</p>
+<p>And don&#39;t forget to use Android Studio&#39;s tools for overriding methods</p>
+<p><img src="img/lab0405a.png" alt=""></p>
+<p>and then</p>
+<p><img src="img/lab0405b.png" alt=""></p>
+<p>You should be seeing something like the following :</p>
+<p><img src="img/lab0404.png" alt=""> <img src="img/lab0405.png" alt=""></p>
+<p>Obviously, our Favourites isn&#39;t filtered to show just &#39;Favourite Coffees&#39; (we&#39;ll get to that later), but this does really illustrate the benefits of using Fragments when we can.</p>
+<p>The next step is introducing the Filter so the user can view their Favourite Coffees (and eventually search).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Reusing Fragments - Filtering Favourite Coffees</h1>
+<p>As mentioned in the Lectures, a <i>ListView</i> supports filtering of elements via its adapter. In this step we will associate our custom filter (<b>CoffeeFilter.java</b>) with our <i>CoffeeFragment</i> so that we have the ability to filter this list whatever way we want, on any screen we want.</p>
+<h1>Our Custom Filter - <b>CoffeeFilter.java</b></h1>
+<p>First of all, familiarise yourself with the (already supplied) <i>CoffeeFilter</i> class. Pay particular attention to the two methods that had to be implemented to actually filter the data and then &#39;publish&#39; the results and make sure you understand what&#39;s going on.</p>
+<p>Next, have a look at the constructor</p>
+<pre><code class="lang-java">public CoffeeFilter(List&lt;Coffee&gt; originalCoffeeList, String filterText,
+            CoffeeListAdapter adapter) {
+        super();
+        this.originalCoffeeList = originalCoffeeList;
+        this.filterText = filterText;
+        this.adapter = adapter;
+    }</code></pre>
+<p>and see if you can create an instance called <i>coffeeFilter</i> inside our <i>CoffeeFragment</i> without referring to the notes.</p>
+<h1>Filtering our Favourites</h1>
+<p>Once you have the filter set up, the next step is to call it&#39;s filter method correctly to filter out just the &#39;Favourite&#39; coffees and display them in our list. To achieve this you&#39;ll need to call the following code (can you work out where it should go inside our <i>CoffeeFragment</i>?)</p>
+<pre><code class="lang-java">if (getActivity() instanceof Favourites) {
+      coffeeFilter.setFilter(&quot;favourites&quot;); // Set the filter text field from &#39;all&#39; to &#39;favourites&#39;
+      coffeeFilter.filter(null); // Filter the data, but don&#39;t use any prefix
+      listAdapter.notifyDataSetChanged(); // Update the adapter
+    }</code></pre>
+<p>If you run the app again, and select the Favourites Button, you should now see just the &#39;Favourite&#39; coffees, like so:</p>
+<p><img src="img/lab0406.png" alt=""></p>
+<p>Note that we didn&#39;t have to modify a single line of code in our <b>Favourites.java</b> Activity class.</p>
+<p>There&#39;s still a few issues with our <b>Favourites</b> though, if you&#39;ve done some proper testing? And tried to delete multiple coffees via the context menu? Can you identify how to fix it?</p>
+<p>Hint : You&#39;ll be focusing on the &#39;deleteCoffees() method and having to &#39;filter&#39; again. (Or you can always check the notes!)</p>
+<p>Next we&#39;ll look at searching our coffees by name and/or type.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Reusing Fragments - Searching Coffees</h1>
+<p>We now have a Fragment that has filtering capabilities so we use these to search our list of coffees and refine the list based on either the coffees name, it&#39;s type, or both. To achieve this, we&#39;ll subclass our existing <b><i>CoffeeFragment</i></b> and create new class called <b><i>SearchFragment</i></b> and associate this Fragment with our <b>Search.java</b> Activity class.</p>
+<h1>SearchFragment.java</h1>
+<p>Have a quick look at the existing <b><i>SearchFragment</i></b> class:</p>
+<pre><code class="lang-java">public class SearchFragment extends CoffeeFragment
+         {
+    @Override
+    public void onAttach(Context c) {
+        super.onAttach(c);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+}</code></pre>
+<p>There&#39;s not much in there, so first add the following :</p>
+<pre><code class="lang-java">public SearchFragment() {
+        // Required empty public constructor
+    }
+
+    public static SearchFragment newInstance() {
+        SearchFragment fragment = new SearchFragment();
+        return fragment;
+    }</code></pre>
+<p>And the next thing we&#39;ll do is add some choices to the Spinner so the user can filter on a &#39;type&#39;.</p>
+<p>We&#39;ll use an Adapter to populate the Spinner data so have a go at completing the following:</p>
+<p>First, create the Adapter</p>
+<pre><code class="lang-java">    ArrayAdapter&lt;CharSequence&gt; spinnerAdapter = ArrayAdapter
+                .createFromResource(/*activity reference*/, /*the options to display*/,
+                        android.R.layout.simple_spinner_item);
+
+    spinnerAdapter
+        .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</code></pre>
+<p>Next, bind to the Spinner widget of the layout</p>
+<pre><code class="lang-java">    Spinner spinner = /*Bind to the spinner widget R.id.searchCoffeeTypeSpinner*/;</code></pre>
+<p>and finally, set the Spinners adapter to the adapter you&#39;ve set up (<i>spinnerAdapter</i>).</p>
+<p>If you run your app again, you would expect to see the Spinner showing data - but it does not. Can you work out what the issue is? (HINT: Have a look at the <b>Search.java</b> Activity class and the type of Fragment being loaded)</p>
+<p>If you&#39;ve spotted what needed to be changed, run the app one more time and you should now be seeing something like this when you click on the Spinner.</p>
+<p><img src="img/lab0407.png" alt=""></p>
+<p>and</p>
+<p><img src="img/lab0408.png" alt=""></p>
+<p>The last step is to add the listeners for the <b><i>Spinner</i></b> and <b><i>EditText</i></b> widgets to filter the list on the users selections.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Reusing Fragments - Adding Event Handlers</h1>
+<p>At the moment, if the user types in some text or selects an option from the Spinner on the Search screen, nothings happens as there&#39;s no code attached to these types of events. This step involves implementing the necessary interfaces to complete the lab.</p>
+<p>If you haven&#39;t been doing so already, you should definitely make use of the Android Studio features to speed up this process, so all we will be left with is writing the specific code for what we want to happen.</p>
+<h1>Handling the Spinner with the <u>OnItemSelectedListener</u> interface</h1>
+<p>First of all, ensure your <b>SearchFragment</b> implements the correct interface</p>
+<pre><code class="lang-java">implements AdapterView.OnItemSelectedListener</code></pre>
+<p>and use Android Studio to implement the interface methods like so</p>
+<p><img src="img/lab0409.png" alt=""></p>
+<p>and you get the following:</p>
+<pre><code class="lang-java">  @Override
+    public void onItemSelected(AdapterView&lt;?&gt; parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView&lt;?&gt; parent) {
+
+    }</code></pre>
+<p>We only need to complete the <i>onItemSelected</i> method to filter our list when the user selects a particular &#39;type&#39; of coffee, as follows:</p>
+<p>Introduce a new global String variable &#39;selected&#39; then</p>
+<p>Introduce this helper method</p>
+<pre><code class="lang-java">private void checkSelected(String selected)
+    {
+        if (selected != null) {
+            if (selected.equals(&quot;All Types&quot;)) {
+                coffeeFilter.setFilter(&quot;all&quot;);
+            } else if (selected.equals(&quot;Favourites&quot;)) {
+                coffeeFilter.setFilter(&quot;favourites&quot;);
+            }
+
+            String filterText = ((EditText)activity
+                    .findViewById(R.id.searchCoffeeNameEditText))
+                    .getText().toString();
+
+            if(filterText.length() &gt; 0)
+                coffeeFilter.filter(filterText);
+            else
+                coffeeFilter.filter(&quot;&quot;);
+        }
+    }</code></pre>
+<p>and finally, inside &#39;onItemSelected&#39;</p>
+<pre><code class="lang-java">  String selected = parent.getItemAtPosition(position).toString();
+  checkSelected(selected);</code></pre>
+<p>Once again, be clear about what is going here.</p>
+<p>We also need to override our &#39;deleteCoffees()&#39; method in the super class to ensure our context menu continues to function as expected, so revisit &#39;CoffeeFragment&#39; and change the access modifier of the method to public and then introduce the following method into your &#39;SearchFragment&#39;</p>
+<pre><code class="lang-java">@Override
+    public void deleteCoffees(ActionMode actionMode) {
+        super.deleteCoffees(actionMode);
+        checkSelected(selected);
+    }</code></pre>
+<p>The last thing to do is set the spinners listener, so have a go at this method call.</p>
+<p>Run your app again to confirm everything is still working as expected.</p>
+<h1>Handling the EditText with the <u>TextWatcher</u> interface</h1>
+<p>Similar to handling the <b><i>Spinner</i></b> try and use the Android Studio features to implement the <b><i>TextWatcher</i></b> interface. If you&#39;ve done this correctly you&#39;ll have the following method stubs:</p>
+<pre><code class="lang-java">@Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+    }</code></pre>
+<p>There&#39;s actually very little code necessary to implement this feature, so see if you can complete this final step without referring to the lecture material.</p>
+<p>HINT: the <i>filter</i> method of our coffee filter takes a String to filter on and you need to add the relevant listener to the <b><i>EditText</i></b>.</p>
+<p>Once you have that up and running you should be seeing something like this during filtering:</p>
+<p><img src="img/lab0407.png" alt=""></p>
+<p><img src="img/lab0410.png" alt=""></p>
+<p><img src="img/lab0411.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>The Application Object</h1>
+<p>In order to keep our application design coherent, we now bring in an &#39;Application&#39; object.</p>
+<p>Create a new package called &#39;ie.cm.main&#39; and incorporate this class here:</p>
+<pre><code class="lang-java">package ie.cm.main;
+
+import ie.cm.models.Coffee;
+import java.util.ArrayList;
+import java.util.List;
+import android.app.Application;
+import android.util.Log;
+
+public class CoffeeMateApp extends Application
+{
+  public List &lt;Coffee&gt;  coffeeList = new ArrayList&lt;Coffee&gt;();
+
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    Log.v(&quot;coffeemate&quot;, &quot;CoffeeMate App Started&quot;);
+  }
+}</code></pre>
+<p>Application objects need to be referenced in the AndroidManifest.xml - at the very top as &#39;andorid:name&#39;</p>
+<pre><code class="lang-xml">    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;
+        android:name=&quot;ie.cm.main.CoffeeMateApp&quot;&gt;</code></pre>
+<p>Make sure the &#39;CoffeeMate App Started&#39; appears in the logs to verify that it has actually been engaged correctly, when you launch the app.</p>
+<p>As we now want our Application Object to manage or list of coffees, we need to replace all references of the list from Base with a reference to our Application Object list.</p>
+<p>The Base class will now look something like this</p>
+<pre><code class="lang-java">
+...
+
+public class Base extends Activity {
+
+  public    CoffeeMateApp  app;
+  protected Bundle         activityInfo;
+  public    Fragment       coffeeFragment;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    app = (CoffeeMateApp) getApplication();
+  }
+
+...</code></pre>
+<p>You can then access the list of coffees via the Base class &#39;app&#39; reference like so...</p>
+<p>Our refactored &#39;Add&#39;</p>
+<pre><code class="lang-java">
+app.coffeeList.add(c);</code></pre>
+<p>See if you can refactor the rest of the affected classes.....</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solution">
+        <h2>Solution</h2>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="archives/CoffeeMate.3.0.Solution.zip">CoffeeMate.3.0.Solution</a></li>
+</ul>
+<p>In this lab you have experimented with Custom Adapters, Fragments and Filters, and the Application Object:</p>
+<ul>
+<li>Now go have a coffee :-)</li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>

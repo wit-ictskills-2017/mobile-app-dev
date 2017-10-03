@@ -1,0 +1,1543 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      8: Multithreading & Networking
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-05">
+      Lab-05
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08">
+      08
+    </a>
+    
+    <a class="item" data-tab="09">
+      09
+    </a>
+    
+    <a class="item" data-tab="10">
+      10
+    </a>
+    
+    <a class="item" data-tab="Solution">
+      Solution
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-05">
+        <h1>Objectives</h1>
+<p>This lab continues our Case Study <b>CoffeeMate</b> but with a major refactoring of the UI (using a Navigation Drawer) and a more detailed look at the use of Fragments and persistence (through an SQLite Database) in an Android App.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Setup - Starter Code</h1>
+<p>As this version of our case study has been substantially refactored to begin with, it&#39;s strongly recommended you download the starter code for this lab here - <a href="archives/CoffeeMate.4.0.Starter.zip">CoffeeMate.4.0.Starter</a>. It contains all the resources you&#39;ll need to complete this lab along with some of the code and features already completed.</p>
+<p>Once you import the <b>CoffeeMate 4.0 Starter</b> Project it should looks as follows:</p>
+<p><img src="img/lab501.png" alt=""></p>
+<p>Take some time to familiarise yourself with the new classes in your project and explore the resources that you will be referring to throughout the lab, especially the layouts in both &#39;Graphical Layout&#39; view and &#39;XML&#39; view for the <b>Navigation Drawer</b> (and it&#39;s associated resources and menus). It&#39;s also probably a good idea to run the App at this stage too, so you can set up your AVD (if you haven&#39;t done so already) and confirm that the starter app is configured properly and running as discussed.</p>
+<p>In this lab, you are required to do the following:</p>
+<ul>
+<li><p>Add a Splash Screen (to make the app a bit more &#39;appealing&#39;)</p>
+</li>
+<li><p>Carry out a complete refactoring of the project to</p>
+<ul>
+<li>update existing Fragments for usage with a Navigation Drawer</li>
+<li>implement new Fragments to add in the necessary extra functionality</li>
+<li>remove any residual classes and resources no longer needed</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Add Database Support to CoffeeMate to manage our coffees</li>
+</ul>
+<p>The following steps will guide you through these requirements, so we&#39;ll start with Splash Screen.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Adding a Splash Screen</h1>
+<p>First of all, confirm that when you run the starter code you get the following:</p>
+<p><img src="img/coffeemate.0.png" alt=""></p>
+<p>and then</p>
+<p><img src="img/coffeemate.2.png" alt=""></p>
+<p>You&#39;ve probably guessed we already have the Splash screen implemented, but</p>
+<p><i><b>Before you move on to the next step, it&#39;s worth taking a quick look at the manifest file to see the changes that have been made to ensure the Splash Screen acts like a &#39;Splash Screen&#39;, and is the first Screen you see when the app launches.</b></i></p>
+<p>It&#39;s also worth testing the app to see the &#39;Favourites&#39; feature working and even delete/update any &#39;Favourite&#39; coffees to see how the app handles an empty list.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>App Refactoring - Our &#39;Add&#39; Option (Part 1)</h1>
+<p>Once you&#39;ve properly tested the latest version of CoffeeMate, you&#39;ll see that we only have The &#39;Home&#39; &amp; &#39;View Favourites&#39; implemented (from the starter App). This step will take you through building a new Fragment <b>AddFragment</b> and reusing a lot of the &#39;Add&#39; activity code and resources.</p>
+<p>First, go ahead and create a new (Blank) Fragment called <b>AddFragment</b> in the <i>fragments</i> package with the following options :</p>
+<p> <img src="img/lab502.png" alt=""></p>
+<p>You&#39;ll get a fair bit of &#39;boilerplate&#39; code, which we don&#39;t need for this project, so before continuing, ensure your new AddFragment initially looks like this</p>
+<pre><code class="lang-java">public class AddFragment extends Fragment {
+
+    public AddFragment() {
+        // Required empty public constructor
+    }
+
+    public static AddFragment newInstance() {
+        AddFragment fragment = new AddFragment();
+
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_add, container, false);
+    }
+}</code></pre>
+<p>The next step is to replace the default fragment layout with our existing &#39;Add&#39; activity layout so once you&#39;re done, you should have a layout like this for &#39;fragment_add&#39;</p>
+<p> <img src="img/lab503.png" alt=""></p>
+<p> Here&#39;s the xml if you&#39;re stuck for time.</p>
+<pre><code class="lang-xml"> &lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;ie.cm.fragments.AddFragment&quot;&gt;
+
+    &lt;RelativeLayout
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;fill_parent&quot;
+        android:gravity=&quot;center&quot;&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/saveCoffeeBtn&quot;
+            style=&quot;@android:style/Holo.Light.ButtonBar&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignParentEnd=&quot;true&quot;
+            android:layout_alignParentStart=&quot;true&quot;
+            android:layout_below=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_marginTop=&quot;20dp&quot;
+            android:drawableTop=&quot;@drawable/ic_save_coffee&quot;
+            android:text=&quot;@string/saveCoffeeBtn&quot; /&gt;
+
+        &lt;RatingBar
+            android:id=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_below=&quot;@+id/ratingTextView&quot;
+            android:layout_centerHorizontal=&quot;true&quot;
+            android:layout_marginTop=&quot;18dp&quot;
+            android:numStars=&quot;5&quot;
+            android:progressTint=&quot;@color/bannerBGColor&quot;
+            android:rating=&quot;2&quot;
+            android:stepSize=&quot;0.5&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/nameEditText&quot;
+            android:layout_width=&quot;200dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignEnd=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_alignParentTop=&quot;true&quot;
+            android:layout_marginTop=&quot;11dp&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;&gt;
+
+            &lt;requestFocus /&gt;
+
+        &lt;/EditText&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/shopEditText&quot;
+            android:layout_width=&quot;200dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignStart=&quot;@+id/nameEditText&quot;
+            android:layout_below=&quot;@+id/nameEditText&quot;
+            android:layout_marginTop=&quot;15dp&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;&gt;&lt;/EditText&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/ratingTextView&quot;
+            android:layout_width=&quot;120dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignStart=&quot;@+id/priceTextView&quot;
+            android:layout_below=&quot;@+id/priceEditText&quot;
+            android:layout_marginTop=&quot;31dp&quot;
+            android:text=&quot;@string/coffeeRatingLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/nameTextView&quot;
+            android:layout_width=&quot;60dp&quot;
+            android:layout_height=&quot;20dp&quot;
+            android:layout_alignBaseline=&quot;@+id/nameEditText&quot;
+            android:layout_alignBottom=&quot;@+id/nameEditText&quot;
+            android:layout_toStartOf=&quot;@+id/nameEditText&quot;
+            android:gravity=&quot;top&quot;
+            android:text=&quot;@string/coffeeNameLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/priceEditText&quot;
+            android:layout_width=&quot;100dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignStart=&quot;@+id/shopEditText&quot;
+            android:layout_below=&quot;@+id/shopEditText&quot;
+            android:layout_marginTop=&quot;18dp&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;numberDecimal&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/shopTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignBaseline=&quot;@+id/shopEditText&quot;
+            android:layout_alignBottom=&quot;@+id/shopEditText&quot;
+            android:layout_alignStart=&quot;@+id/nameTextView&quot;
+            android:text=&quot;@string/coffeeShopLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/priceTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_alignBaseline=&quot;@+id/priceEditText&quot;
+            android:layout_alignBottom=&quot;@+id/priceEditText&quot;
+            android:layout_alignStart=&quot;@+id/shopTextView&quot;
+            android:text=&quot;@string/coffeePriceLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot; /&gt;
+
+    &lt;/RelativeLayout&gt;
+
+&lt;/FrameLayout&gt;</code></pre>
+<p> We can now go ahead and implement the necessary code to add this fragment to the &#39;Home Screen&#39;. We won&#39;t implement the actual logic until the next step, we&#39;ll just get the &#39;Add&#39; screen loading, so navigate to your <b>Home</b> activity class and see can you get the add feature to load the relevant screen.</p>
+<p> Note : if you get an import error on your <b>AddFragment</b> just ensure you have</p>
+<pre><code class="lang-java"> import android.app.Fragment;</code></pre>
+<p>instead of</p>
+<pre><code class="lang-java">import android.support.v4.app.Fragment;</code></pre>
+<p> in your import statements (as this may throw up another error later on).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>App Refactoring - Our &#39;Add&#39; Option (Part 2)</h1>
+<p>Here&#39;s the code you should have implemented (or something similar) to get the &#39;Add&#39; screen loading</p>
+<pre><code class="lang-java"> fragment = AddFragment.newInstance();
+ ft.replace(R.id.homeFrame, fragment);
+ ft.addToBackStack(null);
+ ft.commit();</code></pre>
+<p>and just for completeness, you may have noticed that the title bar we&#39;re using for our &#39;Add&#39; screen  still displays</p>
+<p> <img src="img/lab504.png" alt=""></p>
+<p> so add the following to your <b>AddFragment</b> (and fix the errors)</p>
+<pre><code class="lang-java">  @Override
+    public void onResume() {
+        super.onResume();
+
+        titleBar = (TextView) getActivity().findViewById(R.id.recentAddedBarTextView);
+        titleBar.setText(R.string.addACoffeeLbl);
+    }</code></pre>
+<p> and run the app again to confirm you get the following</p>
+<p> <img src="img/lab505.png" alt=""></p>
+<p>Now we can implement the logic behind the View to add a new coffee to our list of coffees.</p>
+<p>We already have all the code we need in our &#39;Add&#39; activity so go ahead and see can you complete this step without referring to the supporting lecture material.</p>
+<p>And don&#39;t forget to remove the &#39;Add&#39; activity (and associated layout) from the project, as we don&#39;t need them anymore.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>App Refactoring - Our &#39;Search&#39; Option (Part 1)</h1>
+<p>We&#39;ll take a similar approach with this feature as we did with the add feature - we&#39;ll get the navigation and screen up and running first, and then implement the logic.</p>
+<p>In the previous version of CoffeeMate (Version 3.0) our &#39;Search&#39; feature was implemented via a separate layout in a Search activity and we extended our <b>CoffeeFragment</b> to customise our Search (in a <b>SearchFragment</b>). To maintain our current <b><i>navigation design pattern</i></b> we should really remove our existing &#39;Search&#39; activity and manage everything in another Fragment - so that&#39;s what we&#39;ll do.</p>
+<p>First, we need a new layout for our Search, so either copy/paste one of the existing fragment layouts, or go ahead and create a new one (I copied the <i>fragment_home</i> layout and went from there).</p>
+<p>We already have most of the layout we need in the &#39;Search&#39; xml file so see can you put together a layout similar to the following:</p>
+<p><img src="img/lab506.png" alt=""></p>
+<p>If it all gets a bit much for you :) here&#39;s the complete xml code but it&#39;s really worth having a go yourself first, as it will help you develop your layout design skills.</p>
+<pre><code class="lang-xml"> &lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;ie.cm.fragments.SearchFragment&quot;&gt;
+
+    &lt;RelativeLayout
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;486dp&quot;
+        android:gravity=&quot;center&quot; &gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/searchCoffeeNameEditText&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:inputType=&quot;text&quot;
+            android:hint=&quot;@string/searchCoffeeHint&quot;
+            android:layout_alignParentTop=&quot;true&quot;
+            android:layout_alignParentStart=&quot;true&quot;&gt;
+
+            &lt;requestFocus /&gt;
+        &lt;/EditText&gt;
+
+        &lt;Spinner
+            android:id=&quot;@+id/searchCoffeeTypeSpinner&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:prompt=&quot;@string/searchCoffeeTypePrompt&quot;
+            android:layout_below=&quot;@+id/searchCoffeeNameEditText&quot;
+            android:layout_alignParentStart=&quot;true&quot;
+            android:paddingBottom=&quot;10dp&quot; /&gt;
+
+        &lt;android.support.v4.widget.SwipeRefreshLayout
+        android:id=&quot;@+id/coffee_swipe_refresh_layout&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;107dp&quot;
+        android:layout_alignParentStart=&quot;true&quot;
+            android:layout_below=&quot;@+id/recentAddedBarTextView&quot;
+            android:layout_alignParentBottom=&quot;true&quot;&gt;
+
+        &lt;ListView
+            android:id=&quot;@+id/coffeeList&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;match_parent&quot;
+            android:layout_gravity=&quot;right|bottom&quot;&gt;
+        &lt;/ListView&gt;
+
+    &lt;/android.support.v4.widget.SwipeRefreshLayout&gt;
+
+        &lt;TextView
+        android:id=&quot;@+id/recentAddedBarTextView&quot;
+        style=&quot;@style/banner&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;@string/searchCoffeesResultsLbl&quot;
+        android:layout_gravity=&quot;center&quot;
+        android:layout_below=&quot;@+id/searchCoffeeTypeSpinner&quot;
+        android:layout_alignParentStart=&quot;true&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/empty_list_view&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:gravity=&quot;center&quot;
+            android:text=&quot;@string/recentlyViewedEmptyMessage&quot;
+            android:textColor=&quot;@color/headerBGColor&quot;
+            android:layout_alignParentTop=&quot;true&quot;
+            android:layout_alignParentStart=&quot;true&quot;
+            android:layout_marginTop=&quot;157dp&quot; /&gt;
+
+    &lt;/RelativeLayout&gt;
+&lt;/FrameLayout&gt;</code></pre>
+<p>The next thing we need to do is associate this layout with our existing <b>SearchFragment</b> and bind to the widgets such as the Spinner, the EditText etc.</p>
+<p>Even though our SearchFragment extends from CoffeeFragment, we can&#39;t use the standard CoffeeFragment layout so the first thing we need to do is bring in (and override) the <i>onCreateView()</i> method for our SearchFragment.</p>
+<p>Introduce the following to your SearchFragment fragment</p>
+<pre><code class="lang-java">@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_search, container, false);
+
+        listView = (ListView) v.findViewById(R.id.coffeeList); //Bind to the list on our Search layout
+
+        return v;
+    }</code></pre>
+<p>Can you explain why we need to bind to the &#39;coffeeList&#39; ListView widget? (comment out the line of code and run the app once you&#39;ve completed the &#39;wiring up&#39;, and see does that give you any clues?).</p>
+<p>Now, &#39;wire up&#39; a new instance of this fragment to the Search option on the Navigation Drawer, similar to how we did the &#39;Add&#39; and &#39;View Favourites&#39;.</p>
+<p>If you run the app at this stage (which you should) you&#39;ll probably get a NullPointerException error, so be clear why we need to move some existing code from <b>onCreate()</b> to <b>onCreateView()</b>, and carry out some refactoring, like so</p>
+<pre><code class="lang-java">@Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        super.onCreateView(inflater,container,savedInstanceState);
+
+        View v = inflater.inflate(R.layout.fragment_search, container, false);
+
+        ArrayAdapter&lt;CharSequence&gt; spinnerAdapter = ArrayAdapter
+                .createFromResource(getActivity(), R.array.coffeeTypes,
+                        android.R.layout.simple_spinner_item);
+
+        spinnerAdapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        Spinner spinner = ((Spinner) v.findViewById(R.id.searchCoffeeTypeSpinner));
+        spinner.setAdapter(spinnerAdapter);
+        spinner.setOnItemSelectedListener(this);
+
+        EditText nameText = (EditText)v.findViewById(R.id.searchCoffeeNameEditText);
+        nameText.addTextChangedListener(this);
+
+        listView = (ListView) v.findViewById(R.id.coffeeList); //Bind to the list on our Search layout
+
+        setListView(listView,v);
+
+        return v;
+    }</code></pre>
+<p>Notice there&#39;s a new <b>setListView(listView,v)</b> method. This has been introduced to reduce some code redundancy, so make sure it&#39;s implemented in the super CoffeeFragment class. Here&#39;s the code you need for this method</p>
+<pre><code class="lang-java">public void setListView(ListView listview, View v) {
+    listview.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+    listview.setMultiChoiceModeListener(this);
+
+    listview.setAdapter (listAdapter);
+    listview.setOnItemClickListener(this);
+    listview.setEmptyView(getActivity().findViewById(R.id.empty_list_view));
+  }</code></pre>
+<p>Once you&#39;ve made the necessary changes, run the app again and confirm you get the following after you choose the &#39;Search&#39; option:</p>
+<p><img src="img/lab507.png" alt=""></p>
+<p>You&#39;ll notice that the spinner and filter are working - another example of the benefits of using (and reusing) Fragments.</p>
+<p>For completeness, add the following to the Fragment</p>
+<pre><code class="lang-java">@Override
+    public void onResume() {
+        super.onResume();
+
+        titleBar.setText(R.string.searchCoffeesLbl);
+    }</code></pre>
+<p>When you&#39;re done, you should be able to Search &amp; Filter as normal (as with the previous version) only this time it&#39;s all nice and contained in a Fragment, like so:</p>
+<p><img src="img/coffeemate.5.png" alt=""></p>
+<p>and</p>
+<p><img src="img/coffeemate.6.png" alt=""></p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>App Refactoring - Our &#39;Edit&#39; Option (Part 1)</h1>
+<p>This step is similar to our &#39;Add&#39; Fragment implementation but there&#39;s a bit more complexity involved as we need to</p>
+<ul>
+<li>Create a new Fragment (<strong>EditFragment</strong>) (similar to Add)</li>
+<li>Recycle the &#39;Edit&#39; Layout for use with our new Fragment (similar to Add)</li>
+</ul>
+<p>and</p>
+<ul>
+<li>Pass the relevant Coffee Data from the &#39;Coffee List&#39; (managed within the <strong>CoffeeFragment</strong>) to the <strong>EditFragment</strong></li>
+</ul>
+<p>AND</p>
+<ul>
+<li>Implement a callback interface from our Fragment to our Activity to handle the &#39;favourites star&#39; toggle and the update button.</li>
+</ul>
+<p><strong>Note:</strong> We could simply have our EditFragment implement an onClick Listener, but this is an opportunity to demonstrate how to communicate between a Fragment and an Activity.</p>
+<p>So first of all, go ahead and create the Fragment (and it&#39;s associated layout) but this time, make sure you choose to <strong>Include interface Callbacks</strong>, like so .</p>
+<p><img src="img/lab509.png" alt=""></p>
+<p>Then, modify the boilerplate code so that the <strong><em>newInstance()</em></strong> method takes a &#39;Bundle&#39; object (called <em>coffeeBundle</em>) as a parameter.</p>
+<p>Now, our current <em><strong>onItemClick()</strong></em> method inside our CoffeeFragment, looks like this</p>
+<pre><code>@Override  
+public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id)
+{    
+Bundle activityInfo = new Bundle();    
+activityInfo.putInt(&quot;coffeeID&quot;, view.getId());    
+
+Intent goEdit = new Intent(getActivity(), Edit.class);
+goEdit.putExtras(activityInfo);   
+getActivity().startActivity(goEdit);  
+}</code></pre>
+<p>so see if you can implement the necessary code to &#39;switch to&#39; the EditFragment instead of launching the Edit activity (We&#39;ll revist this code in Part 2 to complete the Edit feature).</p>
+<p><strong>Hint:</strong> have a look at your <strong>Home</strong> activity and how we manage our Fragments.</p>
+<hr>
+<p>Next, you need to update your layout, so again, have a go at that, but to help you along here&#39;s the layout I copied from our &#39;Add&#39; and refactored to suit our needs.</p>
+<pre><code class="lang-xml">&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;ie.cm.fragments.EditFragment&quot;&gt;
+
+    &lt;RelativeLayout
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:gravity=&quot;center&quot;
+        android:layout_gravity=&quot;center_horizontal|bottom&quot;&gt;
+
+        &lt;LinearLayout
+            android:id=&quot;@+id/linearLayout1&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:orientation=&quot;vertical&quot;
+            android:paddingBottom=&quot;5dp&quot;
+            android:paddingLeft=&quot;10dp&quot;
+            android:paddingRight=&quot;10dp&quot;
+            android:paddingTop=&quot;5dp&quot; &gt;
+
+            &lt;TableLayout
+                android:id=&quot;@+id/tableLayout1&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;wrap_content&quot; &gt;
+
+                &lt;TableRow
+                    android:id=&quot;@+id/tableRow1&quot;
+                    android:layout_width=&quot;wrap_content&quot;
+                    android:layout_height=&quot;0dp&quot;
+                    android:layout_weight=&quot;1&quot;
+                    tools:ignore=&quot;UselessParent&quot; &gt;
+
+                    &lt;TextView
+                        android:id=&quot;@+id/coffeeNameTextView&quot;
+                        android:layout_width=&quot;300dp&quot;
+                        android:layout_marginStart=&quot;5dp&quot;
+                        android:text=&quot;The Title&quot;
+                        android:textColor=&quot;@color/colorPrimary&quot;
+                        android:textSize=&quot;24sp&quot;
+                        tools:ignore=&quot;HardcodedText&quot; /&gt;
+
+                    &lt;ImageView
+                        android:id=&quot;@+id/favouriteImageView&quot;
+                        android:layout_width=&quot;40dp&quot;
+                        android:layout_height=&quot;40dp&quot;
+                        android:src=&quot;@drawable/ic_favourite_off&quot;
+                        tools:ignore=&quot;ContentDescription&quot;
+                        android:onClick=&quot;toggle&quot; /&gt;
+
+                &lt;/TableRow&gt;
+            &lt;/TableLayout&gt;
+
+            &lt;TextView
+                android:id=&quot;@+id/coffeeShopTextView&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;wrap_content&quot;
+                android:text=&quot;The Description...&quot;
+                android:textColor=&quot;@color/bannerBGColor&quot;
+                tools:ignore=&quot;HardcodedText&quot;
+                android:textSize=&quot;18sp&quot;
+                android:layout_marginStart=&quot;5dp&quot; /&gt;
+
+        &lt;/LinearLayout&gt;
+
+
+        &lt;TextView
+            android:id=&quot;@+id/barTextView&quot;
+            style=&quot;@style/banner&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;@string/coffeeDetailsLbl&quot;
+            android:layout_below=&quot;@+id/linearLayout1&quot;
+            android:layout_alignParentStart=&quot;true&quot; /&gt;
+
+        &lt;RatingBar
+            android:id=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:numStars=&quot;5&quot;
+            android:rating=&quot;2&quot;
+            android:stepSize=&quot;0.5&quot;
+            android:progressTint=&quot;@color/bannerBGColor&quot;
+            android:layout_above=&quot;@+id/updateCoffeeBtn&quot;
+            android:layout_centerHorizontal=&quot;true&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/nameEditText&quot;
+            android:layout_width=&quot;200dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;
+            android:layout_below=&quot;@+id/barTextView&quot;
+            android:layout_alignStart=&quot;@+id/shopEditText&quot;
+            tools:ignore=&quot;LabelFor&quot;&gt;
+
+            &lt;requestFocus /&gt;
+
+        &lt;/EditText&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/shopEditText&quot;
+            android:layout_width=&quot;200dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;
+            android:layout_alignTop=&quot;@+id/shopTextView&quot;
+            android:layout_alignEnd=&quot;@+id/coffeeRatingBar&quot;
+            tools:ignore=&quot;LabelFor&quot;&gt;
+        &lt;/EditText&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/ratingTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;@string/coffeeRatingLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            android:layout_above=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_alignStart=&quot;@+id/priceTextView&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/nameTextView&quot;
+            android:layout_width=&quot;60dp&quot;
+            android:layout_height=&quot;20dp&quot;
+            android:gravity=&quot;top&quot;
+            android:text=&quot;@string/coffeeNameLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            android:layout_below=&quot;@+id/barTextView&quot;
+            android:layout_toStartOf=&quot;@+id/nameEditText&quot;
+            android:layout_marginTop=&quot;2dp&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/priceEditText&quot;
+            android:layout_width=&quot;100dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;numberDecimal&quot;
+            android:layout_below=&quot;@+id/shopEditText&quot;
+            android:layout_alignStart=&quot;@+id/shopEditText&quot;
+            tools:ignore=&quot;LabelFor&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/shopTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;@string/coffeeShopLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            android:layout_below=&quot;@+id/nameEditText&quot;
+            android:layout_alignStart=&quot;@+id/nameTextView&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/priceTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;@string/coffeePriceLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            android:layout_alignTop=&quot;@+id/priceEditText&quot;
+            android:layout_alignStart=&quot;@+id/shopTextView&quot; /&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/updateCoffeeBtn&quot;
+            style=&quot;@android:style/Holo.Light.ButtonBar&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:drawableTop=&quot;@drawable/ic_save_coffee&quot;
+            android:text=&quot;@string/updateCoffeeBtnLbl&quot;
+            android:layout_alignParentBottom=&quot;true&quot;
+            android:layout_centerHorizontal=&quot;true&quot;
+            android:layout_marginBottom=&quot;38dp&quot;
+            android:onClick=&quot;update&quot;/&gt;
+
+    &lt;/RelativeLayout&gt;
+
+&lt;/FrameLayout&gt;</code></pre>
+<p>Run you app and confirm you get a blank Edit Screen when you select a row in the coffee list, like so:</p>
+<p><img src="img/lab508.png" alt=""></p>
+<p>But you get an error instead??</p>
+<p>Can you try a quick fix to get the app running?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>App Refactoring - Our &#39;Edit&#39; Option (Part 2)</h1>
+<p>The problem with the previous step was the Main Activity (in out case &#39;Home&#39; must implement the <strong>OnFragmentInteractionListener</strong> interface (for the callbacks) so you can carry out a quick fix like so</p>
+<p><img src="img/lab510.png" alt=""></p>
+<p>choosing to Implement methods.</p>
+<p>Run your app again just to make sure everything is working as expected. <strong>OnFragmentInteractionListener </strong>isn&#39;t really of any use at the moment, but we&#39;ll come back to that later.</p>
+<hr>
+<p>Now, This step involves recycling a lot of our existing code from our Add Activity but also implementing a callback interface, a lot of which is actually supplied for us via Android Studio when we create a Fragment.</p>
+<p>First of all, ensure your CoffeeFragment&#39;s onItemClick() looks something like this</p>
+<pre><code>@Override
+public void onItemClick(AdapterView&lt;?&gt; parent, View view, int position, long id)
+{  
+    Bundle activityInfo = new Bundle();  
+    activityInfo.putInt(&quot;coffeeID&quot;, view.getId());  
+
+    FragmentTransaction ft = getFragmentManager().beginTransaction();  
+    Fragment fragment = EditFragment.newInstance(activityInfo);  
+    ft.replace(R.id.homeFrame, fragment);  
+    ft.addToBackStack(null);  
+    ft.commit();
+}</code></pre>
+<p>and your initial EditFragment looks something like this</p>
+<pre><code>public class EditFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String ARG_PARAM1 = &quot;param1&quot;;
+    private static final String ARG_PARAM2 = &quot;param2&quot;;
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+    private OnFragmentInteractionListener mListener;
+
+    public EditFragment() {
+        // Required empty public constructor
+    }
+
+    // TODO: Rename and change types and number of parameters
+    public static EditFragment newInstance(Bundle coffeeBundle) {
+        EditFragment fragment = new EditFragment();
+        Bundle args = new Bundle();
+
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_edit, container, false);
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + &quot; must implement OnFragmentInteractionListener&quot;);
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * &lt;p/&gt;
+     * See the Android Training lesson &lt;a href=
+     * &quot;http://developer.android.com/training/basics/fragments/communicating.html&quot;
+     * &gt;Communicating with Other Fragments&lt;/a&gt; for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
+    }
+}</code></pre>
+<p>Now, we need to first of all, be able to display our coffee data on our Edit screen, so see can you reuse what you already have in your existing activity and incorporate it in your new EditFragment. What you&#39;re looking for is something like this (if we selected &#39;Regular Joe&#39; from our list)</p>
+<p><img src="img/coffeemate.7.png" alt=""></p>
+<p>So revisit how it&#39;s implemented in the Edit Activity and how you can leverage that to get it to work in the EditFragment.</p>
+<p><strong>Hint:</strong> You need to do something very similar to what you did with the <strong>AddFragment</strong> insofar as you need to refactor the <em><strong>onCreateView()</strong></em> method but also add the following to your <strong>onCreate() </strong>method, to retrieve the correct coffee data <strong><em>before</em></strong> you display it.</p>
+<pre><code>@Override
+public void onCreate(Bundle savedInstanceState)
+{    
+    super.onCreate(savedInstanceState);    
+        if(getArguments() != null)        
+            aCoffee = getCoffeeObject(getArguments().getInt(&quot;coffeeID&quot;));
+}</code></pre>
+<p>The final step is to implement our listeners for the update button and the &#39;toggle&#39;.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08">
+        <h1>App Refactoring - Our &#39;Edit&#39; Option (Part 3)</h1>
+<p>As we&#39;re using (and replacing) Fragments instead of switching between Activities, we have two options when trying to implement event handling.  We can</p>
+<ul>
+<li>Implement the event handling and listeners &#39;in house&#39; and manage everything inside the Fragment - but this can get a bit tricky when we want to handle more than one event (like our situation)</li>
+</ul>
+<p>or</p>
+<ul>
+<li>we implement a callback listener to the parent activity (in our case &#39;Home&#39;), which ties in with the particular navigation pattern we&#39;re trying to adhere to - so this is what we&#39;ll do.</li>
+</ul>
+<p>If you recall, Android Studio generated a lot of boilerplate code for us, including some template callback listeners - which we needed to implement, to get a version of our app running. We&#39;ll now revisit this code (and the whole EditFragment) and complete our &#39;Edit&#39; feature.</p>
+<p>First, familiarise yourself with the particular listener we need to implement</p>
+<pre><code>public interface OnFragmentInteractionListener
+{    
+// TODO: Update argument type and name    
+void onFragmentInteraction(Uri uri);
+}</code></pre>
+<p>and the default methods to &#39;hook up&#39;, attach/detach to the UI event</p>
+<pre><code>// TODO: Rename method, update argument and hook method into UI event
+
+public void onButtonPressed(Uri uri)
+{    
+if (mListener != null) {        
+    mListener.onFragmentInteraction(uri);    
+    }
+}
+
+@Override
+public void onAttach(Context context)
+{    
+    super.onAttach(context);    
+        if (context instanceof OnFragmentInteractionListener) {        
+            mListener = (OnFragmentInteractionListener) context;    
+            }
+            else {        
+                    throw new RuntimeException(context.toString()                
+                            + &quot; must implement OnFragmentInteractionListener&quot;);    
+            }
+}
+
+@Override
+public void onDetach()
+{    
+    super.onDetach();    
+    mListener = null;
+}</code></pre>
+<p>Next, bring in the existing methods from the Edit activity (&#39;toggle&#39; and &#39;update&#39;) and fix any errors.</p>
+<p><strong>Note:</strong> Seeing as we need to bind to the widgets both for displaying and updating it&#39;s probably best to use class-wide widget variables (like we did for our &#39;Add&#39;) so before you proceed, make sure your <strong>onCreateView()</strong> and <strong>update()</strong> methods look something like this</p>
+<pre><code class="lang-java">@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+    View v = inflater.inflate(R.layout.fragment_edit, container, false);
+
+    ((TextView)v.findViewById(R.id.coffeeNameTextView)).setText(aCoffee.name);
+    ((TextView)v.findViewById(R.id.coffeeShopTextView)).setText(aCoffee.shop);
+
+    name = (EditText)v.findViewById(R.id.nameEditText); name.setText(aCoffee.name);
+    shop = (EditText)v.findViewById(R.id.shopEditText); shop.setText(aCoffee.shop);
+    price = (EditText)v.findViewById(R.id.priceEditText); price.setText(&quot;&quot;+aCoffee.price);
+    ratingBar = (RatingBar) v.findViewById(R.id.coffeeRatingBar); ratingBar.setRating((float)aCoffee.rating);
+
+    favouriteImage = (ImageView) v.findViewById(R.id.favouriteImageView);
+        if (aCoffee.favourite == true) {
+            favouriteImage.setImageResource(R.drawable.ic_favourite_on);
+            isFavourite = true;
+        } else {
+            favouriteImage.setImageResource(R.drawable.ic_favourite_off);
+            isFavourite = false;
+        }
+    return v;
+}</code></pre>
+<pre><code>public void update(View v) {    
+        if (mListener != null) {        
+                String coffeeName = name.getText().toString();        
+                String coffeeShop = shop.getText().toString();        
+                String coffeePriceStr = price.getText().toString();        
+                double ratingValue = ratingBar.getRating();        
+
+                double coffeePrice;        
+                        try {            
+                        coffeePrice = Double.parseDouble(coffeePriceStr);        
+                        } catch (NumberFormatException e)
+                        {            coffeePrice = 0.0;        }        
+
+                if ((coffeeName.length() &gt; 0) &amp;&amp; (coffeeShop.length() &gt; 0) &amp;&amp; (coffeePriceStr.length() &gt; 0)) {            
+                        aCoffee.name = coffeeName;            
+                        aCoffee.shop = coffeeShop;            
+                        aCoffee.price = coffeePrice;            
+                        aCoffee.rating = ratingValue;           
+                     }        
+                } else            
+                Toast.makeText(getActivity(), &quot;You must Enter Something for Name and Shop&quot;, Toast.LENGTH_SHORT).show();    
+                }
+        }</code></pre>
+<p>The last thing we need to do is refactor our Listener interface to reflect the events we want to handle so replace the existing interface with this one</p>
+<pre><code>public interface OnFragmentInteractionListener {    
+    void toggle(View v);    
+    void update(View v);
+}</code></pre>
+<p>And use the Android Studio Tools to implement these new methods back in our &#39;Home&#39; activity (and fix any residual errors).</p>
+<p>Here&#39;s the implementation for the &#39;toggle&#39;</p>
+<pre><code>@Override
+public void toggle(View v) {    
+    EditFragment editFrag = (EditFragment) getFragmentManager().findFragmentById(R.id.homeFrame);    
+        if (editFrag != null) {        
+                editFrag.toggle(v);    
+        }
+    }</code></pre>
+<p>so have a go at implementing the &#39;update&#39;.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="09">
+        <h1>App Refactoring - Our &#39;Edit&#39; Option (Part 4)</h1>
+<p>Now, once you&#39;ve tried to confirm that your update and toggle features are working as expected, you&#39;ve probably noticed you have to manually navigate back to the previous screen when you click the update button.</p>
+<p>To improve the user experience somewhat, we can ensure that the user is automatically returned to the previous screen after they&#39;ve selected the update button - no matter which screen they were on. This can be achieved with the following code, so add this to your Fragment and run your app again and see what happens.</p>
+<pre><code>if (getFragmentManager().getBackStackEntryCount() &gt; 0) {    
+                getFragmentManager().popBackStack();    
+                return;
+         }</code></pre>
+<p>Also, to avoid the soft keyboard overlapping or obscuring our edittexts, place the following in the manifest file in the &#39;Home&#39; activity tag</p>
+<pre><code class="lang-xml">android:windowSoftInputMode=&quot;adjustPan|adjustResize&quot;</code></pre>
+<p>Note : there were a few issues with the layout initially, so if your fragment_edit layout isn&#39;t as expected you can replace it with the following (which now has a ConstraintLayout layout)</p>
+<pre><code class="lang-xml">&lt;FrameLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    tools:context=&quot;ie.cm.fragments.EditFragment&quot;&gt;
+
+    &lt;android.support.constraint.ConstraintLayout
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;fill_parent&quot;
+        android:layout_marginTop=&quot;10dp&quot;
+        android:gravity=&quot;center&quot;&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/coffeeShopTextView&quot;
+            android:layout_width=&quot;344dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginTop=&quot;43dp&quot;
+            android:text=&quot;The Description...&quot;
+            android:textColor=&quot;@color/bannerBGColor&quot;
+            android:textSize=&quot;18sp&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintTop_toTopOf=&quot;parent&quot;
+            tools:ignore=&quot;HardcodedText&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;Button
+            android:id=&quot;@+id/saveCoffeeBtn&quot;
+            style=&quot;@android:style/Holo.Light.ButtonBar&quot;
+            android:layout_width=&quot;369dp&quot;
+            android:layout_height=&quot;68dp&quot;
+            android:layout_marginBottom=&quot;1dp&quot;
+            android:layout_marginTop=&quot;8dp&quot;
+            android:drawableTop=&quot;@drawable/ic_save_coffee&quot;
+            android:onClick=&quot;update&quot;
+            android:text=&quot;@string/updateCoffeeBtnLbl&quot;
+            app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+            app:layout_constraintHorizontal_bias=&quot;0.0&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintRight_toLeftOf=&quot;@+id/coffeeRatingBar&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/coffeeRatingBar&quot;
+            tools:layout_constraintBottom_creator=&quot;1&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            app:layout_constraintVertical_bias=&quot;0.054&quot; /&gt;
+
+        &lt;RatingBar
+            android:id=&quot;@+id/coffeeRatingBar&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginStart=&quot;20dp&quot;
+            android:numStars=&quot;5&quot;
+            android:progressTint=&quot;@color/bannerBGColor&quot;
+            android:rating=&quot;2&quot;
+            android:stepSize=&quot;0.5&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;@+id/ratingTextView&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/ratingTextView&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/nameEditText&quot;
+            android:layout_width=&quot;0dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;@+id/shopEditText&quot;
+            app:layout_constraintRight_toRightOf=&quot;@+id/shopEditText&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/barTextView&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot;
+            android:layout_marginTop=&quot;10dp&quot;
+            app:layout_constraintHorizontal_bias=&quot;0.0&quot;
+            tools:ignore=&quot;LabelFor&quot;&gt;
+
+            &lt;requestFocus /&gt;
+
+        &lt;/EditText&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/coffeeNameTextView&quot;
+            android:layout_width=&quot;0dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;The Title&quot;
+            android:textColor=&quot;@color/colorPrimary&quot;
+            android:textSize=&quot;24sp&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintRight_toLeftOf=&quot;@+id/favouriteImageView&quot;
+            app:layout_constraintTop_toTopOf=&quot;parent&quot;
+            tools:ignore=&quot;HardcodedText&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;ImageView
+            android:id=&quot;@+id/favouriteImageView&quot;
+            android:layout_width=&quot;53dp&quot;
+            android:layout_height=&quot;36dp&quot;
+            android:layout_marginEnd=&quot;19dp&quot;
+            android:onClick=&quot;toggle&quot;
+            android:src=&quot;@drawable/ic_favourite_off&quot;
+            app:layout_constraintBottom_toBottomOf=&quot;@+id/coffeeNameTextView&quot;
+            app:layout_constraintRight_toRightOf=&quot;@+id/coffeeShopTextView&quot;
+            app:layout_constraintTop_toTopOf=&quot;parent&quot;
+            app:layout_constraintVertical_bias=&quot;0.0&quot;
+            tools:ignore=&quot;ContentDescription&quot;
+            tools:layout_constraintBottom_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/shopEditText&quot;
+            android:layout_width=&quot;200dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginTop=&quot;5dp&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;textShortMessage&quot;
+            app:layout_constraintHorizontal_bias=&quot;0.505&quot;
+            app:layout_constraintLeft_toRightOf=&quot;@+id/priceEditText&quot;
+            app:layout_constraintRight_toRightOf=&quot;@+id/priceEditText&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/nameEditText&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot;
+            tools:ignore=&quot;LabelFor&quot;&gt;&lt;/EditText&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/ratingTextView&quot;
+            android:layout_width=&quot;120dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginStart=&quot;52dp&quot;
+            android:layout_marginTop=&quot;13dp&quot;
+            android:text=&quot;@string/coffeeRatingLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/priceEditText&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/nameTextView&quot;
+            android:layout_width=&quot;0dp&quot;
+            android:layout_height=&quot;20dp&quot;
+            android:gravity=&quot;top&quot;
+            android:text=&quot;@string/coffeeNameLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            app:layout_constraintBaseline_toBaselineOf=&quot;@+id/nameEditText&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;@+id/shopTextView&quot;
+            app:layout_constraintRight_toLeftOf=&quot;@+id/nameEditText&quot;
+            tools:layout_constraintBaseline_creator=&quot;1&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot; /&gt;
+
+        &lt;EditText
+            android:id=&quot;@+id/priceEditText&quot;
+            android:layout_width=&quot;100dp&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginEnd=&quot;113dp&quot;
+            android:layout_marginStart=&quot;112dp&quot;
+            android:layout_marginTop=&quot;10dp&quot;
+            android:ems=&quot;10&quot;
+            android:inputType=&quot;numberDecimal&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;@+id/barTextView&quot;
+            app:layout_constraintRight_toRightOf=&quot;@+id/favouriteImageView&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/shopEditText&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot;
+            tools:ignore=&quot;LabelFor&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/shopTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginEnd=&quot;11dp&quot;
+            android:text=&quot;@string/coffeeShopLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            app:layout_constraintBaseline_toBaselineOf=&quot;@+id/shopEditText&quot;
+            app:layout_constraintRight_toLeftOf=&quot;@+id/shopEditText&quot;
+            tools:layout_constraintBaseline_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/priceTextView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:layout_marginTop=&quot;21dp&quot;
+            android:text=&quot;@string/coffeePriceLbl&quot;
+            android:textColor=&quot;@color/appFontColor&quot;
+            android:textSize=&quot;18sp&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;@+id/shopTextView&quot;
+            app:layout_constraintRight_toRightOf=&quot;@+id/shopTextView&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/shopTextView&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintRight_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot; /&gt;
+
+        &lt;TextView
+            android:id=&quot;@+id/barTextView&quot;
+            style=&quot;@style/banner&quot;
+            android:layout_width=&quot;383dp&quot;
+            android:layout_height=&quot;24dp&quot;
+            android:layout_marginTop=&quot;7dp&quot;
+            android:text=&quot;@string/coffeeDetailsLbl&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintTop_toBottomOf=&quot;@+id/coffeeShopTextView&quot;
+            tools:layout_constraintLeft_creator=&quot;1&quot;
+            tools:layout_constraintTop_creator=&quot;1&quot;
+            android:layout_marginStart=&quot;1dp&quot; /&gt;
+
+    &lt;/android.support.constraint.ConstraintLayout&gt;
+&lt;/FrameLayout&gt;</code></pre>
+<p>The final step in this lab is to add database support, which we&#39;ll do next.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="10">
+        <h1>App Refactoring - Adding Database Support</h1>
+<p>Before we complete this step, there&#39;s a few classes you need to import to help you along. Once you import the necessary Database classes, this step is relatively straight forward - all you have to do is replace the method calls that manages the <strong>coffeeList</strong> with the respective <strong>dbManager</strong> calls.</p>
+<p>First thing to do is download the necessary database classes in the <a href="archives/database.zip">database</a> archive and add them to a new <em><strong>ie.cm.db</strong></em> package in your project.</p>
+<p>Take a few moments to investigate the classes and familiarise yourself with the methods you&#39;ll be using. There are a number of classes you&#39;ll need to modify to add database support to your project, but initially, you need to create an instance of <em><strong>DBManager</strong></em> in <strong>CofeeMateApp.java</strong> and both open/close the database when necessary.</p>
+<p>Our DBManager instance inside our Application Object</p>
+<pre><code>public class CoffeeMateApp extends Application {    
+    //public List &lt;Coffee&gt;  coffeeList = new ArrayList&lt;Coffee&gt;();    
+    public DBManager  dbManager = new DBManager(this);    
+
+    @Override    
+    public void onCreate()    
+    {        
+        super.onCreate();        
+        Log.v(&quot;coffeemate&quot;, &quot;CoffeeMate App Started&quot;);        
+        dbManager.open();    
+    }    
+
+    @Override    
+    public void onTerminate()
+    {        
+    super.onTerminate();        
+    dbManager.close();    
+    }
+}</code></pre>
+<p>Once you make this change (and save the file) you&#39;ll get a number of errors, which actually indicates which classes you need to now update and add the database calls (and remove the coffeeList calls). Each error requires only one line of code to be fixed, so have a go and updating each of the classes (and we&#39;ll have a look at the solution near the end of the Practical Lab).</p>
+<p>Once you fix all the errors, and run the app again, you should see your coffee list - but this time those coffees are stored in a database.</p>
+<p>And as a final check, if you call the <em><strong>setupList()</strong></em> method of the <em><strong>DBManager</strong></em> reference in your <strong>CoffeeMateApp</strong> reference &#39;app&#39; (replacing the existing setup method in &#39;Home&#39;) you should see the following list:</p>
+<p><img src="img/coffeemate.8.png" alt=""></p>
+<p>After some testing you may find that your adapter isn&#39;t functioning as expected in certain circumstances when deleting multiple coffees. This is due to the fact that our data is now persistent, so depending on &#39;where you are&#39;, so to speak, some slight refactoring of our <b>deleteCoffees()</b> is required, like so</p>
+<pre><code class="lang-java">public void deleteCoffees(ActionMode actionMode)
+  {
+    Coffee c = null;
+    for (int i = listAdapter.getCount() - 1; i &gt;= 0; i--) {
+      if (listView.isItemChecked(i)) {
+        activity.app.dbManager.delete(listAdapter.getItem(i).coffeeId); //delete from DB
+        listAdapter.coffeeList.remove(listAdapter.getItem(i)); // update adapters data
+      }
+    }
+
+    actionMode.finish();
+
+    if (favourites) {
+      //Update the filters data
+      coffeeFilter = new CoffeeFilter(Base.app.dbManager.getAll(),&quot;favourites&quot;,listAdapter);
+      coffeeFilter.filter(null);
+    }
+    listAdapter.notifyDataSetChanged();
+  }</code></pre>
+<p>Test again to confirm and go have a coffee!</p>
+<p>Well Done!</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solution">
+        <h1>Solution</h1>
+<p>As an exercise, try and refactor the Help Option to use a fragment instead of an activity, to adhere to the UI Navigation Design Pattern we&#39;re using.</p>
+<p>This is a solution to the lab:</p>
+<ul>
+<li><a href="archives/CoffeeMate.4.0.Solution.zip">CoffeeMate.4.0.Solution</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
