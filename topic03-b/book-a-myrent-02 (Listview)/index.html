@@ -732,7 +732,7 @@ class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
       <div  class="ui tab segment lab" data-tab="07">
         <h1>Intents</h1>
 <p>Currently the application just displays the list, and we do not have any way of navigating from the list to individual residences. To bind them we will first have to listen for clicks on the list in ResidenceListActivity. This requires that we implement OnItemClickListener:</p>
-<pre><code>public class ResidenceListActivity extends Activity  implements AdapterView.OnItemClickListener</code></pre>
+<pre><code>public class ResidenceListActivity extends AppCompatActivity  implements AdapterView.OnItemClickListener</code></pre>
 <p>Use Android Studio method (ALT+Enter) of adding the required interface method.</p>
 <pre><code>    @Override
     public void onItemClick(AdapterView&lt;?&gt; adapterView, View view, int i, long l) {

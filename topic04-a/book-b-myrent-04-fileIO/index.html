@@ -767,10 +767,20 @@ public class MyRentApp extends Application
     super.onPause();
     portfolio.saveResidences();
   }</code></pre>
-<p>Before concluding this lab we shall fix an issue that prevents the <code>rented</code> residence field from being serialized. Replace this statement:</p>
-<pre><code>    rented.setChecked(residence.rented);</code></pre>
-<p>with this:</p>
-<pre><code>    rented.setOnCheckedChangeListener(this);</code></pre>
+<!--Before concluding this lab we shall fix an issue that prevents the `rented` residence field from being serialized. Replace this statement:
+
+```
+    rented.setChecked(residence.rented);
+
+```
+with this:
+
+```
+    rented.setOnCheckedChangeListener(this);
+
+```
+-->
+
 <p>It should now be possible to save and load the residences. Verify that this works - you will need to completely kill the app for this to be verified.</p>
 <p><img src="img/02.png" alt="Figure 1: Kill app - remove from list"></p>
 <p>Here is the complete class for reference purposes:</p>
@@ -843,7 +853,7 @@ public class ResidenceActivity extends AppCompatActivity implements TextWatcher,
     public void updateControls(Residence residence)
     {
         geolocation.setText(residence.geolocation);
-        rented.setOnCheckedChangeListener(this);
+        rented.setChecked(residence.rented);
         dateButton.setText(residence.getDateString());
     }
 
