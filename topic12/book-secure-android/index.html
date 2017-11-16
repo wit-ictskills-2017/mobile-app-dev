@@ -1,0 +1,1075 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      12: Secure Android Rest Client
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Lab-Android 3">
+      Lab-Android 3
+    </a>
+    
+    <a class="item" data-tab="Solutions">
+      Solutions
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <a class="item" data-tab="07">
+      07
+    </a>
+    
+    <a class="item" data-tab="08.Exercises">
+      08.Exercises
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-android-client/index.html">
+          Lab-Android 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-secure-android/index.html">
+          Lab-Android 3
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-Android 3">
+        <h1>Objectives</h1>
+<p>Refactor the donation-android client to use the JWT secured routes.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Solutions">
+        <h1>Exercises</h1>
+<p>This is the completed project from the last android app:</p>
+<ul>
+<li><a href="https://bitbucket.org/edeleastar/donation-android-2016/commits/tag/lab.14.end">https://bitbucket.org/edeleastar/donation-android-2016/commits/tag/lab.14.end</a></li>
+</ul>
+<h1>Report</h1>
+<p>Try the report now before making any changes.</p>
+<p>You will notice that it seems to list the donations. Where are these coming from? We havent made any changes to the Report activity yet...</p>
+<p>We can now adjust this - and have the report display ALL donations (not just the donations made on this device).</p>
+<p>Before we start, make the following changes to the Report class:</p>
+<p>Introduce a new private member:</p>
+<pre><code>  private DonationAdapter adapter;</code></pre>
+<p>.. and change the onCreate method to initialise this member:</p>
+<pre><code>  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    app = (DonationApp) getApplication();
+
+    listView = (ListView) findViewById(R.id.reportList);
+    adapter = new DonationAdapter (this, app.donations);
+    listView.setAdapter(adapter);
+  }</code></pre>
+<p>(we are just making the adapter a class member, previously it was local)</p>
+<p>Now, import the libraries we need:</p>
+<pre><code>import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import android.widget.Toast;</code></pre>
+<p>Then implement the callback:</p>
+<pre><code>public class Report extends AppCompatActivity implements Callback&lt;Donation&gt;</code></pre>
+<p>... and these are the required method overrides:</p>
+<pre><code>  @Override
+  public void onResponse(Call&lt;List&lt;Donation&gt;&gt; call, Response&lt;List&lt;Donation&gt;&gt; response) {
+    adapter.donations = response.body();
+    adapter.notifyDataSetChanged();
+  }
+
+  @Override
+  public void onFailure(Call&lt;List&lt;Donation&gt;&gt; call, Throwable t) {
+    Toast toast = Toast.makeText(this, &quot;Error retrieving donations&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }</code></pre>
+<p>and finally, in onCreate - make the call to retrieve the donations:</p>
+<pre><code>    Call&lt;List&lt;Donation&gt;&gt; call = (Call&lt;List&lt;Donation&gt;&gt;) app.donationService.getAllDonations();
+    call.enqueue(this);</code></pre>
+<p>Try this now - you should see a list of all dontations.</p>
+<p>Complete version of Report class at this stage:</p>
+<pre><code>package app.donation.activity;
+
+import app.donation.R;
+import app.donation.main.DonationApp;
+import app.donation.model.Donation;
+
+import android.content.Context;
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import android.widget.Toast;
+
+import java.util.List;
+
+public class Report extends AppCompatActivity implements Callback&lt;List&lt;Donation&gt;&gt;
+{
+  private ListView listView;
+  private DonationApp app;
+  private DonationAdapter adapter;
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_report);
+
+    app = (DonationApp) getApplication();
+
+    listView = (ListView) findViewById(R.id.reportList);
+    adapter = new DonationAdapter (this, app.donations);
+    listView.setAdapter(adapter);
+
+    Call&lt;List&lt;Donation&gt;&gt; call = (Call&lt;List&lt;Donation&gt;&gt;) app.donationService.getAllDonations();
+    call.enqueue(this);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.menu_report, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    switch (item.getItemId()) {
+      case R.id.menuDonate:
+        startActivity(new Intent(this, Donate.class));
+        break;
+      case R.id.menuLogout:
+        startActivity(new Intent(this, Welcome.class));
+        break;
+    }
+    return true;
+  }
+
+  @Override
+  public void onResponse(Call&lt;List&lt;Donation&gt;&gt; call, Response&lt;List&lt;Donation&gt;&gt; response) {
+    adapter.donations = response.body();
+    adapter.notifyDataSetChanged();
+  }
+
+  @Override
+  public void onFailure(Call&lt;List&lt;Donation&gt;&gt; call, Throwable t) {
+    Toast toast = Toast.makeText(this, &quot;Error retrieving donations&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }
+}
+
+class DonationAdapter extends ArrayAdapter&lt;Donation&gt;
+{
+  private Context context;
+  public List&lt;Donation&gt; donations;
+
+  public DonationAdapter(Context context, List&lt;Donation&gt; donations) {
+    super(context, R.layout.row_layout, donations);
+    this.context = context;
+    this.donations = donations;
+  }
+
+  @Override
+  public View getView(int position, View convertView, ViewGroup parent) {
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+    View view = inflater.inflate(R.layout.row_layout, parent, false);
+    Donation donation = donations.get(position);
+    TextView amountView = (TextView) view.findViewById(R.id.row_amount);
+    TextView methodView = (TextView) view.findViewById(R.id.row_method);
+
+    amountView.setText(&quot;&quot; + donation.amount);
+    methodView.setText(donation.method);
+
+    return view;
+  }
+
+  @Override
+  public int getCount() {
+    return donations.size();
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Token Model + Authenticate Method</h1>
+<p>To support Tokens, we need a new model class which will hold the Json Web Tokens in our app:</p>
+<h1>app.donation.model</h1>
+<pre><code>package app.donation.model;
+
+public class Token
+{
+  public boolean success;
+  public String token;
+  public User user;
+
+  public Token(boolean success, String token)
+  {
+    this.success = success;
+    this.token = token;
+  }
+}</code></pre>
+<h2>donation-web</h2>
+<p>Back on the server side we need to make some adjustments in our auth implementation:</p>
+<h2>app/api/candidatesapi.js</h2>
+<p>The get all candidates route should be made open:</p>
+<pre><code>exports.find = {
+
+  auth: false,
+
+  ...
+
+};</code></pre>
+<p>This will allow an unauthenticated client to retrieve the candidates</p>
+<p>We need to augment the <code>authenticate</code> method to pass user details back on a successful authentication:</p>
+<h3>app/api/usersapi.js</h3>
+<pre><code>exports.authenticate = {
+
+  auth: false,
+
+  handler: function (request, reply) {
+    const user = request.payload;
+    User.findOne({ email: user.email }).then(foundUser =&gt; {
+      if (foundUser &amp;&amp; foundUser.password === user.password) {
+        const token = utils.createToken(foundUser);
+        reply({ success: true, token: token, user: foundUser }).code(201);
+      } else {
+        reply({ success: false, message: &#39;Authentication failed. User not found.&#39; }).code(201);
+      }
+    }).catch(err =&gt; {
+      reply(Boom.notFound(&#39;internal db failure&#39;));
+    });
+  },
+
+};</code></pre>
+<p>Also, the create user should be open to unauthenticated users:</p>
+<pre><code>exports.create = {
+
+  auth: false,
+
+  ...
+};</code></pre>
+<h1>Record Donor when donation is made</h1>
+<p>This was an exercise in the last lab. </p>
+<p>First, bring in a new utility method. which will make decoding tokens a little more convenient:</p>
+<h2>app/api/utils.js</h2>
+<pre><code>exports.getUserIdFromRequest = function (request) {
+  var userId = null;
+  try {
+    const authorization = request.headers.authorization;
+    var token = authorization.split(&#39; &#39;)[1];
+    var decodedToken = jwt.verify(token, &#39;secretpasswordnotrevealedtoanyone&#39;);
+    userId = decodedToken.id;
+  } catch (e) {
+    userId = null;
+  }
+
+  return userId;
+};</code></pre>
+<h2>app/api/donationsapi.js</h2>
+<p>Use this function to initialise the donor field in a new donation. Also , make sure, when we are creating a donation, we return the new donation including populated donor and candidate fields:</p>
+<pre><code>const utils = require(&#39;./utils.js&#39;);
+
+...
+
+exports.makeDonation = {
+
+  auth: {
+    strategy: &#39;jwt&#39;,
+  },
+
+  handler: function (request, reply) {
+    const donation = new Donation(request.payload);
+    donation.candidate = request.params.id;
+    donation.donor = utils.getUserIdFromRequest(request);
+    donation.save().then(newDonation =&gt; {
+      return Donation.findOne(newDonation).populate(&#39;candidate&#39;).populate(&#39;donor&#39;);
+    }).then(newDonation =&gt; {
+      reply(newDonation).code(201);
+    }).catch(err =&gt; {
+      reply(Boom.badImplementation(&#39;error making donation&#39;));
+    });
+  },
+
+};</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h2>RetrofitServiceFctory</h2>
+<p>Back in the donation-android app, We need to change how we are creating the proxies to the service. Specifically we need to compose a factory class which will create 2 separate donation-web api proxies:</p>
+<ul>
+<li>without jwt support for &#39;open&#39; apis</li>
+<li>with jwt support for &#39;closed&#39; apis</li>
+</ul>
+<p>The open version is created more or less the same way as before. The closed one will need a valid token, and will include this token with api calls makes.</p>
+<h2>app.donation.main</h2>
+<pre><code>package app.donation.main;
+
+import java.io.IOException;
+
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.Retrofit.Builder;
+
+public class RetrofitServiceFactory
+{
+  public static final String API_BASE_URL = &quot;http://10.0.2.2:4000&quot;;
+
+  private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+
+  private static Builder builder = new Builder()
+                                        .baseUrl(API_BASE_URL)
+                                        .addConverterFactory(GsonConverterFactory.create());
+
+  public static &lt;S&gt; S createService(Class&lt;S&gt; serviceClass)
+  {
+    Retrofit retrofit = builder.client(httpClient.build()).build();
+    return retrofit.create(serviceClass);
+  }
+
+  public static &lt;S&gt; S createService(Class&lt;S&gt; serviceClass, final String authToken)
+  {
+    if (authToken != null)
+    {
+      httpClient.addInterceptor(new Interceptor()
+      {
+        @Override
+        public Response intercept(Interceptor.Chain chain) throws IOException
+        {
+          Request original = chain.request();
+          Request.Builder requestBuilder = original.newBuilder()
+              .header(&quot;Authorization&quot;, &quot;bearer &quot; + authToken)
+              .method(original.method(), original.body());
+
+          Request request = requestBuilder.build();
+          return chain.proceed(request);
+        }
+      });
+    }
+
+    OkHttpClient client = httpClient.build();
+    Retrofit retrofit = builder.client(client).build();
+    return retrofit.create(serviceClass);
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Donation Service Interfaces</h1>
+<p>We propose 2 interfaces, one we regard as open (without an auth requirement):</p>
+<h2>app.donation.main.DonationServiceOpen</h2>
+<pre><code>package app.donation.main;
+
+import java.util.List;
+
+import app.donation.model.Token;
+import app.donation.model.Candidate;
+import app.donation.model.User;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+
+public interface DonationServiceOpen
+{
+  @GET(&quot;/api/candidates&quot;)
+  Call&lt;List&lt;Candidate&gt;&gt; getAllCandidates();
+
+  @POST(&quot;/api/users&quot;)
+  Call&lt;User&gt; createUser(@Body User User);
+
+  @POST(&quot;/api/users/authenticate&quot;)
+  Call&lt;Token&gt; authenticate(@Body User user);
+}</code></pre>
+<p>.. and one we consider to be closed:</p>
+<h2>app.donation.main.DonationService</h2>
+<pre><code>package app.donation.main;
+
+import java.util.List;
+
+import app.donation.model.Donation;
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+
+public interface DonationService
+{
+  @GET(&quot;/api/donations&quot;)
+  Call&lt;List&lt;Donation&gt;&gt; getAllDonations();
+
+  @POST(&quot;/api/candidates/{id}/donations&quot;)
+  Call&lt;Donation&gt; createDonation(@Path(&quot;id&quot;) String id, @Body Donation donation);
+}</code></pre>
+<p>There is no real difference in how we declare these interfaces - but separating them out means we can use a different service creation mechanism for each (with or without jwt token), as presented in the last step.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Authenticate</h1>
+<h2>app.main.DonationApp</h2>
+<p>The DonationApp class in restructured now to use the new authenticate route - encapsulated in the <code>validUser</code> and <code>onResponse</code> methods below:</p>
+<pre><code>package app.donation.main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Application;
+import android.util.Log;
+import android.widget.Toast;
+
+import app.donation.model.Token;
+import app.donation.model.Candidate;
+import app.donation.model.User;
+import app.donation.model.Donation;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class DonationApp extends Application implements Callback&lt;Token&gt;
+{
+  public DonationServiceOpen donationServiceOpen;
+  public DonationService     donationService;
+
+  public boolean         donationServiceAvailable = false;
+  public String          service_url  = &quot;http://10.0.2.2:4000&quot;;   // Standard Emulator IP Address
+
+  public final int       target       = 10000;
+  public int             totalDonated = 0;
+
+  public User             currentUser;
+  public List &lt;Donation&gt;  donations    = new ArrayList&lt;Donation&gt;();
+  public List &lt;Candidate&gt; candidates   = new ArrayList&lt;Candidate&gt;();
+
+  public boolean newDonation(Donation donation)
+  {
+    boolean targetAchieved = totalDonated &gt; target;
+    if (!targetAchieved)
+    {
+      donations.add(donation);
+      totalDonated += donation.amount;
+    }
+    else
+    {
+      Toast toast = Toast.makeText(this, &quot;Target Exceeded!&quot;, Toast.LENGTH_SHORT);
+      toast.show();
+    }
+    return targetAchieved;
+  }
+
+  @Override
+  public void onCreate()
+  {
+    super.onCreate();
+    donationServiceOpen = RetrofitServiceFactory.createService(DonationServiceOpen.class);
+    Log.v(&quot;Donation&quot;, &quot;Donation App Started&quot;);
+  }
+
+  public boolean validUser (String email, String password)
+  {
+    User user = new User (&quot;&quot;, &quot;&quot;, email, password);
+    donationServiceOpen.authenticate(user);
+    Call&lt;Token&gt; call = (Call&lt;Token&gt;) donationServiceOpen.authenticate (user);
+    call.enqueue(this);
+    return true;
+  }
+
+  @Override
+  public void onResponse(Call&lt;Token&gt; call, Response&lt;Token&gt; response) {
+    Token auth = response.body();
+    currentUser = auth.user;
+    donationService =  RetrofitServiceFactory.createService(DonationService.class, auth.token);
+    Log.v(&quot;Donation&quot;, &quot;Authenticated &quot; + currentUser.firstName + &#39; &#39; + currentUser.lastName);
+  }
+
+  @Override
+  public void onFailure(Call&lt;Token&gt; call, Throwable t) {
+    Toast toast = Toast.makeText(this, &quot;Unable to authenticate with Donation Service&quot;, Toast.LENGTH_SHORT);
+    toast.show();
+    Log.v(&quot;Donation&quot;, &quot;Failed to Authenticated!&quot;);
+  }
+}</code></pre>
+<p>In <code>onResponse</code> above, we are creating the closed route proxy using the token we have just received (if we had the correct credentials).</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Welcome</h1>
+<p>The welcome activity can be simplified, as we are no longer downloading a full list of users...</p>
+<h2>app.activities.Welcome</h2>
+<pre><code>package app.donation.activity;
+
+import app.donation.R;
+import app.donation.main.DonationApp;
+import app.donation.model.Candidate;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
+
+import java.util.List;
+
+public class Welcome extends AppCompatActivity
+{
+  private DonationApp app;
+
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_welcome);
+
+    app = (DonationApp) getApplication();
+  }
+
+  @Override
+  public void onResume()
+  {
+    super.onResume();
+    app.currentUser = null;;
+
+    Call&lt;List&lt;Candidate&gt;&gt; call = (Call&lt;List&lt;Candidate&gt;&gt;) app.donationServiceOpen.getAllCandidates();
+    call.enqueue(new Callback&lt;List&lt;Candidate&gt;&gt;() {
+      @Override
+      public void onResponse(Call&lt;List&lt;Candidate&gt;&gt; call, Response&lt;List&lt;Candidate&gt;&gt; response) {
+        serviceAvailableMessage();
+        app.candidates = response.body();
+      }
+
+      @Override
+      public void onFailure(Call&lt;List&lt;Candidate&gt;&gt; call, Throwable t) {
+        serviceUnavailableMessage();
+      }
+    });
+  }
+
+  public void loginPressed (View view)
+  {
+    if (app.donationServiceAvailable)
+    {
+      startActivity (new Intent(this, Login.class));
+    }
+    else
+    {
+      serviceUnavailableMessage();
+    }
+  }
+
+  public void signupPressed (View view)
+  {
+    if (app.donationServiceAvailable)
+    {
+      startActivity (new Intent(this, Signup.class));
+    }
+    else
+    {
+      serviceUnavailableMessage();
+    }
+  }
+
+  void serviceUnavailableMessage()
+  {
+    app.donationServiceAvailable = false;
+    Toast toast = Toast.makeText(this, &quot;Donation Service Unavailable. Try again later&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }
+
+  void serviceAvailableMessage()
+  {
+    app.donationServiceAvailable = true;
+    Toast toast = Toast.makeText(this, &quot;Donation Contacted Successfully&quot;, Toast.LENGTH_LONG);
+    toast.show();
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="07">
+        <h1>Signup</h1>
+<p>Signup has minor changes to use the open api proxy:</p>
+<h2>app.activities.Signup</h2>
+<pre><code>package app.donation.activity;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import app.donation.R;
+import app.donation.main.DonationApp;
+import app.donation.model.User;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class Signup extends AppCompatActivity implements Callback&lt;User&gt;
+{
+  private DonationApp app;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_signup);
+    app = (DonationApp) getApplication();
+  }
+
+  public void signupPressed (View view)
+  {
+    TextView firstName = (TextView)  findViewById(R.id.firstName);
+    TextView lastName  = (TextView)  findViewById(R.id.lastName);
+    TextView email     = (TextView)  findViewById(R.id.Email);
+    TextView password  = (TextView)  findViewById(R.id.Password);
+
+    User user = new User(firstName.getText().toString(), lastName.getText().toString(), email.getText().toString(), password.getText().toString());
+
+    DonationApp app = (DonationApp) getApplication();
+    Call&lt;User&gt; call = (Call&lt;User&gt;) app.donationServiceOpen.createUser(user);
+    call.enqueue(this);
+  }
+
+  @Override
+  public void onResponse(Call&lt;User&gt; call, Response&lt;User&gt; response)
+  {
+    Toast toast = Toast.makeText(this, &quot;Signup Successful&quot;, Toast.LENGTH_LONG);
+    toast.show();
+    startActivity(new Intent(this, Welcome.class));
+  }
+
+  @Override
+  public void onFailure(Call&lt;User&gt; call, Throwable t)
+  {
+    app.donationServiceAvailable = false;
+    Toast toast = Toast.makeText(this, &quot;Donation Service Unavailable. Try again later&quot;, Toast.LENGTH_LONG);
+    toast.show();
+    startActivity (new Intent(this, Welcome.class));
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="08.Exercises">
+        <h1>Solution</h1>
+<p>Complete projects:</p>
+<h2>android</h2>
+<ul>
+<li><a href="https://bitbucket.org/edeleastar/donation-android-2016">https://bitbucket.org/edeleastar/donation-android-2016</a></li>
+</ul>
+<h2>hapi</h2>
+<ul>
+<li><a href="https://bitbucket.org/edeleastar/donation-web-final">https://bitbucket.org/edeleastar/donation-web-final</a></li>
+</ul>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
