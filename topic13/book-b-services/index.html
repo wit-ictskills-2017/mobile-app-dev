@@ -1,0 +1,772 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      13: Services
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="MyRent-14 (Services)">
+      MyRent-14 (Services)
+    </a>
+    
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
+    <a class="item" data-tab="06">
+      06
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01/book-a-donation-01/index.html">
+          Donation-01
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-a/book-a-donation-02/index.html">
+          Donation-02
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-b/book-a-donation-03/index.html">
+          Donation-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-a-solutions-donation-03/index.html">
+          Donation-03-Solutions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-b-myrent-00 (Baseline)/index.html">
+          MyRent-00 (Baseline)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-a/book-c-myrent-01 (Widgets)/index.html">
+          MyRent-01 (Widgets)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-a-myrent-02 (Listview)/index.html">
+          MyRent-02 (Listview)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic03-b/book-b-event-handling/index.html">
+          Event-Handling
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-a-myrent-03 (Action Bar & Dialogs)/index.html">
+          MyRent-03 (Action Bar & Dialogs)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-a/book-b-myrent-04-fileIO/index.html">
+          MyRent-04 (FileIO)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-a-myrent-05 (Up Button)/index.html">
+          MyRent-05 (Up Button)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-b-java-8/index.html">
+          Lambda Expressions
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-b/book-c-event-handler-soln/index.html">
+          Event-Handling-Solution
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-a-myrent-06 (Contact & Email)/index.html">
+          MyRent-06 (Contact & Email)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-a/book-b-permissions/index.html">
+          MyRent-06a (Permissions)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-a-myrent-07 (Fragments)/index.html">
+          MyRent-07 (Fragments)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic05-b/book-b-twopane/index.html">
+          Two Pane
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-a-myrent-08 (Deletion)/index.html">
+          MyRent-08 (Deletion)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-a/book-b-myrent-09 (Viewpager)/index.html">
+          MyRent-09 (ViewPager)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic06-b/book-a-settings/index.html">
+          MyRent-10 (Settings)
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-a/book-coffeemate-lab-02/index.html">
+          Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic07-b/book-coffeemate-lab-03/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic08-a/book-coffeemate-lab-04/index.html">
+          Lab-05
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-05/index.html">
+          Lab-06
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic09-a/book-coffeemate-lab-06/index.html">
+          Lab-07
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic10-a/book-coffeemate-lab-07/index.html">
+          Lab-08
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic11/book-android-client/index.html">
+          Lab-Android 2
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic12/book-secure-android/index.html">
+          Lab-Android 3
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic13/book-b-services/index.html">
+          MyRent-14 (Services)
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="MyRent-14 (Services)">
+        <h1>Services</h1>
+<p>We avail of two Android classes, BroadcastReceiver and IntentService, to asynchronously refresh local data obtained by querying a cloud-based service. The BroadcastReceiver receives intents sent by a Context method, <code>sendBroadcast</code>. The IntentService handles asynchronous requests. Our approach is to initialize an alarm in the BroadcastReceiver to exercise the IntentService at interverals configurable from the settings. When the alarm fires, the local data is asynchronously refreshed.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>BroadcastReceiver</h1>
+<p>We create a subclass called BootReceiver. When Context.sendBroadcast is invoked with an appropriate intent as a parameter BroadcastReceiver.onReceive is then called. This method possesses the following functionality:</p>
+<ul>
+<li>Queries the settings to determine the frequency at which data is refreshed.</li>
+<li>Prepares an intent destined for our RefreshService class, a sub-class of IntentService. RefreshService is define shortly.</li>
+<li>Configures an alarm to send the intent to RefreshService at the specified frequency.</li>
+</ul>
+<p>You will see later in the lab that we choose to invoke Context.sendBroadcast in MyRentApp.onCreate and also when the refresh frequency is changed in the settings.</p>
+<p>We shall also demonstrate how, as an alternative, to <a href="https://developer.android.com/training/scheduling/alarms.html">set the alarm when the Android device reboots</a>. See the Stack Overflow article <a href="http://stackoverflow.com/questions/2784441/trying-to-start-a-service-on-boot-on-android">Trying to start a service on boot on Android</a> where some of the typical problems encountered are discussed.</p>
+<p>Create this file, BootReceiver.java and locate it in a new folder named <code>receivers</code> in myrent.</p>
+<pre><code>
+package org.wit.myrent.receivers;
+
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.util.Log;
+
+import org.json.JSONException;
+import org.wit.myrent.R;
+import org.wit.myrent.services.RefreshService;
+
+import java.io.IOException;
+
+/**
+ * Method 1: If permission set and BootReceiver registered in manifest file then
+ * BootReceiver.onReceive method will be invoked by system when device started.
+ * Method 2: Create bespoke intent filter action in BootReceiver receiver in manifest and 
+ * broadcast an intent from MyApp with this action as parameter. This is approach used
+ * in our code for easier debugging into BootReceiver.
+ * In this onReceive method we set the interval at which the alarm should trigger.
+ * This will be either a default value or a value input by user in preference settings.
+ * Note that the system units are milliseconds. Even AlarmManager.INTERVAL_FIFTEEN_MINUTES
+ * resolves to milliseconds. The user input frequency units is minutes.
+ * Debugging has proved impossible using BOOT_COMPLETED action (see manifest).
+ * The approach adopted is to sent an intent from the app and again from the setting if
+ * the user changes the refresh frequency.
+ */
+public class BootReceiver extends BroadcastReceiver
+{
+  private final int NUMBER_MILLIS_PER_MINUTE = 60000;
+  private final int ONE_MINUTE = 60000;
+  private static final long DEFAULT_INTERVAL = AlarmManager.INTERVAL_FIFTEEN_MINUTES;
+  public static int REQUESTCODE = -1;
+  private String tag = &quot;org.wit.myrent&quot;;
+
+  @Override
+  public void onReceive(Context context, Intent intent)
+  {
+    Log.d(tag, &quot;In BootReceiver.onReceive&quot;);
+
+    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+    // The settings key
+    String key = context.getResources().getString(R.string.refresh_interval_preference_key);
+    Log.d(tag, &quot;Settings refresh interval key &quot; + key);
+    long interval = DEFAULT_INTERVAL; // 15 minutes but units are millis so this is Constant Value: 900000 (0x00000000000dbba0)
+    Log.d(tag,&quot;DEFAULT_INTERVAL &quot; + (interval/NUMBER_MILLIS_PER_MINUTE) + &quot; minute(s)&quot;);
+    // Use default interval if fail to retrieve valid settings input interval
+    String value = prefs.getString(key, Long.toString(DEFAULT_INTERVAL/NUMBER_MILLIS_PER_MINUTE));
+    Log.d(tag, &quot;Settings refresh interval value (user-input) &quot; + value + &quot; minute(s)&quot;);
+    if (NumUtil.isPositiveNumber(value))
+    {
+      interval = Long.parseLong(value) * NUMBER_MILLIS_PER_MINUTE; // minutes to millis
+      Log.d(tag,&quot;Using refresh interval obtained from settings &quot; + interval);
+    }
+    // Set an arbitrary minimum interval value of a minute to avoid overloading service.
+    interval = interval &lt; ONE_MINUTE ? ONE_MINUTE : interval;
+
+    // Prepare an PendingIntent with a view to triggering RefreshService
+    PendingIntent operation = PendingIntent.getService(
+        context,
+        REQUESTCODE,
+        new Intent(context, RefreshService.class),
+        PendingIntent.FLAG_UPDATE_CURRENT
+    );
+
+    AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    alarmManager.cancel(operation);//cancel any existing alarms with matching intent
+    alarmManager.setInexactRepeating(AlarmManager.RTC, System.currentTimeMillis(), interval, operation);
+
+    Log.d(tag, &quot;BootReceiver alarm repeats every: &quot; + (interval/NUMBER_MILLIS_PER_MINUTE) + &quot; minute(s).&quot;);
+  }
+}
+
+/**
+ * Class containing single method to validate a string resolves to an integer
+ */
+class NumUtil
+{
+
+  /**
+   * Verifies that a string parses to a positive number
+   * @param str The string to be verified
+   * @return If string comprises digits 0 to 9 only, returns true, else false.
+   */
+  public static boolean isPositiveNumber(String str)
+  {
+    // check for empty string
+    if (str.compareTo(&quot;&quot;) == 0)
+      return false;
+
+    // if any non-digit char found return false
+    for (char c : str.toCharArray())
+    {
+      if (!Character.isDigit(c))
+        return false;
+    }
+    return true;
+  }
+
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>IntentService</h1>
+<p>Create a folder <code>services</code> in myrent and subclass <a href="https://developer.android.com/reference/android/app/IntentService.html">IntentService</a> as follows.</p>
+<pre><code>package org.wit.myrent.services;
+
+import android.app.IntentService;
+import android.content.Intent;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
+
+import org.wit.myrent.activities.ResidenceListFragment;
+import org.wit.myrent.app.MyRentApp;
+import org.wit.myrent.models.Residence;
+
+import java.io.IOException;
+import java.util.List;
+
+import retrofit.Call;
+import retrofit.Response;
+
+public class RefreshService extends IntentService
+{
+  private String tag = &quot;MyRent&quot;;
+  MyRentApp app;
+  public RefreshService()
+  {
+    super(&quot;RefreshService&quot;);
+    app = MyRentApp.getApp();
+  }
+
+  @Override
+  protected void onHandleIntent(Intent intent)
+  {
+    Intent localIntent = new Intent(ResidenceListFragment.BROADCAST_ACTION);
+    Call&lt;List&lt;Residence&gt;&gt; call = (Call&lt;List&lt;Residence&gt;&gt;) app.residenceService.getResidences();
+    try
+    {
+      Response&lt;List&lt;Residence&gt;&gt; response = call.execute();
+      app.portfolio.refreshResidences(response.body());
+      LocalBroadcastManager.getInstance(this).sendBroadcast(localIntent);
+    }
+    catch (IOException e)
+    {
+
+    }
+  }
+
+  @Override
+  public void onDestroy()
+  {
+    super.onDestroy();
+    Log.i(tag, &quot;RefreshService instance destroyed&quot;);
+  }
+
+}</code></pre>
+<p>The alarm we configured in an earlier step results in an intent being sent to RefreshService and handled in <code>onHandleIntent</code>. When this method exits the RefreshService instance is destroyed.</p>
+<p>In the try-catch block the residence list is refreshed, a local intent is created and broadcast. In a later step we shall configure ResidenceListFragment to accept this intent and update the displayed list of residences.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>ResidenceListFragment</h1>
+<p>Here we shall introduce code to </p>
+<ul>
+<li>accept the intent broadcast by RefreshService,</li>
+<li>update the displayed list of residences.</li>
+</ul>
+<p>The following import statements are required:</p>
+<pre><code>import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
+import android.content.BroadcastReceiver;</code></pre>
+<p>Add a string to uniquely identify ResidenceListFragment as the target of the RefreshService sendBroadcast:</p>
+<pre><code>  public static final String BROADCAST_ACTION = &quot;org.wit.myrent.activities.ResidenceListFragment&quot;;</code></pre>
+<p>Declare an IntentFilter field and initialize it in a private convenience method <code>registerBroadcastReceiver</code> which we invoke in <code>onCreate</code>:</p>
+<pre><code>
+  private IntentFilter intentFilter;</code></pre>
+<pre><code>  private void registerBroadcastReceiver()
+  {
+    intentFilter = new IntentFilter(BROADCAST_ACTION);
+    ResponseReceiver responseReceiver = new ResponseReceiver();
+    // Registers the ResponseReceiver and its intent filters
+    LocalBroadcastManager.getInstance(getActivity()).registerReceiver(responseReceiver, intentFilter);
+  }</code></pre>
+<pre><code>  @Override
+  public void onCreate(Bundle savedInstanceState) {
+  ...
+
+  registerBroadcastReceiver();</code></pre>
+<p>Declare and initialize a residence list field in the ResidenceAdapter class:</p>
+<pre><code>
+  class ResidenceAdapter extends ArrayAdapter&lt;Residence&gt;
+  {
+    ...
+    List&lt;Residence&gt; residences;
+
+    public ResidenceAdapter(Context context, ArrayList&lt;Residence&gt; residences) {
+      ...
+      this.residences = residences;
+    }
+
+    ...
+  }</code></pre>
+<p>Create an inner class <code>ResponseReceiver</code>, a subclass of BroadcastReceiver whose purpose here is to receive updates triggered within RefreshService. Each RefreshService broadcast results in invoking ResponseReceiver.onReceive, the sole purpose of which is to obtain the lastest list of residences and notify the adapter that the data set has changed. This results in refreshing the rendered list.</p>
+<pre><code>public class ResidenceListFragment ... {
+  ...
+  ...
+  //Broadcast receiver for receiving status updates from the IntentService
+  private class ResponseReceiver extends BroadcastReceiver
+  {
+    //private void ResponseReceiver() {}
+    // Called when the BroadcastReceiver gets an Intent it&#39;s registered to receive
+    @Override
+    public void onReceive(Context context, Intent intent)
+    {
+      //refreshDonationList();
+      adapter.residences = app.portfolio.residences;
+      adapter.notifyDataSetChanged();
+    }
+  }
+}</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Settings</h1>
+<p>We shall make the some changes to the settings.xml and strings.xml files:</p>
+<ul>
+<li>Introduce default values<ul>
+<li>username: ICTSkills</li>
+<li>password: secret</li>
+<li>nmr_residences: 10</li>
+<li>refesh_interval: 15 </li>
+</ul>
+</li>
+<li>Provide a string value for the refresh interval key to facilitate referencing it from anywhere within the app. This will avoid referencing a hard-wired string.</li>
+</ul>
+<p>Here is the modified settings.xml:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;PreferenceScreen xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; &gt;
+  &lt;EditTextPreference
+      android:key=&quot;username&quot;
+      android:defaultValue=&quot;ICTSkills&quot;
+      android:summary=&quot;@string/username_summary&quot;
+      android:title=&quot;@string/username&quot;/&gt;
+
+  &lt;EditTextPreference
+      android:key=&quot;password&quot;
+      android:defaultValue=&quot;secret&quot;
+      android:summary=&quot;@string/password_summary&quot;
+      android:title=&quot;@string/password&quot;
+      android:inputType=&quot;textPassword&quot;/&gt;
+
+  &lt;EditTextPreference
+      android:key=&quot;nmr_residences&quot;
+      android:defaultValue=&quot;10&quot;
+      android:summary=&quot;@string/nmr_residences_summary&quot;
+      android:title=&quot;@string/nmr_residences&quot;
+      android:inputType=&quot;text&quot;/&gt;
+
+  &lt;EditTextPreference
+      android:key=&quot;@string/refresh_interval_preference_key&quot;
+      android:defaultValue=&quot;15&quot;
+      android:summary=&quot;@string/set_refresh_interval_summary&quot;
+      android:title=&quot;@string/set_refresh_interval&quot;
+      android:inputType=&quot;text&quot;/&gt;
+
+&lt;/PreferenceScreen&gt;</code></pre>
+<p>Add this element to the end of strings.xml:</p>
+<pre><code>  &lt;string name=&quot;refresh_interval_preference_key&quot;&gt;refresh_interval&lt;/string&gt;</code></pre>
+<p>We may now access this string from within a fragment, for example, as follows:</p>
+<pre><code>String refresh_interval = getActivity().getResources().getString(R.string.refresh_interval_preference_key)</code></pre>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Manifest</h1>
+<p>Since we shall be accessing a cloud service it is necessary to include a permission as follows:</p>
+<pre><code>  &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</code></pre>
+<p>We are using two services, BootReceiver and RefreshService. </p>
+<pre><code>    &lt;receiver android:name=&quot;.receivers.BootReceiver&quot;
+              android:exported=&quot;false&quot;&gt;
+      &lt;intent-filter &gt;
+        &lt;action android:name=&quot;org.wit.myrent.receivers.SEND_BROADCAST&quot;/&gt;
+      &lt;/intent-filter&gt;
+    &lt;/receiver&gt;</code></pre>
+<pre><code>    &lt;service android:name=&quot;.services.RefreshService&quot;
+             android:exported=&quot;false&quot;/&gt;</code></pre>
+<p>In the cased of BootReceiver, the <a href="https://developer.android.com/reference/android/content/Intent.html#Intent(java.lang.String">Intent action</a> is a bespoke one:</p>
+<pre><code>org.wit.myrent.receivers.SEND_BROADCAST</code></pre>
+<p>We have chosen this string to be unique within the system - the choice of action name components such as SEND_BROADCAST is arbitrary.</p>
+<p>If you wish that the automatic refresh process is initiated on booting the device (emulator, phone or tablet) then you should add or replace the above intent filter with the following:</p>
+<pre><code>
+&lt;intent-filter &gt;
+  &lt;action android:name=&quot;android.intent.action.BOOT_COMPLETED&quot;/&gt;
+&lt;/intent-filter&gt;</code></pre>
+<p>Whether you simply add or add and replace is a programmatic decision.</p>
+<ul>
+<li>Should you decide to replace, then there are implications elsewhere in the code where you may have used org.wit.myrent.receivers.SEND_BROADCAST.</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="06">
+        <h1>Start services</h1>
+<p>In MyRentApp we broadcast an intent directed to the BroadcastReceiver.</p>
+<p>We also rebroadcast the intent if a user changes the refresh frequency in the settings.</p>
+<p>Add this line of code to the end of MyRentApp.onCreate: </p>
+<pre><code>    sendBroadcast(new Intent(&quot;org.wit.myrent.receivers.SEND_BROADCAST&quot;));</code></pre>
+<p>In SettingsFragment.onSharedPreferenceChanged add this code:</p>
+<pre><code>    // If the refresh frequency is changed send a broadcast so that alarm appropriately reset.
+    String refreshIntervalKey = getActivity().getResources().getString(R.string.refresh_interval_preference_key);
+    if(key.equals(refreshIntervalKey)) {
+      getActivity().sendBroadcast(new Intent(&quot;org.wit.myrent.receivers.SEND_BROADCAST&quot;));
+    }</code></pre>
+<p>These code changes necessitate an import statement:</p>
+<pre><code>import android.content.Intent;</code></pre>
+<p>Test as follows:</p>
+<ul>
+<li>Set the refresh frequency at the minimum 1 minute on two devices, A &amp; B.</li>
+<li>On device A create a series of residences on the cloud server.</li>
+<li>Observe the residence list on device B: it should sync after a minute or so.</li>
+<li>Change the number of residences on the cloud using device A.</li>
+<li>Change the refresh frequency in the settings in device B to 2 minutes. At the end of this period its residence list should sync to the cloud.</li>
+</ul>
+<p>The application at the end of this lab is available for reference here: <a href="https://github.com/wit-ictskills-2016/myrent-14.git">myrent-14</a></p>
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
+    </div>
+  </div>
+</div>-->
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
